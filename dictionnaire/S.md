@@ -508,6 +508,10 @@ Protocole qui permet d'intégrer des données d'image formatées directement sur
 
 > ► *Pour plus d'informations, voir les définitions d'**[UTREEXO](./U.md#utreexo)** et d'**[UTXO SET](./U.md#utxo-set)**.*
 
+## STÉGANOGRAPHIE
+
+La stéganographie est une technique consistant à dissimuler une information sensible dans un objet ou media de couverture d'apparence anodine (typiquement un signal de type texte, son, image, vidéo, transaction Bitcoin, etc.), qui n'éveillera pas les soupçons même si elle est à la vue de tous ; seul un destinataire légitime saura qu'il y a là une information pour lui et où la chercher.
+
 ## STONEWALL
 
 Forme spécifique de transaction Bitcoin visant à accroître la confidentialité des utilisateurs lors d'une dépense en imitant un coinjoin entre deux personnes, sans pour autant en être un. En effet, cette transaction n'est pas collaborative. Un utilisateur peut la construire tout seul, en faisant uniquement intervenir les UTXOs lui appartenant en inputs. Vous pouvez donc créer une transaction Stonewall pour n'importe quelle occasion, sans avoir besoin de vous synchroniser avec un autre utilisateur.
