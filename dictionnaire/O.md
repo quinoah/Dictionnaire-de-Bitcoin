@@ -63,6 +63,10 @@ Désigne une opération de minage de Bitcoin qui fonctionne de manière autonome
 
 Le minage off-grid présente souvent des avantages écologiques, car il peut, dans certains cas, aider à réduire les émissions de gaz à effet de serre en limitant le torchage. De plus, il rend économiquement viables certains projets de production d'énergie renouvelable malgré leur intermittence naturelle.
 
+## OMNI
+
+Omni Layer (ex-Mastercoin) est une plateforme open-source et décentralisée de création et gestion d'actifs sur la blockchain Bitcoin. Parmi les actifs sur Omni on peut citer Tether (USDT) et MaidSafeCoin (MAID).
+
 ## ON-CHAIN
 
 ► ***FR : SUR-CHAÎNE***
