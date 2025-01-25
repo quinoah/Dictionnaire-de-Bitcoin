@@ -48,7 +48,7 @@ header-includes:
 \textbf{© 2024 Loïc Morel}\newline
 \textbf{\textit{Dictionnaire de Bitcoin : Tout le vocabulaire technique de Bitcoin}}\newline
 \newline
-Version du 20 octobre 2024\newline
+Version du 25 janvier 2025\newline
 https://github.com/LoicPandul/Dictionnaire-de-Bitcoin\newline
 \newline
 Cet ouvrage est sous licence CC BY-NC-SA 4.0\newline
@@ -118,7 +118,8 @@ Je tiens à remercier tous les contributeurs pour leur précieuse aide, leurs co
   \item Psyduck07 (https://github.com/Psyduck07) ;
   \item Adrien Lacombe (https://github.com/adrienlacombe) ;
   \item Ludovic Lars (https://github.com/lugaxker) ;
-  \item Beemo (https://github.com/nflatrea).
+  \item Beemo (https://github.com/nflatrea) ;
+  \item quinoah (https://github.com/quinoah).
 \end{itemize}
 \
 Je tiens également à remercier toutes les personnes qui m'ont aidé dans la rédaction de mes autres contenus, qui ont servi de fondement au _Dictionnaire de Bitcoin_ :
@@ -534,47 +535,48 @@ Le 24 avril 2024, les deux cofondateurs de Samourai Wallet ont été injustement
 | | | | |
 |:---------------------------|--:|:---------------------------|--:|
 | | | | |
-| [OBJECTIF](#objectif)          |   186 | [OP_HASH256 (0XAA)](#op_hash256-0xaa) |   197 |
-| [OBOE (OFF-BY-ONE ERROR)](#oboe-off-by-one-error) |   186 | [OP_IF (0X63)](#op_if-0x63)    |   197 |
-| [OBSOLÈTE (BLOC)](#obsolète-bloc) |   204 | [OP_IFDUP (0X73)](#op_ifdup-0x73) |   197 |
-| [OCTET](#octet)                |   187 | [OP_LESSTHAN (0X9F)](#op_lessthan-0x9f) |   197 |
-| [OFF-CHAIN](#off-chain)        |   187 | [OP_LESSTHANOREQUAL (0XA1)](#op_lessthanorequal-0xa1) |   198 |
-| [OFFER](#offer)                |   188 | [OP_MAX (0XA4)](#op_max-0xa4)  |   198 |
-| [OFF-GRID](#off-grid)          |   188 | [OP_MIN (0XA3)](#op_min-0xa3)  |   198 |
+| [OBJECTIF](#objectif)          |   186 | [OP_HASH160 (0XA9)](#op_hash160-0xa9) |   197 |
+| [OBOE (OFF-BY-ONE ERROR)](#oboe-off-by-one-error) |   186 | [OP_HASH256 (0XAA)](#op_hash256-0xaa) |   197 |
+| [OBSOLÈTE (BLOC)](#obsolète-bloc) |   204 | [OP_IF (0X63)](#op_if-0x63)    |   197 |
+| [OCTET](#octet)                |   187 | [OP_IFDUP (0X73)](#op_ifdup-0x73) |   197 |
+| [OFF-CHAIN](#off-chain)        |   187 | [OP_LESSTHAN (0X9F)](#op_lessthan-0x9f) |   198 |
+| [OFFER](#offer)                |   188 | [OP_LESSTHANOREQUAL (0XA1)](#op_lessthanorequal-0xa1) |   198 |
+| [OFF-GRID](#off-grid)          |   188 | [OP_MAX (0XA4)](#op_max-0xa4)  |   198 |
+| [OMNI](#omni)                  |   188 | [OP_MIN (0XA3)](#op_min-0xa3)  |   198 |
 | [ON-CHAIN](#on-chain)          |   188 | [OP_NEGATE (0X8F)](#op_negate-0x8f) |   198 |
 | [ON-GRID](#on-grid)            |   188 | [OP_NIP (0X77)](#op_nip-0x77)  |   198 |
 | [ONION_PRIVATE_KEY](#onion_private_key) |   189 | [OP_NOP (0X61)](#op_nop-0x61)  |   198 |
-| [ONION_V3_PRIVATE_KEY](#onion_v3_private_key) |   189 | [OP_NOT (0X91)](#op_not-0x91)  |   198 |
-| [OP_0 (0X00)](#op_0-0x00)      |   189 | [OP_NOTIF (0X64)](#op_notif-0x64) |   198 |
+| [ONION_V3_PRIVATE_KEY](#onion_v3_private_key) |   189 | [OP_NOT (0X91)](#op_not-0x91)  |   199 |
+| [OP_0 (0X00)](#op_0-0x00)      |   189 | [OP_NOTIF (0X64)](#op_notif-0x64) |   199 |
 | [OP_0NOTEQUAL (0X92)](#op_0notequal-0x92) |   189 | [OP_NUMEQUAL (0X9C)](#op_numequal-0x9c) |   199 |
 | [OP_1 (0X51)](#op_1-0x51)      |   189 | [OP_NUMEQUALVERIFY (0X9D)](#op_numequalverify-0x9d) |   199 |
 | [OP_1ADD (0X8B)](#op_1add-0x8b) |   189 | [OP_NUMNOTEQUAL (0X9E)](#op_numnotequal-0x9e) |   199 |
 | [OP_1NEGATE (0X4F)](#op_1negate-0x4f) |   189 | [OP_OVER (0X78)](#op_over-0x78) |   199 |
-| [OP_1SUB (0X8C)](#op_1sub-0x8c) |   189 | [OP_PICK (0X79)](#op_pick-0x79) |   199 |
+| [OP_1SUB (0X8C)](#op_1sub-0x8c) |   190 | [OP_PICK (0X79)](#op_pick-0x79) |   199 |
 | [OP_2 À OP_16 (0X52 À 0X60)](#op_2-à-op_16-0x52-à-0x60) |   190 | [OP_PUSHDATA1 (0X4C)](#op_pushdata1-0x4c) |   199 |
-| [OP_2DROP (0XD6)](#op_2drop-0xd6) |   190 | [OP_PUSHDATA2 (0X4D)](#op_pushdata2-0x4d) |   199 |
-| [OP_2DUP (0X6E)](#op_2dup-0x6e) |   190 | [OP_PUSHDATA4 (0X4E)](#op_pushdata4-0x4e) |   199 |
-| [OP_2OVER (0X70)](#op_2over-0x70) |   190 | [OP_RETURN (0X6A)](#op_return-0x6a) |   200 |
+| [OP_2DROP (0XD6)](#op_2drop-0xd6) |   190 | [OP_PUSHDATA2 (0X4D)](#op_pushdata2-0x4d) |   200 |
+| [OP_2DUP (0X6E)](#op_2dup-0x6e) |   190 | [OP_PUSHDATA4 (0X4E)](#op_pushdata4-0x4e) |   200 |
+| [OP_2OVER (0X70)](#op_2over-0x70) |   191 | [OP_RETURN (0X6A)](#op_return-0x6a) |   200 |
 | [OP_2ROT (0X71)](#op_2rot-0x71) |   191 | [OP_RIPEMD160 (0XA6)](#op_ripemd160-0xa6) |   200 |
 | [OP_2SWAP (0X72)](#op_2swap-0x72) |   191 | [OP_ROLL (0X7A)](#op_roll-0x7a) |   200 |
 | [OP_3DUP (0X6F)](#op_3dup-0x6f) |   192 | [OP_ROT (0X7B)](#op_rot-0x7b)  |   200 |
 | [OP_ABS (0X90)](#op_abs-0x90)  |   192 | [OP_SHA1 (0XA7)](#op_sha1-0xa7) |   200 |
 | [OP_ADD (0X93)](#op_add-0x93)  |   192 | [OP_SHA256 (0XA8)](#op_sha256-0xa8) |   200 |
-| [OP_BOOLAND (0X9A)](#op_booland-0x9a) |   192 | [OP_SIZE (0X82)](#op_size-0x82) |   200 |
-| [OP_BOOLOR (0X9B)](#op_boolor-0x9b) |   192 | [OP_SUB (0X94)](#op_sub-0x94)  |   200 |
+| [OP_BOOLAND (0X9A)](#op_booland-0x9a) |   193 | [OP_SIZE (0X82)](#op_size-0x82) |   201 |
+| [OP_BOOLOR (0X9B)](#op_boolor-0x9b) |   193 | [OP_SUB (0X94)](#op_sub-0x94)  |   201 |
 | [OP_CAT (0X7E)](#op_cat-0x7e)  |   193 | [OP_SUCCESS](#op_success)      |   202 |
 | [OP_CHECKHASHVERIFY (CHV)](#op_checkhashverify-chv) |   193 | [OP_SWAP (0X7C)](#op_swap-0x7c) |   201 |
 | [OP_CHECKLOCKTIMEVERIFY (0XB1)](#op_checklocktimeverify-0xb1) |   193 | [OP_TOALTSTACK (0X6B)](#op_toaltstack-0x6b) |   201 |
-| [OP_CHECKMULTISIG (0XAE)](#op_checkmultisig-0xae) |   193 | [OP_TRUE (0X51)](#op_true-0x51) |   201 |
-| [OP_CHECKMULTISIGVERIFY (0XAF)](#op_checkmultisigverify-0xaf) |   194 | [OP_TUCK (0X7D)](#op_tuck-0x7d) |   201 |
+| [OP_CHECKMULTISIG (0XAE)](#op_checkmultisig-0xae) |   194 | [OP_TRUE (0X51)](#op_true-0x51) |   201 |
+| [OP_CHECKMULTISIGVERIFY (0XAF)](#op_checkmultisigverify-0xaf) |   194 | [OP_TUCK (0X7D)](#op_tuck-0x7d) |   202 |
 | [OP_CHECKSEQUENCEVERIFY (0XB2)](#op_checksequenceverify-0xb2) |   194 | [OP_VER (0X62)](#op_ver-0x62)  |   202 |
-| [OP_CHECKSIG (0XAC)](#op_checksig-0xac) |   194 | [OP_VERIFY (0X69)](#op_verify-0x69) |   202 |
+| [OP_CHECKSIG (0XAC)](#op_checksig-0xac) |   195 | [OP_VERIFY (0X69)](#op_verify-0x69) |   202 |
 | [OP_CHECKSIGADD (0XBA)](#op_checksigadd-0xba) |   195 | [OP_WITHIN (0XA5)](#op_within-0xa5) |   202 |
 | [OP_CHECKSIGVERIFY (0XAD)](#op_checksigverify-0xad) |   195 | [OPCODES](#opcodes)            |   202 |
-| [OP_CODESEPARATOR (0XAB)](#op_codeseparator-0xab) |   195 | [OPEN ASSETS PROTOCOL (OAP)](#open-assets-protocol-oap) |   202 |
+| [OP_CODESEPARATOR (0XAB)](#op_codeseparator-0xab) |   195 | [OPEN ASSETS PROTOCOL (OAP)](#open-assets-protocol-oap) |   203 |
 | [OP_DEPTH (0X74)](#op_depth-0x74) |   195 | [ORACLE](#oracle)              |   203 |
 | [OP_DROP (0X75)](#op_drop-0x75) |   195 | [ORDINAL NUMBER](#ordinal-number) |   203 |
-| [OP_DUP (0X76)](#op_dup-0x76)  |   195 | [ORDINALS THEORY](#ordinals-theory) |   203 |
+| [OP_DUP (0X76)](#op_dup-0x76)  |   196 | [ORDINALS THEORY](#ordinals-theory) |   203 |
 | [OP_ELSE (0X67)](#op_else-0x67) |   196 | [ORPHELIN](#orphelin)          |   203 |
 | [OP_ENDIF (0X68)](#op_endif-0x68) |   196 | [OSINT](#osint)                |   204 |
 | [OP_EQUAL (0X87)](#op_equal-0x87) |   196 | [OUTBOUND CAPACITY](#outbound-capacity) |   205 |
@@ -582,9 +584,8 @@ Le 24 avril 2024, les deux cofondateurs de Samourai Wallet ont été injustement
 | [OP_EVAL](#op_eval)            |   196 | [OUTPUT](#output)              |   205 |
 | [OP_FALSE (0X00)](#op_false-0x00) |   196 | [OUTPUT LINKING](#output-linking) |   206 |
 | [OP_FROMALTSTACK (0X6C)](#op_fromaltstack-0x6c) |   196 | [OUTPUT SCRIPT DESCRIPTORS](#output-script-descriptors) |   206 |
-| [OP_GREATERTHAN (0XA0)](#op_greaterthan-0xa0) |   196 | [OVERCLOCKING](#overclocking)  |   207 |
+| [OP_GREATERTHAN (0XA0)](#op_greaterthan-0xa0) |   197 | [OVERCLOCKING](#overclocking)  |   207 |
 | [OP_GREATERTHANOREQUAL (0XA2)](#op_greaterthanorequal-0xa2) |   197 | [OVERT ASICBOOST](#overt-asicboost) |   208 |
-| [OP_HASH160 (0XA9)](#op_hash160-0xa9) |   197 |                                |       |
 | | | | |
 
 
@@ -657,32 +658,32 @@ Le 24 avril 2024, les deux cofondateurs de Samourai Wallet ont été injustement
 | | | | |
 |:---------------------------|--:|:---------------------------|--:|
 | | | | |
-| [SAMOURAI WALLET](#samourai-wallet) |   246 | [SIGHASH FLAG](#sighash-flag)  |   257 |
-| [SATOSHI (SAT)](#satoshi-sat)  |   246 | [SIGHASH_NONE (0X02)](#sighash_none-0x02) |   258 |
-| [SCALABILITÉ](#scalabilité)    |   246 | [SIGHASH_NONE/SIGHASH_ACP](#sighash_nonesighash_acp) |   258 |
-| [SCHNORR (PROTOCOLE)](#schnorr-protocole) |   247 | [SIGHASH_SINGLE (0X03)](#sighash_single-0x03) |   258 |
-| [SCORE (SCORE BASED METHOD)](#score-score-based-method) |   247 | [SIGHASH_SINGLE/SIGHASH_ACP](#sighash_singlesighash_acp) |   258 |
-| [SCRIPT](#script)              |   247 | [SIGNATURE AVEUGLE](#signature-aveugle) |   258 |
-| [SCRIPTLESS SCRIPTS](#scriptless-scripts) |   247 | [SIGNATURE NUMÉRIQUE](#signature-numérique) |   259 |
-| [SCRIPTPUBKEY](#scriptpubkey)  |   248 | [SIGNER À L'AVEUGLE](#signer-à-laveugle) |   259 |
-| [SCRIPTSIG](#scriptsig)        |   248 | [SIGNET](#signet)              |   259 |
-| [SCRIPTWITNESS](#scriptwitness) |   249 | [SIGOPS (SIGNATURE OPERATIONS)](#sigops-signature-operations) |   259 |
-| [SDK (SOFTWARE DEVELOPMENT KIT)](#sdk-software-development-kit) |   249 | [SILENT PAYMENTS](#silent-payments) |   261 |
-| [SECP256K1](#secp256k1)        |   249 | [SILK ROAD](#silk-road)        |   262 |
-| [SECP256R1](#secp256r1)        |   250 | [SIMPLIFIED PAYMENT VERIFICATION](#simplified-payment-verification) |   262 |
-| [SEED NODES](#seed-nodes)      |   250 | [SLIP](#slip)                  |   263 |
-| [SEGWIT](#segwit)              |   251 | [SMALL BLOCKERS](#small-blockers) |   263 |
-| [SEGWIT2X](#segwit2x)          |   251 | [SMPPS](#smpps)                |   263 |
-| [SEGWIT V0](#segwit-v0)        |   252 | [SOFT FORK](#soft-fork)        |   263 |
-| [SEGWIT V1](#segwit-v1)        |   252 | [SOMME DE CONTRÔLE](#somme-de-contrôle) |   263 |
-| [SÉLECTION DES PIÈCES](#sélection-des-pièces) |   252 | [SOROBAN](#soroban)            |   264 |
-| [SELF-CUSTODY](#self-custody)  |   252 | [SORTIE LA PLUS GRANDE](#sortie-la-plus-grande) |   264 |
-| [SELFISH MINING](#selfish-mining) |   252 | [SORTIE NON RENTABLE](#sortie-non-rentable) |   264 |
-| [SETTINGS.JSON](#settings.json) |   253 | [SPEEDY TRIAL](#speedy-trial)  |   265 |
-| [SHA256](#sha256)              |   253 | [SPOF](#spof)                  |   265 |
-| [SHA512](#sha512)              |   253 | [SPREAD (WST)](#spread-wst)    |   265 |
-| [SHARDS](#shards)              |   254 | [STABLECOIN](#stablecoin)      |   266 |
-| [SHAREDCOIN](#sharedcoin)      |   254 | [STAMPS](#stamps)              |   266 |
+| [SAMOURAI WALLET](#samourai-wallet) |   246 | [SIGHASH_NONE (0X02)](#sighash_none-0x02) |   258 |
+| [SATOSHI (SAT)](#satoshi-sat)  |   246 | [SIGHASH_NONE/SIGHASH_ACP](#sighash_nonesighash_acp) |   258 |
+| [SCALABILITÉ](#scalabilité)    |   246 | [SIGHASH_SINGLE (0X03)](#sighash_single-0x03) |   258 |
+| [SCHNORR (PROTOCOLE)](#schnorr-protocole) |   247 | [SIGHASH_SINGLE/SIGHASH_ACP](#sighash_singlesighash_acp) |   258 |
+| [SCORE (SCORE BASED METHOD)](#score-score-based-method) |   247 | [SIGNATURE AVEUGLE](#signature-aveugle) |   258 |
+| [SCRIPT](#script)              |   247 | [SIGNATURE NUMÉRIQUE](#signature-numérique) |   259 |
+| [SCRIPTLESS SCRIPTS](#scriptless-scripts) |   247 | [SIGNER À L'AVEUGLE](#signer-à-laveugle) |   259 |
+| [SCRIPTPUBKEY](#scriptpubkey)  |   248 | [SIGNET](#signet)              |   259 |
+| [SCRIPTSIG](#scriptsig)        |   248 | [SIGOPS (SIGNATURE OPERATIONS)](#sigops-signature-operations) |   259 |
+| [SCRIPTWITNESS](#scriptwitness) |   249 | [SILENT PAYMENTS](#silent-payments) |   261 |
+| [SDK (SOFTWARE DEVELOPMENT KIT)](#sdk-software-development-kit) |   249 | [SILK ROAD](#silk-road)        |   262 |
+| [SECP256K1](#secp256k1)        |   249 | [SIMPLIFIED PAYMENT VERIFICATION](#simplified-payment-verification) |   262 |
+| [SECP256R1](#secp256r1)        |   250 | [SLIP](#slip)                  |   263 |
+| [SEED NODES](#seed-nodes)      |   250 | [SMALL BLOCKERS](#small-blockers) |   263 |
+| [SEGWIT](#segwit)              |   251 | [SMPPS](#smpps)                |   263 |
+| [SEGWIT2X](#segwit2x)          |   251 | [SOFT FORK](#soft-fork)        |   263 |
+| [SEGWIT V0](#segwit-v0)        |   252 | [SOMME DE CONTRÔLE](#somme-de-contrôle) |   263 |
+| [SEGWIT V1](#segwit-v1)        |   252 | [SOROBAN](#soroban)            |   264 |
+| [SÉLECTION DES PIÈCES](#sélection-des-pièces) |   252 | [SORTIE LA PLUS GRANDE](#sortie-la-plus-grande) |   264 |
+| [SELF-CUSTODY](#self-custody)  |   252 | [SORTIE NON RENTABLE](#sortie-non-rentable) |   264 |
+| [SELFISH MINING](#selfish-mining) |   252 | [SPEEDY TRIAL](#speedy-trial)  |   265 |
+| [SETTINGS.JSON](#settings.json) |   253 | [SPOF](#spof)                  |   265 |
+| [SHA256](#sha256)              |   253 | [SPREAD (WST)](#spread-wst)    |   265 |
+| [SHA512](#sha512)              |   253 | [STABLECOIN](#stablecoin)      |   266 |
+| [SHARDS](#shards)              |   254 | [STAMPS](#stamps)              |   266 |
+| [SHAREDCOIN](#sharedcoin)      |   254 | [STÉGANOGRAPHIE](#stéganographie) |   266 |
 | [SHARES](#shares)              |   254 | [STONEWALL](#stonewall)        |   266 |
 | [SHARES DIFFICULTY](#shares-difficulty) |   255 | [STONEWALL X2](#stonewall-x2)  |   267 |
 | [SHITCOIN](#shitcoin)          |   255 | [STRATUM](#stratum)            |   268 |
@@ -692,6 +693,7 @@ Le 24 avril 2024, les deux cofondateurs de Samourai Wallet ont été injustement
 | [SIGHASH_ALL/SIGHASH_ACP](#sighash_allsighash_acp) |   256 | [SURFACE D'ATTAQUE](#surface-dattaque) |   269 |
 | [SIGHASH_ANYPREVOUT](#sighash_anyprevout) |   257 | [SWEEP TRANSACTION](#sweep-transaction) |   270 |
 | [SIGHASH_ANYPREVOUTANYSCRIPT](#sighash_anyprevoutanyscript) |   257 | [SYBIL (ATTAQUE)](#sybil-attaque) |   270 |
+| [SIGHASH FLAG](#sighash-flag)  |   257 |                                |       |
 | | | | |
 
 
@@ -4846,6 +4848,10 @@ Désigne une opération de minage de Bitcoin qui fonctionne de manière autonome
 
 Le minage off-grid présente souvent des avantages écologiques, car il peut, dans certains cas, aider à réduire les émissions de gaz à effet de serre en limitant le torchage. De plus, il rend économiquement viables certains projets de production d'énergie renouvelable malgré leur intermittence naturelle.
 
+## OMNI
+
+Omni Layer (ex-Mastercoin) est une plateforme open-source et décentralisée de création et gestion d'actifs sur la blockchain Bitcoin. Parmi les actifs sur Omni on peut citer Tether (USDT) et MaidSafeCoin (MAID).
+
 ## ON-CHAIN
 
 ► ***FR : SUR-CHAÎNE***
@@ -6859,6 +6865,10 @@ Catégorie de cryptomonnaie conçue pour maintenir une valeur stable par rapport
 Protocole qui permet d'intégrer des données d'image formatées directement sur la blockchain Bitcoin via des transactions multisignatures brutes (P2MS). Stamps encode le contenu binaire d'une image en base 64 et l'ajoute dans les clés d’un P2MS 1/3. Une clé est réelle et sert à dépenser les fonds, tandis que les deux autres sont des fausses clés (on ne connait pas la clé privée associée) qui stockent les données. En encodant les données directement sous forme de clés publiques plutôt qu'en utilisant des sorties `OP_RETURN`, les images stockées avec le protocole Stamps sont particulièrement intensives en termes de charge de travail pour les nœuds. Cette méthode crée notamment de multiples UTXOs, ce qui augmente la taille de l'UTXO set et pose des problèmes pour les nœuds complets.
 
 > ► *Pour plus d'informations, voir les définitions d'**[UTREEXO](#utreexo)** et d'**[UTXO SET](#utxo-set)**.*
+
+## STÉGANOGRAPHIE
+
+La stéganographie est une technique consistant à dissimuler une information sensible dans un objet ou media de couverture d'apparence anodine (typiquement un signal de type texte, son, image, vidéo, transaction Bitcoin, etc.), qui n'éveillera pas les soupçons même si elle est à la vue de tous ; seul un destinataire légitime saura qu'il y a là une information pour lui et où la chercher.
 
 ## STONEWALL
 

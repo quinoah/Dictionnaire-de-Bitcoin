@@ -1,4 +1,4 @@
-**Nombre total de définitions : ` 803 `**
+**Nombre total de définitions : ` 805 `**
 
 ### A
 
@@ -531,6 +531,7 @@
 - [OFF-CHAIN](./dictionnaire/O.md#off-chain)
 - [OFFER](./dictionnaire/O.md#offer)
 - [OFF-GRID](./dictionnaire/O.md#off-grid)
+- [OMNI](./dictionnaire/O.md#omni)
 - [ON-CHAIN](./dictionnaire/O.md#on-chain)
 - [ON-GRID](./dictionnaire/O.md#on-grid)
 - [ONION_PRIVATE_KEY](./dictionnaire/O.md#onion_private_key)
@@ -785,6 +786,7 @@
 - [SPREAD (WST)](./dictionnaire/S.md#spread-wst)
 - [STABLECOIN](./dictionnaire/S.md#stablecoin)
 - [STAMPS](./dictionnaire/S.md#stamps)
+- [STÉGANOGRAPHIE](./dictionnaire/S.md#stéganographie)
 - [STONEWALL](./dictionnaire/S.md#stonewall)
 - [STONEWALL X2](./dictionnaire/S.md#stonewall-x2)
 - [STRATUM](./dictionnaire/S.md#stratum)
