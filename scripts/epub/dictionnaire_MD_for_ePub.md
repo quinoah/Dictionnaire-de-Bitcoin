@@ -4,7 +4,7 @@
 Dictionnaire de Bitcoin : Tout le vocabulaire technique de Bitcoin
 
 
-Version du 25 January 2025
+Version du 25 janvier 2025
 
 https://github.com/LoicPandul/Dictionnaire-de-Bitcoin
 
