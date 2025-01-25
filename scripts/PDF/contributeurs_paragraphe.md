@@ -4,7 +4,8 @@ Je tiens à remercier tous les contributeurs pour leur précieuse aide, leurs co
 * Psyduck07 (https://github.com/Psyduck07) ;
 * Adrien Lacombe (https://github.com/adrienlacombe) ;
 * Ludovic Lars (https://github.com/lugaxker) ;
-* Beemo (https://github.com/nflatrea).
+* Beemo (https://github.com/nflatrea) ;
+* quinoah (https://github.com/quinoah).
 \
 Je tiens également à remercier toutes les personnes qui m'ont aidé dans la rédaction de mes autres contenus, qui ont servi de fondement au _Dictionnaire de Bitcoin_ :
 * Grittoshi (https://twitter.com/Grittoshi) ;
