@@ -1,10 +1,12 @@
 import os
 import datetime
+import locale
 
 def generate_md_for_epub(md_input_path, md_output_path, contributors_path, license_info):
     with open(md_input_path, 'r', encoding='utf-8') as input_file:
         content = input_file.read()
 
+    locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
     current_date = datetime.datetime.now().strftime("%d %B %Y")
 
     license_text = f"""
