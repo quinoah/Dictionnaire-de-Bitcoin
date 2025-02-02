@@ -302,7 +302,7 @@
 - [DÉRIVATION](./dictionnaire/D.md#dérivation)
 - [DÉRIVATION ENDURCIE](./dictionnaire/D.md#dérivation-endurcie)
 - [DÉRIVATION NORMALE](./dictionnaire/D.md#dérivation-normale)
-- [DETERMINISTIC BITCOIN COMMITMENT](./dictionnaire/D.md#deterministic-bitcoin-commitment)
+- [DBC](./dictionnaire/D.md#dbc)
 - [DGM](./dictionnaire/D.md#dgm)
 - [DIFFICULTÉ](./dictionnaire/D.md#difficulté)
 - [DIFFIE-HELLMAN](./dictionnaire/D.md#diffie-hellman)

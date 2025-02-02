@@ -1,6 +1,6 @@
-## DETERMINISTIC BITCOIN COMMITMENT
+## DBC
 
-Ensemble de règles permettant d’inscrire de manière prouvable et unique un engagement dans une transaction Bitcoin. Dans le protocole RGB, il existe deux formes principales de DBC :
+Sigle de « Deterministic Bitcoin Commitment ». C'est un ensemble de règles permettant d’inscrire de manière prouvable et unique un engagement dans une transaction Bitcoin. Dans le protocole RGB, il existe deux formes principales de DBC :
 * Opret ;
 * Tapret.
 

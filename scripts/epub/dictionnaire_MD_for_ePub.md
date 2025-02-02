@@ -1907,13 +1907,13 @@ $$
 
 Ce mécanisme comprend deux opérations principales :
 <ul>
-<li>*Commit* : on applique une fonction cryptographique à un message $m$ et à un aléa $r$ pour produire $C$ ;</li>
-<li>*Verify* : on utilise $C$, le message $m$ et la valeur $r$ pour vérifier que ce commitment est correct. La fonction renvoie `Vrai` ou `Faux`.</li>
+<li>Commit : on applique une fonction cryptographique à un message $m$ et à un aléa $r$ pour produire $C$ ;</li>
+<li>Verify : on utilise $C$, le message $m$ et la valeur $r$ pour vérifier que ce commitment est correct. La fonction renvoie `Vrai` ou `Faux`.</li>
 </ul>
 
 Un commitment doit respecter deux propriétés :
 <ul>
-<li>*Binding* : il doit être impossible de trouver deux messages différents produisant le même $C$ :</li>
+<li>Binding : il doit être impossible de trouver deux messages différents produisant le même $C$ :</li>
 </ul>
 $$
 m' : \, | \, : m' \neq m \quad \text{and} \quad r' : \, | \, : r' \neq r \quad 
@@ -1924,7 +1924,7 @@ $$
 $$
 
 <ul>
-<li>*Hiding* : la connaissance de $C$ ne doit pas révéler le contenu de $m$.</li>
+<li>Hiding : la connaissance de $C$ ne doit pas révéler le contenu de $m$.</li>
 </ul>
 
 Dans le cas du protocole RGB, un commitment est inclus dans une transaction Bitcoin afin de prouver l’existence d’une certaine information à un instant donné, sans dévoiler cette information elle-même.
@@ -2289,9 +2289,9 @@ Processus de génération de clés enfants dans les portefeuilles HD. La dériva
 
 > ► *Pour plus d'informations, voir la définition de [**CHEMIN DE DÉRIVATION**](#chemin-de-dérivation).*
 
-## DETERMINISTIC BITCOIN COMMITMENT
+## DBC
 
-Ensemble de règles permettant d’inscrire de manière prouvable et unique un engagement dans une transaction Bitcoin. Dans le protocole RGB, il existe deux formes principales de DBC :
+Sigle de « Deterministic Bitcoin Commitment ». C'est un ensemble de règles permettant d’inscrire de manière prouvable et unique un engagement dans une transaction Bitcoin. Dans le protocole RGB, il existe deux formes principales de DBC :
 <ul>
 <li>Opret ;</li>
 <li>Tapret.</li>
