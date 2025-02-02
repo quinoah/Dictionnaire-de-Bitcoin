@@ -119,6 +119,10 @@ Suite finie et non ambiguë d'instructions permettant de réaliser une tâche. D
 
 Désigne toute cryptomonnaie autre que le bitcoin (BTC). Le terme « altcoin » est la contraction de « alternative » et de « coin » (pièce alternative). Certains bitcoiners maximalistes parlent également de « shitcoins » pour désigner les altcoins.
 
+## ALUVM
+
+Sigle de « *Algorithmic Logic Unit Virtual Machine* ». Machine virtuelle à registres spécifiquement conçue pour l’exécution déterministe de tâches de calcul distribuées et la validation de smart contracts, notamment dans le cadre des contrats RGB. AluVM a initialement été développé par Dr. Maxim Orlovsky et est actuellement maintenu par l'association LNP/BP Standards.
+
 ## ANALYSE DE CHAINE
 
 ► ***EN : CHAIN ANALYSIS***
@@ -141,6 +145,16 @@ Notons que les deux premières heuristiques sur Bitcoin ont été formulées par
 Autre nom parfois donné à CPFP (*Child-Pay-For-Parent*). Le minage des ancêtres est le principe selon lequel un mineur ne choisit pas une transaction uniquement sur la base de ses propres frais de transaction, mais prend aussi en compte les frais des transactions ascendantes.
 
 > ► *Pour plus d'informations, voir la définition de [**CPFP (CHILD PAY FOR PARENT)**](#cpfp-child-pay-for-parent).*
+
+## ANCHOR
+
+Dans le cadre du protocole RGB, un Anchor représente un ensemble de données côté client permettant de prouver l’inclusion d’un engagement unique dans une transaction. Dans le protocole RGB, un Anchor est constitué des éléments suivants :
+* L’identifiant de la transaction Bitcoin (TXID) de la witness transaction ;
+* Le Multi Protocol Commitment (MPC) ;
+* Le Deterministic Bitcoin Commitment (DBC) ;
+* L’Extra Transaction Proof (ETP) si l’on emploie le mécanisme d'engagement Tapret.
+
+Un Anchor sert donc à établir un lien vérifiable entre une transaction Bitcoin précise et des données privées validées par le protocole RGB. Il garantit que ces données sont bel et bien incluses dans la blockchain, sans pour autant que leur contenu exact soit exposé publiquement.
 
 ## ANCHOR OUTPUTS
 
@@ -253,6 +267,14 @@ Pour résumer, AsicBoost permet de ne pas avoir à effectuer un vrai SHA256 comp
 ## ASMAP
 
 Outil inventé par Gleb Naumenko et utilisé par Bitcoin Core pour améliorer la sécurité et la topologie du réseau Bitcoin en diversifiant les connexions entre les nœuds. Il s'agit d'une carte d'adressage IP vers les numéros de systèmes autonomes (ASN), permettant une meilleure répartition des connexions sortantes en fonction de l'ASN plutôt que des préfixes IP. Cela aide à prévenir les attaques Eclipse (notamment l'attaque Erebus) en rendant plus difficile pour un attaquant de simuler plusieurs nœuds.
+
+## ASSIGNMENT
+
+Dans la logique du protocole RGB, un Assignment est l’équivalent d’une sortie de transaction (output) qui modifie, met à jour ou crée certaines propriétés au sein de l’état d’un contract. Un Assignment comporte deux éléments :
+* Une Seal Definition (la référence à un UTXO précis) ;
+* Un Owned State (les données décrivant l’état associé à ce nouveau détenteur).
+
+Un Assignment indique donc qu’une portion de l’état (par exemple, un actif) est désormais allouée à un détenteur particulier, identifié via un Single-use Seal lié à un UTXO.
 
 ## ASSUME UTXO
 
@@ -1215,6 +1237,12 @@ Processeur de paiement open-source qui permet aux commerçants et aux utilisateu
 
 Période prolongée durant laquelle le prix d'un actif, tel que le bitcoin, monte par rapport à une monnaie fiat, typiquement le dollar américain. Depuis son introduction en 2009, le cycle des bull markets du BTC semble influencé par les halvings, des événements programmés qui réduisent de moitié la récompense des mineurs et qui interviennent approximativement tous les quatre ans.
 
+## BUSINESS LOGIC
+
+► ***FR : LOGIQUE MÉTIER***
+
+Dans le cadre du protocole RGB, la Business Logic regroupe l’ensemble des règles et des opérations internes d’un contrat, décrites par son schéma (c’est-à-dire la structure même du contrat). Elle dicte la manière dont l’état du contrat peut évoluer et sous quelles conditions.
+
 ## BYZANTINE FAULT TOLERANCE (BFT)
 
 ► ***FR : TOLÉRANCE AUX DÉFAUTS BYZANTINS***
@@ -1525,6 +1553,12 @@ K = 03678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb6
 
 Acronyme de « *Command Line Interface* », ou « interface en ligne de commande » en français. C'est une méthode d'interaction avec des logiciels qui repose sur la saisie de commandes textuelles dans un terminal ou une console. La CLI se différencie de la GUI (interface graphique utilisateur) qui dispose de méthodes d'interactions de pointage (avec la souris) et d'éléments visuels interactifs.
 
+## CLIENT-SIDE VALIDATION
+
+► ***FR : VALIDATION CÔTÉ CLIENT***
+
+Processus par lequel chaque partie (client) vérifie un ensemble de données échangées en privé, selon les règles d’un protocole. Dans le cas du protocole RGB, ces données échangées sont regroupées dans ce qu’on appelle des consignments. Contrairement au protocole Bitcoin qui exige que toutes les transactions soient publiées on-chain, RGB permet de ne stocker en public que des commitments (ancrés dans Bitcoin), tandis que l’essentiel des informations de contrat (transitions, attestations, preuves) reste off-chain, partagé seulement entre les utilisateurs concernés.
+
 ## C-LIGHTNING (CLN)
 
 Ancien nom de l'implémentation Core-Lightning. 
@@ -1688,6 +1722,34 @@ Toute personne physique ou morale qui accepte d'échanger un bien ou un service 
 
 Dans le cadre de Git, représente une capture instantanée des modifications apportées à l'ensemble de fichiers d'un dépôt. Chaque commit est identifié par un hachage unique et inclut un message descriptif, l'identité de l'auteur et la date. Il permet de suivre l'évolution du projet et de revenir à des états antérieurs si nécessaire.
 
+## COMMITMENT
+
+► ***FR : ENGAGEMENT***
+
+Un Commitment (au sens cryptographique) est un objet mathématique, noté $C$, dérivé de façon déterministe à partir d’une opération sur une donnée structurée $m$ (le message) et d’une valeur aléatoire $r$. On écrit :
+$$
+C = \text{commit}(m, r)
+$$
+
+Ce mécanisme comprend deux opérations principales :
+* *Commit* : on applique une fonction cryptographique à un message $m$ et à un aléa $r$ pour produire $C$ ;
+* *Verify* : on utilise $C$, le message $m$ et la valeur $r$ pour vérifier que ce commitment est correct. La fonction renvoie `Vrai` ou `Faux`.
+
+Un commitment doit respecter deux propriétés :
+* *Binding* : il doit être impossible de trouver deux messages différents produisant le même $C$ :
+$$
+m' : \, | \, : m' \neq m \quad \text{and} \quad r' : \, | \, : r' \neq r \quad 
+$$
+Tels que :
+$$
+\text{verify}(m, r, C) = \text{verify}(m', r', C) \rightarrow \text{True}
+$$
+
+* *Hiding* : la connaissance de $C$ ne doit pas révéler le contenu de $m$.
+
+Dans le cas du protocole RGB, un commitment est inclus dans une transaction Bitcoin afin de prouver l’existence d’une certaine information à un instant donné, sans dévoiler cette information elle-même.
+
+
 ## COMPACT BLOCK RELAY
 
 Protocole introduit dans Bitcoin Core en 2016 via le BIP152 qui propose une méthode d'économie de bande passante pour les nœuds du réseau. Compact Block Relay permet de communiquer les informations des blocs de manière compacte, en se basant sur l'hypothèse que les nœuds ont déjà une grande partie des transactions d'un bloc récent dans leur mempool. Plutôt que de transmettre chaque transaction intégralement, ce qui constituerait un doublon, Compact Block Relay propose d'envoyer uniquement de courts identifiants pour les transactions déjà connues des pairs, accompagnés de quelques transactions sélectionnées (notamment la transaction coinbase et celles que le nœud est susceptible de ne pas connaître). Le nœud peut ensuite demander à ses pairs les éventuelles transactions manquantes. Compact Block Relay permet ainsi de diminuer la quantité de données échangées lors de la propagation des blocs, ce qui réduit ainsi les pics de bande passante et améliore l'efficacité globale du réseau.
@@ -1734,6 +1796,14 @@ Mécanisme par lequel tous les nœuds du réseau Bitcoin parviennent à s'accord
 
 > ► *Par extension, certaines personnes appellent par « Consensus » les règles tacites du protocole Bitcoin.*
 
+## CONSIGNMENT
+
+Dans le cadre du protocole RGB, regroupe les données échangées entre les parties, soumises à la *Client-side Validation*. Il existe deux grandes catégories de consignments :
+* Contract Consignment : fourni par l’issuer (émetteur du contrat), il comprend les informations d’initialisation telles que le Schema, la Genesis, l’Interface et l’Implementation de l'Interface.
+* Transfer Consignment : fourni par la partie qui paie (payer). Il contient tout l’historique de transitions d’état aboutissant au terminal consignment (c’est-à-dire l’état final reçu par le payeur).
+
+Ces consignments ne sont pas enregistrés publiquement dans la blockchain ; ils sont échangés directement entre les parties concernées sur le canal de communication de leur choix.
+
 ## CONSOLIDATION
 
 Transaction spécifique dans laquelle plusieurs petits UTXOs sont fusionnés en entrée pour former un seul et plus gros UTXO en sortie. Cette opération est une transaction effectuée vers son propre portefeuille. L'objectif de la consolidation est de tirer profit des périodes où les frais sur le réseau Bitcoin sont bas pour fusionner plusieurs petits UTXOs en un seul plus grand en valeur. Ainsi, on anticipe les dépenses obligatoires en cas de hausse des frais, permettant d'économiser sur les frais de transaction futurs. 
@@ -1750,6 +1820,35 @@ Cependant, il est important de noter que les transactions de consolidation sont 
 
 Dans le cadre du minage, un conteneur est une structure modulaire utilisée pour héberger et opérer un grand nombre d'ASICs. Ces containers sont conçus pour optimiser l'espace, la gestion de la chaleur et l'alimentation électrique. Ils sont équipés de systèmes de refroidissement à l'air. Leur avantage principal réside dans leur mobilité et leur capacité à être déployés rapidement, souvent à proximité de sources d'énergie bon marché.
 
+## CONTRACT OPERATION
+
+Dans le cadre du protocole RGB, désigne une mise à jour de l’état du contrat effectuée selon les règles du Schema. Les opérations suivantes existent dans RGB :
+* State Transition ;
+* Genesis ;
+* State Extension.
+
+Chaque opération modifie l’état en y ajoutant ou en y remplaçant certaines données (Global State, Owned State…).
+
+## CONTRACT PARTICIPANT
+
+Dans le cadre de RGB, un Contract Participant est un acteur prenant part aux opérations relatives au contrat. On distingue ainsi :
+* L’issuer du contrat, qui crée la Genesis (l’origine du contrat) ;
+* Les contract parties, c’est-à-dire les détenteurs de droits sur l’état du contrat ;
+* Les public parties, acteurs pouvant construire des State Extensions si le contrat propose des Valencies accessibles au public.
+
+## CONTRACT RIGHTS
+
+Les Contract Rights désignent les différents droits que peuvent exercer les acteurs d’un contrat RGB. Ils se classent en plusieurs catégories :
+* Les ownership rights, associés à la détention d’un UTXO particulier (via un Seal Definition) ;
+* Les executive rights, c’est-à-dire la capacité de construire une ou plusieurs transitions (State Transitions) conformes au Schema ;
+* Les public rights, lorsque le Schema autorise certains usages publics, par exemple la création d’une State Extension via la rédemption d’une Valency.
+
+## CONTRACT STATE
+
+Dans le cadre de RGB, le Contract State correspond à l’état courant d’un contrat à un instant donné. Il peut être constitué de données à la fois publiques et privées, qui reflète la situation du contrat. Dans RGB, on distingue :
+* Le Global State, qui comprend les propriétés publiques du contrat (mises en place dès la Genesis ou ajoutées via des mises à jour autorisées) ;
+* Les Owned States, qui appartiennent à des détenteurs précis, identifiés par leurs UTXOs.
+
 ## CONTRAT INTELLIGENT
 
 ► ***EN : SMART CONTRACT***
@@ -1757,6 +1856,10 @@ Dans le cadre du minage, un conteneur est une structure modulaire utilisée pour
 Programme qui s'exécute automatiquement lorsque certaines conditions prédéfinies sont remplies. Un contrat intelligent est donc un ensemble de clauses entre plusieurs parties qui peuvent se réaliser sans nécessiter l'intervention d'un tiers de confiance. Ces contrats déclenchent généralement des actions spécifiques comme un transfert de bitcoins.
 
 > ► *En français, on parle également parfois de « contrat autonome ».*
+
+## CONTRAT RGB
+
+Désigne un ensemble de droits exécutés numériquement entre plusieurs acteurs via le protocole RGB. Il possède un état actif et une logique d’affaires, définie par un Schema, qui précise quelles opérations sont autorisées (transferts, extensions, etc.). L’état d’un contrat, ainsi que les règles de validité, s’expriment dans le Schema. À tout moment, le contrat n’évolue que conformément à ce qui est permis par ce Schema et par les scripts de validation (exécutés, par exemple, dans AluVM).
 
 ## CONTRIBUTEUR (CORE)
 
@@ -1990,6 +2093,14 @@ Processus de génération de clés enfants dans les portefeuilles HD. La dériva
 
 > ► *Pour plus d'informations, voir la définition de [**CHEMIN DE DÉRIVATION**](#chemin-de-dérivation).*
 
+## DETERMINISTIC BITCOIN COMMITMENT
+
+Ensemble de règles permettant d’inscrire de manière prouvable et unique un engagement dans une transaction Bitcoin. Dans le protocole RGB, il existe deux formes principales de DBC :
+* Opret ;
+* Tapret.
+
+Ces mécanismes définissent précisément comment l'engagement est encodé dans les sorties ou dans la structure d’une transaction Bitcoin, afin de s’assurer que cet engagement est repérable et vérifiable de façon déterministe.
+
 ## DGM
 
 Sigle de « *Double Geometric Method* ». C'est une méthode de calcul de la rémunération des mineurs dans le contexte des pools de minage. DGM est une méthode hybride, censée combiner les avantages de PPLNS et de la méthode dite « géométrique ». Elle dispose d'une faible variance sur les parts, à la manière de PPLNS, puis permet au mineur d'absorber de la variance pour réduire celle de la pool dans un second temps. DGM est résistant au pool hopping en garantissant que le paiement attendu par share reste constant. La méthode est établie sur des scores, rendant les paiements indépendants de l'historique de la pool et presque totalement indépendants des changements futurs de difficulté.
@@ -2017,6 +2128,12 @@ Processus par lequel les informations, comme les transactions et les blocs, sont
 Dans le contexte du protocole Ordinals, c'est un sat qui a été inscrit avec des données spécifiques via le mécanisme d'inscriptions. Ces artefacts peuvent inclure des images, des textes, ou tout autre type de contenu numérique et sont liés indissociablement au satoshi correspondant.
 
 > ► *En français, on peut traduire ce terme par « artefact numérique ». Pour plus d'informations, voir les définitions de **[INSCRIPTIONS](#inscriptions)** et de **[ORDINALS THEORY](#ordinals-theory)**.*
+
+## DIRECTED ACYCLIC GRAPH
+
+► ***FR : GRAPHE ORIENTÉ ACYCLIQUE***
+
+Un DAG est une structure mathématique composée de nœuds interconnectés par des arcs orientés, sans former de cycle, ce qui permet un ordonnancement topologique rigoureux. Dans le cadre du protocole RGB, le DAG sert à représenter la structure des shards de contrats, pour la gestion et la vérification des transitions d’état. Cette représentation graphique permet d’assurer la cohérence et la traçabilité des modifications dans un environnement distribué.
 
 ## DISTRIBUÉ
 
@@ -2211,6 +2328,10 @@ Comme le précise LaurentMT dans le Space Kek #19 (un podcast francophone), l'ut
 
 Désigne l'ordre dans lequel une séquence d'octets est arrangée et interprétée en informatique. On distingue deux types : « big-endian », où l'octet de poids le plus fort (le plus significatif) est stocké en premier, et « little-endian », où l'octet de poids le plus faible (le moins significatif) est stocké en premier.
 
+## ENGRAVING
+
+Dans le cadre du protocole RGB, l’*engraving* désigne une chaîne de données optionnelle que peuvent inscrire successivement les détenteurs d’un contrat dans l’historique de ses transitions. Accessible notamment via l’interface RGB21, cette fonctionnalité permet d’ajouter des informations commémoratives ou descriptives sans modifier la validité des opérations. Elle enrichit l’historique du contrat en intégrant des métadonnées supplémentaires.
+
 ## ENTÊTE DE BLOC
 
 ► ***EN : BLOCK HEADER***
@@ -2343,6 +2464,10 @@ Modifier l’extra-nonce dans la transaction coinbase change l’identifiant de 
 Dans le cadre des pools de minage, l'extra-nonce est souvent divisé en deux parties : une générée par la pool pour identifier chaque hacheur, et une autre modifiée par le hacheur dans la recherche d'une share valide. Cela permet aux différents hacheurs de la pool de travailler simultanément sur un même bloc candidat avec l'entièreté de la plage des nonces, sans pour autant dupliquer le même travail au niveau de la pool.
 
 > ► *Pour plus d'informations, voir la définition de [**NONCE**](#nonce).*
+
+## EXTRA TRANSACTION PROOF
+
+Dans le cadre du protocole RGB, l’ETP constitue la partie de l’Anchor qui intègre les données complémentaires indispensables à la validation d’un commitment de type Tapret (dans le contexte de Taproot). Elle comprend, entre autres, la clé publique interne associée au script Taproot et les informations spécifiques requises pour le *Script Path Spend*. Cette composante assure ainsi la vérification précise des engagements cryptographiques.
 
 
 ## FARADAY
@@ -2539,6 +2664,10 @@ Cette citation est une référence à un article du journal *The Times*. Le mess
 
 Puisqu’il incarne le tout premier bloc de la blockchain Bitcoin, le bloc de Genèse ne possède évidemment pas de champ contenant le hachage du bloc antérieur (car il n'y en pas). Par ailleurs, les 50 bitcoins générés en récompense dans ce bloc ne sont pas dépensables au niveau protocolaire.
 
+## GENESIS (RGB)
+
+Dans le cadre du protocole RGB, la Genesis désigne l’ensemble des données initiales, régies par un schéma spécifique, qui établissent l’état de départ de tout contrat. Ces informations constituent le point d’ancrage à partir duquel s’opère l’évolution des smart contracts et la gestion des jetons RGB. On peut la rapprocher du concept de *Genesis Block* sur Bitcoin, ou bien au concept de transaction Coinbase, mais ici au niveau *client-side* et des jetons RGB.
+
 ## GETWORK
 
 Ancien protocole de minage pour Bitcoin créé en 2010 par m0mchil. Getwork permettait aux mineurs de recevoir des données de travail de la part d'un nœud complet. Il était établi sur des requêtes RPC permettant d'obtenir des entêtes de blocs sur lesquels travailler pour trouver une preuve de travail valide. Getwork était optimisé pour le minage par GPU. Ce fut le premier logiciel open source conçu pour optimiser la communication entre les nœuds et les mineurs à une époque où quelques acteurs gardaient ces logiciels privés. Getwork a été progressivement remplacé par Stratum, plus efficace, notamment pour les ASICs, et moins gourmand en bande passante.
@@ -2558,6 +2687,10 @@ Plateforme de gestion et d'hébergement de code source qui facilite la collabora
 ## GITLAB
 
 Plateforme de gestion et d'hébergement de code source qui facilite la collaboration entre développeurs. GitLab est la principale alternative à GitHub. La plateforme est assez similaire, mais elle offre également la possibilité d'être autohébergée. Comme son nom l'indique, GitLab est établi sur le système de contrôle de version Git. Cette plateforme permet donc de suivre les changements de code, de gérer les versions et d'encourager la collaboration grâce à des outils comme les pull requests et les issues. Certains projets liés à Bitcoin comme Samourai Wallet, Whirlpool ou encore RoninDojo utilisent GitLab.
+
+## GLOBAL STATE
+
+Dans le cadre du protocole RGB, le Global State désigne l’ensemble des propriétés publiques d’un contrat, établies lors de la Genesis. Il agit comme un registre public et regroupe les éléments d’état accessibles à tous et pouvant être mis à jour par des transitions autorisées conformément aux règles définies par le schéma du contrat. Contrairement aux Owned States, qui sont associés à des entités spécifiques, le Global State n’appartient à aucune partie en particulier.
 
 ## GNPA
 
@@ -2858,6 +2991,14 @@ Ces artefacts numériques, comme des NFTs, peuvent être échangés et conservé
 
 > ► *Pour plus d'informations, voir les définitions de **[ORDINALS THEORY](#ordinals-theory)** et de **[DIGITAL ARTIFACTS](#digital-artifacts)**.*
 
+## INTERFACE
+
+Dans le cadre du protocole RGB, l’Interface désigne l’ensemble des instructions qui décodent les données binaires compilées dans un Schema ou au sein des opérations et états d’un contrat. Elle sert de couche d’interprétation, afin de transformer les informations brutes en une représentation lisible par l’utilisateur ou son wallet.
+
+## INTERFACE IMPLEMENTATION
+
+Dans le cadre du protocole RGB, l’Interface Implementation désigne l’ensemble des déclarations établissant la correspondance entre une Interface et un Schema. Elle permet de réaliser la traduction sémantique des données binaires d’un contrat, afin d'assurer leur interprétation correcte par l’utilisateur ou par les applications, telles que les wallets.
+
 ## INVOICE LIGHTNING
 
 Requête de paiement Lightning générée par le destinataire, qui contient toutes les informations nécessaires pour réaliser la transaction. 
@@ -2865,6 +3006,10 @@ Requête de paiement Lightning générée par le destinataire, qui contient tout
 Une invoice Lightning contient la destination du paiement sous la forme de la clé publique du nœud destinataire, mais également un préfixe `ln`, le montant, un temps avant expiration, le hachage du secret utilisé dans le cadre des HTLCs, ainsi que d'autres métadonnées, pour certaines optionnelles, comme des options relatives au routage. Ces invoices sont définies par la norme BOLT11. Une fois payée, une invoice Lightning ne peut plus être réutilisée.
 
 > ► *En français, on pourrait traduire « invoice » par « facture », mais on utilise généralement le terme anglais même en français.*
+
+## INVOICE RGB
+
+Dans le cadre du protocole RGB, une Invoice se présente sous la forme d’une URL encodée en base58, qui intègre les informations indispensables à la construction d’une State Transition par le payeur. En pratique, il s’agit d’une facture qui permet à la contrepartie de générer la transition adéquate pour transférer un actif ou actualiser l’état d’un contrat.
 
 ## IOU
 
@@ -3376,6 +3521,10 @@ Terme générique pour désigner toutes les techniques de paiement sur Lightning
 Les paiements multi-path offrent également de légers avantages en termes de confidentialité, car il devient plus difficile pour un observateur de lier chaque fraction de paiement à l’ensemble de la transaction. Toutefois, dans sa version de base, tous les fragments partagent le même secret pour les HTLCs, ce qui peut rendre la transaction traçable si un observateur est présent sur plusieurs routes. De plus, du fait que le secret est unique pour toutes les fractions du paiement, celui-ci n'est pas atomique. Cela signifie que certaines parties du paiement peuvent être exécutées avec succès, tandis que d'autres peuvent échouer. Ces inconvénients sont corrigés avec les « *Atomic Multi-Path Payment* ».
 
 > ► *On parle également parfois de « Multi-Part Payment » pour désigner cette même méthode. Pour plus d'informations, voir la définition de **[ATOMIC MULTI-PATH PAYMENT (AMP)](#atomic-multi-path-payments)**.*
+
+## MULTI PROTOCOL COMMITMENT
+
+Dans le cadre du protocole RGB, le MPC désigne la structure d’arbre de Merkle conçue pour intégrer, au sein d’une unique transaction Bitcoin, plusieurs Transition Bundles issus de contrats distincts. Ce mécanisme permet de regrouper divers engagements, lesquels correspondent à des contrats ou des actifs différents, en un seul point d’ancrage. En consolidant ces transitions dans une structure hiérarchisée, le MPC optimise l’occupation de l’espace de bloc, afin de réduire les frais de transaction et d'améliorer l’efficacité de l’utilisation de la blockchain.
 
 ## MULTISIG
 
@@ -4227,6 +4376,14 @@ Version ouverte et transparente d'AsicBoost. AsicBoost est une technique d'optim
 
 > ► *Pour plus d'informations, voir les définitions de **[ASICBOOST](#asicboost)** et **[COVERT ASICBOOST](#covert-asicboost)**.*
 
+## OWNED STATE
+
+Dans le cadre du protocole RGB, l’Owned State désigne la portion du Contract State encapsulée dans un Assignment et explicitement associée à un détenteur particulier par le biais d’un Single-use Seal pointant vers un UTXO. Cette composante représente, par exemple, un actif numérique ou un droit contractuel spécifique attribué à un individu. En isolant l’état lié à chaque titulaire, l’Owned State garantit une gestion précise et sécurisée de la propriété au sein des smart contracts RGB.
+
+## OWNERSHIP
+
+Dans le cadre du protocole RGB, le terme Ownership désigne la capacité de contrôler et de dépenser un UTXO tel qu’identifié par une Seal Definition. Lorsqu’un Owned State est associé à un UTXO, le propriétaire de ce dernier détient le droit, conformément aux règles du contrat, de transférer ou de faire évoluer l’état correspondant.
+
 
 ## P2MS
 
@@ -4410,6 +4567,24 @@ Identifiant unique lié à un portefeuille Bitcoin qui implémente cette option.
 `PBKDF2` est le sigle de *Password-Based Key Derivation Function 2*. C’est une méthode pour créer des clés cryptographiques à partir d'un mot de passe en utilisant une fonction de dérivation. Elle prend en entrée un mot de passe, un sel cryptographique, et applique de manière itérative une fonction prédéterminée (souvent une fonction de hachage comme `SHA256` ou un `HMAC`) sur ces données. Ce processus est répété de nombreuses fois afin de générer une clé cryptographique. 
 
 Dans le contexte de Bitcoin, `PBKDF2` est utilisée en conjonction avec la fonction `HMAC-SHA512` pour créer la graine d'un portefeuille déterministe et hiérarchique (seed) à partir d'une phrase de récupération de 12 ou de 24 mots. Le sel cryptographique utilisé dans ce cas est la passphrase BIP39, et le nombre d’itérations est de `2048`.
+
+## PEDERSEN COMMITMENT
+
+Un Pedersen commitment est un type d'engagement cryptographique présentant la propriété d’être homomorphique vis-à-vis de l’opération d’addition. Cela signifie qu’il est possible de valider la somme de deux engagements sans dévoiler les valeurs individuelles.
+
+Formellement, si :
+
+$$
+C1=\text{commit}(m1,r1) \quad C2=\text{commit}(m2,r2)
+$$
+
+alors :
+
+$$
+C3=C1⋅C2=\text{commit}(m1+m2, r1+r2)
+$$
+
+Cette propriété devient utile, par exemple, pour dissimuler les montants de tokens échangés dans des système de cryptomonnaies, comme par exemple RGB, tout en pouvant vérifier les totaux.
 
 ## PEER DISCOVERY
 
@@ -4784,6 +4959,10 @@ De manière plus générale, en informatique, ce que l’on appelle la « récu
 
 > ► *Pour plus d'informations, voir la définition de [**COVENANT**](#covenant).*
 
+## REDEEM
+
+Dans le cadre du protocole RGB, dans une State Extension, le terme Redeem désigne l’action de récupérer ou d’exploiter une Valency préalablement déclarée. La Valency, en tant que droit public inscrit dans l’état du contrat, confère à un participant autorisé la possibilité de réclamer une extension précise de cet état. Ce mécanisme permet ainsi de formaliser l’exercice de droits spécifiques définis dans le schéma du contrat, garantissant que seule la partie légitimement habilitée peut initier la transition correspondante et exploiter les ressources associées.
+
 ## REDEEMSCRIPT
 
 Script qui défini les conditions spécifiques que doivent remplir les inputs pour débloquer les fonds associés à un output P2SH. Dans un UTXO P2SH, le `scriptPubKey` contient le hachage du `redeemScript`. Lorsqu'une transaction souhaite dépenser cet UTXO en entrée, elle doit fournir le `redeemScript` en clair qui correspond au hachage contenu dans le `scriptPubKey`. Le `redeemScript` est donc donné dans le `scriptSig` de l'input, en plus des autres éléments nécessaires pour satisfaire les conditions du script, comme les signatures ou les clés publiques. Cette structure encapsulée garantit que les détails des conditions de dépense restent cachés jusqu'à ce que les bitcoins soient effectivement dépensés. On l'utilise notamment pour les portefeuilles multisignatures Legacy P2SH.
@@ -4898,6 +5077,12 @@ On dit d'une réutilisation d'adresse qu'elle est "interne" lorsqu'elle survient
 
 ![](../../dictionnaire/assets/10.png)
 
+## RGB
+
+Système de contrats intelligents décentralisé et confidentiel, conçu pour fonctionner avec Bitcoin et le Lightning Network. RGB fonctionne sur un modèle de validation côté client et sépare le stockage de l’état des contrats de la blockchain, afin de ne conserver que des engagements cryptographiques sur celle-ci. Ainsi, l’historique complet des états est maintenu en dehors de la chaîne, ce qui permet une meilleure scalabilité et confidentialité. RGB permet ainsi la création de contrats complexes afin d'emmètre des tokens, des NFT, des identités décentralisées ou des solutions de DeFi, directement par-dessus Bitcoin.
+
+Sur RGB, la résistance à la double dépense est assurée par l'utilisation de Single-use Seal, un mécanisme cryptographique qui tire parti du fait que les UTXOs sur Bitcoin ne peuvent être utilisés qu'une seule fois. Quant à l'authenticité des jetons, elle est garantie par la vérification côté client de l'historique des états, depuis la création du contrat jusqu'à son état le plus récent.
+
 ## RICOCHET
 
 Technique consistant à réaliser plusieurs transactions fictives vers soi-même pour simuler un transfert de propriété des bitcoins. Le Ricochet permet d'estomper les spécificités pouvant compromettre la fongibilité d'une pièce Bitcoin. Par exemple, si vous réalisez un coinjoin, votre pièce en sortie de mix sera identifiée comme telle. Cette étiquette de « _pièce issue d'un coinjoin_ » peut affecter la fongibilité d'un UTXO. Des entités réglementées, telles que les plateformes d'échange, peuvent refuser d'accepter un UTXO ayant subi un coinjoin, voire exiger des explications de la part de son propriétaire, avec le risque de voir son compte bloqué ou ses fonds gelés. Dans certains cas, la plateforme peut même signaler votre comportement aux autorités étatiques. C'est là que la méthode du Ricochet entre en jeu. Pour estomper l'empreinte laissée par un coinjoin, Ricochet exécute quatre transactions successives où l'utilisateur transfère ses fonds à lui-même sur des adresses différentes. Après cet enchaînement de transactions, l'outil Ricochet achemine finalement les bitcoins vers leur destination finale, comme par exemple une plateforme d'échange. L'objectif est de créer de la distance entre la transaction coinjoin originale et l'acte de dépense final. De cette manière, les outils d'analyse de chaîne vont penser qu'il y a vraisemblablement eu un transfert de propriété après le coinjoin, et qu'il est donc inutile d'entamer des actions à l'encontre de l'émetteur. Le cas d'utilisation le plus courant de Ricochet se présente quand il est nécessaire de dissimuler une participation antérieure à un coinjoin sur un UTXO, notamment pour éviter d'être la cible des politiques LCB/FT des plateformes régulées ou des blacklists. L'outil Ricochet est disponible sur le portefeuille Samourai Wallet.
@@ -4956,6 +5141,10 @@ Le satoshi, souvent abrégé en « sat », est la plus petite subdivision du b
 Fait référence à la capacité de Bitcoin à gérer une augmentation du volume de transactions tout en maintenant des performances acceptables. Bitcoin est confronté à des limitations techniques inhérentes, telles que la taille des blocs, l'intervalle de temps entre chaque bloc, et le fait qu'une transaction ne soit considérée comme immuable qu'après plusieurs confirmations. Ces contraintes empêchent Bitcoin de traiter un nombre illimité de transactions de manière efficace. Lorsque la demande pour l'espace dans les blocs s'intensifie, les utilisateurs sont contraints d'augmenter les frais proposés pour que leurs transactions soient traitées. La scalabilité, c'est-à-dire la capacité de Bitcoin à gérer l'augmentation du volume de transactions, peut être améliorée soit par des modifications directes du protocole, soit par des solutions externes comme le Lightning Network. La question de la scalabilité a toujours été au cœur de vifs débats au sein de la communauté. On retrouve la première tentative d'augmentation de la taille des blocs en octobre 2010 avec [un patch proposé par Jeff Garzik](https://bitcointalk.org/index.php?topic=1347.0). C'est ce sujet de la scalabilité qui a notamment mené à la guerre des blocs entre 2015 et 2017.
 
 > ► *Le terme de « scalabilité » est un anglicisme. La bonne traduction du terme anglais « scalabilty » est « évolutivité » ou bien « passage à l'échelle ». Toutefois, il est généralement admis au sein de la communauté d'utiliser directement le terme de « scalabilité ». Pour plus d'informations, voir la définition de **[BLOCKSIZE WAR](#blocksize-war)**.*
+
+## SCHEMA
+
+Dans le cadre du protocole RGB, un Schema désigne un morceau de code déclaratif qui définit l’ensemble des variables, règles et logiques d’affaires (*Business Logic*) régissant le fonctionnement d’un contrat. Il spécifie la structure de l’état, notamment la configuration initiale établie lors de la Genesis, et détaille les types de transitions autorisées ainsi que les conditions strictes de leur validation. Le Schema sert de cadre normatif, garantissant que toute évolution de l’état du contrat se conforme aux règles établies par l’émetteur.
 
 ## SCHNORR (PROTOCOLE)
 
@@ -5034,6 +5223,10 @@ OP_DUP OP_HASH160 OP_PUSHBYTES_20 <adresse> OP_EQUALVERIFY OP_CHECKSIG
 Ensemble d'outils logiciels fournissant les ressources nécessaires aux développeurs pour créer des applications sur une plateforme spécifique. Un SDK inclut des bibliothèques, des guides de développement, des exemples de code ou encore des processus de compilation. Les SDK facilitent et accélèrent le développement en offrant des modules réutilisables. Sur Bitcoin, il existe le BDK (*Bitcoin Dev Kit*) et le LDK (*Lightning Dev Kit*).
 
 > ► *En anglais, les SDK sont également parfois appelés « devkit ». Pour plus d'informations, voir les définitions de [**BDK**](#bdk-bitcoin-dev-kit) et de [**LDK**](#ldk-lightning-dev-kit).*
+
+## SEAL DEFINITION
+
+Dans le cadre du protocole RGB, la Seal Definition constitue la composante d’un Assignment qui relie explicitement un commitment à un UTXO détenu par le nouveau propriétaire. Elle précise l’emplacement de l’état en identifiant l'UTXO dans lequel celui-ci est conservé, ce qui établit de manière formelle la propriété d’un actif ou d’un droit sur RGB.
 
 ## SECP256K1
 
@@ -5132,7 +5325,13 @@ Sigle pour « *Secure Hash Algorithm 512 bits* ». C'est une fonction de hacha
 
 > ► *Pour plus d'informations, voir la définition de [**FONCTION DE HACHAGE**](#fonction-de-hachage).*
 
-## SHARDS
+## SHAREDCOIN
+
+Service de mixage de pièces Bitcoin lancé en 2013 par Blockchain.info, mais qui n'est plus en service aujourd'hui. Ce service proposait aux utilisateurs d'améliorer leur confidentialité sur Bitcoin en combinant leurs transactions avec celles d'autres personnes, grâce à une technique de mixage similaire aux coinjoins. SharedCoin apportait une forme de confidentialité sans nécessiter de faire confiance au coordinateur, car les pièces des utilisateurs restaient sous leur contrôle tout au long du processus. Contrairement aux services de mixage centralisés de l'époque, les bitcoins ne pouvaient pas être volés par l'intermédiaire. SharedCoin a par la suite fait face à des problèmes menant à la désanonymisassions de certains de leurs mixages au début de l'été 2014. 
+
+> ► *Pour plus d'informations, voir la définition de [**COINJOIN**](#coinjoin).*
+
+## SHARDS (LIGHTNING)
 
 ► ***FR : FRACTIONS***
 
@@ -5142,11 +5341,9 @@ Dans le cadre des MPP, tous les shards partagent le même secret, alors que dans
 
 > ► *Pour plus d'informations, voir la définition de **[MULTI-PATH PAYMENT (MPP)](#multi-path-payments-mpp)**.*
 
-## SHAREDCOIN
+## SHARDS (RGB)
 
-Service de mixage de pièces Bitcoin lancé en 2013 par Blockchain.info, mais qui n'est plus en service aujourd'hui. Ce service proposait aux utilisateurs d'améliorer leur confidentialité sur Bitcoin en combinant leurs transactions avec celles d'autres personnes, grâce à une technique de mixage similaire aux coinjoins. SharedCoin apportait une forme de confidentialité sans nécessiter de faire confiance au coordinateur, car les pièces des utilisateurs restaient sous leur contrôle tout au long du processus. Contrairement aux services de mixage centralisés de l'époque, les bitcoins ne pouvaient pas être volés par l'intermédiaire. SharedCoin a par la suite fait face à des problèmes menant à la désanonymisassions de certains de leurs mixages au début de l'été 2014. 
-
-> ► *Pour plus d'informations, voir la définition de [**COINJOIN**](#coinjoin).*
+Dans le cadre du protocole RGB, un Shard représente une branche distincte au sein du graphe orienté acyclique (DAG) qui retrace l’historique des State Transitions d’un contrat. Il constitue un sous-ensemble cohérent de l’ensemble des transitions, correspondant par exemple à la séquence d’opérations nécessaires pour attester la validité d’un actif particulier depuis la Genesis. Ce mécanisme permet d’isoler des segments spécifiques de l’historique global, afin de faciliter la vérification côté client.
 
 ## SHARES
 
@@ -5363,6 +5560,10 @@ Méthode permettant aux clients légers de vérifier les transactions Bitcoin sa
 
 > ► *On utilise souvent le sigle « SPV » pour évoquer cette méthode. Pour plus d'informations, voir la définition de [**NOEUD SPV**](#noeud-spv-noeud-léger).*
 
+## SINGLE-USE SEAL
+
+Désigne une promesse d’engagement cryptographique relative à un message encore inconnu, lequel sera révélé une seule fois à l’avenir et devra être accessible à l’ensemble d’une audience déterminée. Ce mécanisme vise à prévenir la création de multiples engagements concurrents pour un même sceau, ce qui garantie l’unicité de chaque validation. En imposant cette contrainte d’utilisation unique, le Single-use Seal est utilisé sur RGB pour éviter la double-dépense.
+
 ## SLIP
 
 Sigle de « *Satoshi Labs Improvement Proposals* ». C'est un ensemble de propositions visant à améliorer ou à standardiser l'utilisation de Bitcoin, émanant de SatoshiLabs, la société à l'origine des portefeuilles matériels Trezor. Ces propositions s'articulent souvent comme des extensions de BIP (*Bitcoin Improvement Proposals*), dans le but d'enrichir les standards existants. Elles exposent les décisions techniques prises par SatoshiLabs qui ne trouvent pas leur place dans les BIP, mais qui restent pertinentes pour d'autres développeurs de logiciels de portefeuilles ou de portefeuilles matériels, notamment pour contribuer à l'uniformisation des processus.
@@ -5446,6 +5647,18 @@ Catégorie de cryptomonnaie conçue pour maintenir une valeur stable par rapport
 Protocole qui permet d'intégrer des données d'image formatées directement sur la blockchain Bitcoin via des transactions multisignatures brutes (P2MS). Stamps encode le contenu binaire d'une image en base 64 et l'ajoute dans les clés d’un P2MS 1/3. Une clé est réelle et sert à dépenser les fonds, tandis que les deux autres sont des fausses clés (on ne connait pas la clé privée associée) qui stockent les données. En encodant les données directement sous forme de clés publiques plutôt qu'en utilisant des sorties `OP_RETURN`, les images stockées avec le protocole Stamps sont particulièrement intensives en termes de charge de travail pour les nœuds. Cette méthode crée notamment de multiples UTXOs, ce qui augmente la taille de l'UTXO set et pose des problèmes pour les nœuds complets.
 
 > ► *Pour plus d'informations, voir les définitions d'**[UTREEXO](#utreexo)** et d'**[UTXO SET](#utxo-set)**.*
+
+## STASH
+
+Dans le cadre du protocole RGB, le Stash désigne l’ensemble des données stockées côté client par un utilisateur pour un ou plusieurs contrats. Ces données comprennent notamment l’historique des transitions, les consignments ainsi que les preuves de validité, indispensables au processus de validation côté client (*Client-side Validation*). Chaque détenteur conserve uniquement les fragments pertinents de l’historique (*shards*) nécessaires à la vérification et à la mise à jour de ses contrats.
+
+## STATE EXTENSION
+
+Dans le cadre du protocole RGB, une State Extension désigne une opération contractuelle permettant d’initier une mise à jour de l’état d’un contrat via la rédemption de Valencies préalablement déclarées. Cette procédure exploite un droit public inscrit dans le contrat pour déclencher une modification, qui ne devient effective qu’après avoir été clôturée par une State Transition. Cette dernière intègre la mise à jour définitive de l’état du contrat.
+
+## STATE TRANSITION
+
+Dans le cadre du protocole RGB, la State Transition désigne l’opération permettant de faire évoluer l’état d’un contrat vers une nouvelle configuration. Elle peut modifier tant les données du Global State que celles des Owned States. Chaque transition est strictement vérifiée selon les règles définies dans le Schema du contrat, ce qui garantie la conformité des modifications aux contraintes établies lors de la Genesis. Cette opération est ancrée dans la blockchain Bitcoin via un commitment.
 
 ## STÉGANOGRAPHIE
 
@@ -5568,6 +5781,10 @@ Avant SegWit, les signatures pouvaient être légèrement modifiées sans être 
 
 > ► *Pour plus d'informations, voir la définition de **[SEGWIT](#segwit)**.*
 
+## TERMINAL CONSIGNEMENT
+
+Dans le cadre du protocole RGB, le Terminal Consignment, également appelé Consignment Endpoint, désigne le transfert consignment intégrant l’état final d’un contrat, obtenu par la State Transition générée à partir de l’Invoice du destinataire (payee). Ce mécanisme représente le point d’aboutissement d’un transfert, en rassemblant l’ensemble des données nécessaires pour attester que la propriété ou l’état du contrat a été dûment transmis et validé.
+
 ## TESTNET
 
 Version alternative de Bitcoin utilisée exclusivement à des fins de test et de développement. Il s'agit d'un réseau séparé du réseau principal (mainnet), avec ses propres blocs et transactions, permettant aux développeurs de tester de nouvelles fonctionnalités, applications et mises à jour sans risque pour le réseau principal. Le testnet permet également d'éviter de payer des frais de transaction lors de tests. Les bitcoins utilisés sur le testnet n'ont aucune valeur réelle.
@@ -5648,6 +5865,10 @@ Transaction Bitcoin qui, en plus de respecter les règles de consensus, entre é
 Ces règles sont donc configurées et exécutées en local par chaque nœud et peuvent varier d'un nœud à l'autre. Elles s'appliquent exclusivement sur les transactions non confirmées. Ainsi, un nœud n'acceptera une transaction qu'il jugerait non standard que si celle-ci est déjà incluse dans un bloc valide. 
 
 Notons que la majorité des nœuds laissent les configurations par défaut telles que préétablies dans Bitcoin Core, engendrant de fait une homogénéité des règles de standardisation à travers le réseau. Une transaction qui, bien que conforme aux règles de consensus, ne respecte pas ces règles de standardisation, aura des difficultés à se propager sur le réseau. Elle pourra toutefois être incluse dans un bloc valide si jamais elle atteint un mineur. Dans la pratique, ces transactions, qualifiées de non standard, sont souvent transmises directement à un mineur par des voies externes au réseau pair-à-pair de Bitcoin. C'est souvent le seul moyen pour confirmer ce type de transaction. Par exemple, une transaction qui n'alloue aucuns frais est à la fois valide selon les règles de consensus et non standard, car la politique par défaut de Bitcoin Core pour le paramètre `minRelayTxFee` est de `0.00001` (en BTC/kB).
+
+## TRANSITION BUNDLE
+
+Dans le cadre du protocole RGB, un Transition Bundle désigne un regroupement de State Transitions appartenant à un même contrat, toutes engagées simultanément dans une unique witness transaction Bitcoin. Ce mécanisme permet de consolider plusieurs mises à jour ou transferts dans un seul point d’ancrage on-chain, afin d'optimiser l’utilisation de l’espace de bloc.
 
 ## TUMBLEBIT
 
@@ -5777,6 +5998,10 @@ Cet UTXO set est conservé par chaque nœud afin de pouvoir vérifier rapidement
 
 > ► *Pour plus d'informations, voir la définition d'[**UTXO**](.U.md#utxo).*
 
+
+## VALENCY
+
+Dans le cadre du protocole RGB, une Valency désigne un droit public qui ne nécessite pas le stockage explicite d’un état, mais qui peut être ultérieurement activé via une State Extension. Ce mécanisme constitue une possibilité préalablement déclarée dans la logique du contrat, accessible à tous ou à certains acteurs spécifiques, et permet de déclencher une extension spécifique de l’état contractuel lorsque les conditions définies sont remplies. La Valency offre ainsi une solution flexible et modulable pour anticiper des évolutions futures du contrat.
 
 ## VANITY (ADDRESS)
 
@@ -5910,6 +6135,10 @@ Rapport ou guide qui informe les lecteurs de manière concise sur une question c
 Script qui spécifie les conditions sous lesquelles les bitcoins peuvent être dépensés dans les UTXOs P2WSH ou P2SH-P2WSH. Typiquement, les `witnessScript` déterminent les conditions d'un portefeuille multisignatures sous standard SegWit. Dans ces standards de script, le `scriptPubKey` de l'UTXO (la sortie) contient un hachage du `witnessScript`. Pour utiliser cet UTXO comme entrée dans une nouvelle transaction, le détenteur doit révéler le `witnessScript` original, afin de prouver sa correspondance avec l'empreinte dans le `scriptPubKey`. Le `witnessScript` doit alors être inclus dans le `scriptWitness` de la transaction, qui contient également les éléments nécessaires pour valider le script, comme par exemple les signatures.  Le `witnessScript` est donc l'équivalent pour SegWit du `redeemScript` dans une transaction P2SH, à la différence près qu'il est placé dans le témoin de la transaction, et non dans le `scriptSig`.
 
 > ► *Attention, le `witnessScript` ne doit pas être confondu avec le `scriptWitness`. Tandis que le `witnessScript` définit les conditions de dépense d'un UTXO P2WSH ou P2SH-P2WSH et constitue un script à part entière, le `scriptWitness` contient les données de témoin de tout input SegWit.*
+
+## WITNESS TRANSACTION
+
+Dans le cadre du protocole RGB, la Witness Transaction désigne la transaction Bitcoin qui clôt le Single-use Seal autour d’un message intégrant un Multi Protocol Commitment (MPC). Cette opération consiste soit à dépenser un UTXO existant, soit à en créer un nouveau, afin de verrouiller l’engagement contractuel inscrit dans le protocole. La Witness Transaction constitue donc une preuve on-chain que l’état du contrat RGB a été fixé à un instant précis.
 
 ## WTXID
 

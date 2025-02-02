@@ -476,11 +476,11 @@ C = \text{commit}(m, r)
 $$
 
 Ce mécanisme comprend deux opérations principales :
-- *Commit* : on applique une fonction cryptographique à un message $m$ et à un aléa $r$ pour produire $C$ ;
-- *Verify* : on utilise $C$, le message $m$ et la valeur $r$ pour vérifier que ce commitment est correct. La fonction renvoie `Vrai` ou `Faux`.
+* Commit : on applique une fonction cryptographique à un message $m$ et à un aléa $r$ pour produire $C$ ;
+* Verify : on utilise $C$, le message $m$ et la valeur $r$ pour vérifier que ce commitment est correct. La fonction renvoie `Vrai` ou `Faux`.
 
 Un commitment doit respecter deux propriétés :
-- *Binding* : il doit être impossible de trouver deux messages différents produisant le même $C$ :
+* Binding : il doit être impossible de trouver deux messages différents produisant le même $C$ :
 $$
 m' : \, | \, : m' \neq m \quad \text{and} \quad r' : \, | \, : r' \neq r \quad 
 $$
@@ -489,7 +489,7 @@ $$
 \text{verify}(m, r, C) = \text{verify}(m', r', C) \rightarrow \text{True}
 $$
 
-- *Hiding* : la connaissance de $C$ ne doit pas révéler le contenu de $m$.
+* Hiding : la connaissance de $C$ ne doit pas révéler le contenu de $m$.
 
 Dans le cas du protocole RGB, un commitment est inclus dans une transaction Bitcoin afin de prouver l’existence d’une certaine information à un instant donné, sans dévoiler cette information elle-même.
 
@@ -543,8 +543,8 @@ Mécanisme par lequel tous les nœuds du réseau Bitcoin parviennent à s'accord
 ## CONSIGNMENT
 
 Dans le cadre du protocole RGB, regroupe les données échangées entre les parties, soumises à la *Client-side Validation*. Il existe deux grandes catégories de consignments :
-- Contract Consignment : fourni par l’issuer (émetteur du contrat), il comprend les informations d’initialisation telles que le Schema, la Genesis, l’Interface et l’Implementation de l'Interface.
-- Transfer Consignment : fourni par la partie qui paie (payer). Il contient tout l’historique de transitions d’état aboutissant au terminal consignment (c’est-à-dire l’état final reçu par le payeur).
+* Contract Consignment : fourni par l’issuer (émetteur du contrat), il comprend les informations d’initialisation telles que le Schema, la Genesis, l’Interface et l’Implementation de l'Interface.
+* Transfer Consignment : fourni par la partie qui paie (payer). Il contient tout l’historique de transitions d’état aboutissant au terminal consignment (c’est-à-dire l’état final reçu par le payeur).
 
 Ces consignments ne sont pas enregistrés publiquement dans la blockchain ; ils sont échangés directement entre les parties concernées sur le canal de communication de leur choix.
 
@@ -567,31 +567,31 @@ Dans le cadre du minage, un conteneur est une structure modulaire utilisée pour
 ## CONTRACT OPERATION
 
 Dans le cadre du protocole RGB, désigne une mise à jour de l’état du contrat effectuée selon les règles du Schema. Les opérations suivantes existent dans RGB :
-- State Transition ;
-- Genesis ;
-- State Extension.
+* State Transition ;
+* Genesis ;
+* State Extension.
 
 Chaque opération modifie l’état en y ajoutant ou en y remplaçant certaines données (Global State, Owned State…).
 
 ## CONTRACT PARTICIPANT
 
 Dans le cadre de RGB, un Contract Participant est un acteur prenant part aux opérations relatives au contrat. On distingue ainsi :
-- L’issuer du contrat, qui crée la Genesis (l’origine du contrat) ;
-- Les contract parties, c’est-à-dire les détenteurs de droits sur l’état du contrat ;
-- Les public parties, acteurs pouvant construire des State Extensions si le contrat propose des Valencies accessibles au public.
+* L’issuer du contrat, qui crée la Genesis (l’origine du contrat) ;
+* Les contract parties, c’est-à-dire les détenteurs de droits sur l’état du contrat ;
+* Les public parties, acteurs pouvant construire des State Extensions si le contrat propose des Valencies accessibles au public.
 
 ## CONTRACT RIGHTS
 
 Les Contract Rights désignent les différents droits que peuvent exercer les acteurs d’un contrat RGB. Ils se classent en plusieurs catégories :
-- Les ownership rights, associés à la détention d’un UTXO particulier (via un Seal Definition) ;
-- Les executive rights, c’est-à-dire la capacité de construire une ou plusieurs transitions (State Transitions) conformes au Schema ;
-- Les public rights, lorsque le Schema autorise certains usages publics, par exemple la création d’une State Extension via la rédemption d’une Valency.
+* Les ownership rights, associés à la détention d’un UTXO particulier (via un Seal Definition) ;
+* Les executive rights, c’est-à-dire la capacité de construire une ou plusieurs transitions (State Transitions) conformes au Schema ;
+* Les public rights, lorsque le Schema autorise certains usages publics, par exemple la création d’une State Extension via la rédemption d’une Valency.
 
 ## CONTRACT STATE
 
 Dans le cadre de RGB, le Contract State correspond à l’état courant d’un contrat à un instant donné. Il peut être constitué de données à la fois publiques et privées, qui reflète la situation du contrat. Dans RGB, on distingue :
-- Le Global State, qui comprend les propriétés publiques du contrat (mises en place dès la Genesis ou ajoutées via des mises à jour autorisées) ;
-- Les Owned States, qui appartiennent à des détenteurs précis, identifiés par leurs UTXOs.
+* Le Global State, qui comprend les propriétés publiques du contrat (mises en place dès la Genesis ou ajoutées via des mises à jour autorisées) ;
+* Les Owned States, qui appartiennent à des détenteurs précis, identifiés par leurs UTXOs.
 
 ## CONTRAT INTELLIGENT
 

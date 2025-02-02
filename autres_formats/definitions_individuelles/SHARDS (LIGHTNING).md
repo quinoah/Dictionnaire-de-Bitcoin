@@ -1,4 +1,4 @@
-## SHARDS
+## SHARDS (LIGHTNING)
 
 ► ***FR : FRACTIONS***
 
