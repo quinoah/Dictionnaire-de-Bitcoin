@@ -28,6 +28,10 @@ Cette citation est une référence à un article du journal *The Times*. Le mess
 
 Puisqu’il incarne le tout premier bloc de la blockchain Bitcoin, le bloc de Genèse ne possède évidemment pas de champ contenant le hachage du bloc antérieur (car il n'y en pas). Par ailleurs, les 50 bitcoins générés en récompense dans ce bloc ne sont pas dépensables au niveau protocolaire.
 
+## GENESIS (RGB)
+
+Dans le cadre du protocole RGB, la Genesis désigne l’ensemble des données initiales, régies par un schéma spécifique, qui établissent l’état de départ de tout contrat. Ces informations constituent le point d’ancrage à partir duquel s’opère l’évolution des smart contracts et la gestion des jetons RGB. On peut la rapprocher du concept de *Genesis Block* sur Bitcoin, ou bien au concept de transaction Coinbase, mais ici au niveau *client-side* et des jetons RGB.
+
 ## GETWORK
 
 Ancien protocole de minage pour Bitcoin créé en 2010 par m0mchil. Getwork permettait aux mineurs de recevoir des données de travail de la part d'un nœud complet. Il était établi sur des requêtes RPC permettant d'obtenir des entêtes de blocs sur lesquels travailler pour trouver une preuve de travail valide. Getwork était optimisé pour le minage par GPU. Ce fut le premier logiciel open source conçu pour optimiser la communication entre les nœuds et les mineurs à une époque où quelques acteurs gardaient ces logiciels privés. Getwork a été progressivement remplacé par Stratum, plus efficace, notamment pour les ASICs, et moins gourmand en bande passante.
@@ -47,6 +51,10 @@ Plateforme de gestion et d'hébergement de code source qui facilite la collabora
 ## GITLAB
 
 Plateforme de gestion et d'hébergement de code source qui facilite la collaboration entre développeurs. GitLab est la principale alternative à GitHub. La plateforme est assez similaire, mais elle offre également la possibilité d'être autohébergée. Comme son nom l'indique, GitLab est établi sur le système de contrôle de version Git. Cette plateforme permet donc de suivre les changements de code, de gérer les versions et d'encourager la collaboration grâce à des outils comme les pull requests et les issues. Certains projets liés à Bitcoin comme Samourai Wallet, Whirlpool ou encore RoninDojo utilisent GitLab.
+
+## GLOBAL STATE
+
+Dans le cadre du protocole RGB, le Global State désigne l’ensemble des propriétés publiques d’un contrat, établies lors de la Genesis. Il agit comme un registre public et regroupe les éléments d’état accessibles à tous et pouvant être mis à jour par des transitions autorisées conformément aux règles définies par le schéma du contrat. Contrairement aux Owned States, qui sont associés à des entités spécifiques, le Global State n’appartient à aucune partie en particulier.
 
 ## GNPA
 

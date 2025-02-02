@@ -281,6 +281,10 @@ Les paiements multi-path offrent également de légers avantages en termes de co
 
 > ► *On parle également parfois de « Multi-Part Payment » pour désigner cette même méthode. Pour plus d'informations, voir la définition de **[ATOMIC MULTI-PATH PAYMENT (AMP)](./A.md#atomic-multi-path-payments)**.*
 
+## MULTI PROTOCOL COMMITMENT
+
+Dans le cadre du protocole RGB, le MPC désigne la structure d’arbre de Merkle conçue pour intégrer, au sein d’une unique transaction Bitcoin, plusieurs Transition Bundles issus de contrats distincts. Ce mécanisme permet de regrouper divers engagements, lesquels correspondent à des contrats ou des actifs différents, en un seul point d’ancrage. En consolidant ces transitions dans une structure hiérarchisée, le MPC optimise l’occupation de l’espace de bloc, afin de réduire les frais de transaction et d'améliorer l’efficacité de l’utilisation de la blockchain.
+
 ## MULTISIG
 
 Les portefeuilles multisignatures, souvent abrégés « multisig », sont conçus pour renforcer la sécurisation de bitcoins en exigeant plusieurs signatures provenant de différentes clés privées pour autoriser une dépense. Cette méthode répartit le risque entre plusieurs clés, ce qui permet de réduire à la fois le risque de perte et celui de vol (selon la configuration du multisig). Les portefeuilles multisig fonctionnent selon un modèle « m-de-n », où `m` désigne le nombre minimal de signatures requises pour valider une transaction, et `n` le nombre total de clés impliquées. Par exemple, une configuration 2-de-3 nécessite deux signatures sur trois possibles pour valider une transaction. Cette approche offre une sécurité supérieure par rapport aux portefeuilles à clé unique, mais elle introduit également plus de complexité en termes de gestion et de sauvegarde. De plus, les transactions utilisant les anciens standards de multisig sont moins confidentielles et plus coûteuses en frais que les transactions singlesig classiques. Cependant, des innovations récentes telles que Taproot et l'utilisation de descriptors vont permettre de minimiser, voire d'éliminer, ces inconvénients des multisigs.

@@ -882,6 +882,12 @@ Processeur de paiement open-source qui permet aux commerçants et aux utilisateu
 
 Période prolongée durant laquelle le prix d'un actif, tel que le bitcoin, monte par rapport à une monnaie fiat, typiquement le dollar américain. Depuis son introduction en 2009, le cycle des bull markets du BTC semble influencé par les halvings, des événements programmés qui réduisent de moitié la récompense des mineurs et qui interviennent approximativement tous les quatre ans.
 
+## BUSINESS LOGIC
+
+► ***FR : LOGIQUE MÉTIER***
+
+Dans le cadre du protocole RGB, la Business Logic regroupe l’ensemble des règles et des opérations internes d’un contrat, décrites par son schéma (c’est-à-dire la structure même du contrat). Elle dicte la manière dont l’état du contrat peut évoluer et sous quelles conditions.
+
 ## BYZANTINE FAULT TOLERANCE (BFT)
 
 ► ***FR : TOLÉRANCE AUX DÉFAUTS BYZANTINS***

@@ -712,3 +712,11 @@ Pratique qui consiste à augmenter la fréquence de fonctionnement des puces ASI
 Version ouverte et transparente d'AsicBoost. AsicBoost est une technique d'optimisation algorithmique utilisée dans le minage de Bitcoin. Les mineurs utilisant la version Overt manipulent le champ `nVersion` du bloc candidat et utilisent cette modification comme un nonce supplémentaire. Cette méthode laisse le véritable champ `Nonce` du bloc inchangé lors de chaque tentative de hachage, ce qui réduit ainsi les calculs nécessaires pour chaque SHA256, en conservant certaines données identiques entre les tentatives. Cette version est détectable publiquement et ne dissimule pas ses modifications au reste du réseau, à l'inverse de la version Covert d'AsicBoost.
 
 > ► *Pour plus d'informations, voir les définitions de **[ASICBOOST](./A.md#asicboost)** et **[COVERT ASICBOOST](./C.md#covert-asicboost)**.*
+
+## OWNED STATE
+
+Dans le cadre du protocole RGB, l’Owned State désigne la portion du Contract State encapsulée dans un Assignment et explicitement associée à un détenteur particulier par le biais d’un Single-use Seal pointant vers un UTXO. Cette composante représente, par exemple, un actif numérique ou un droit contractuel spécifique attribué à un individu. En isolant l’état lié à chaque titulaire, l’Owned State garantit une gestion précise et sécurisée de la propriété au sein des smart contracts RGB.
+
+## OWNERSHIP
+
+Dans le cadre du protocole RGB, le terme Ownership désigne la capacité de contrôler et de dépenser un UTXO tel qu’identifié par une Seal Definition. Lorsqu’un Owned State est associé à un UTXO, le propriétaire de ce dernier détient le droit, conformément aux règles du contrat, de transférer ou de faire évoluer l’état correspondant.

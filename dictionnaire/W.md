@@ -66,6 +66,10 @@ Script qui spécifie les conditions sous lesquelles les bitcoins peuvent être d
 
 > ► *Attention, le `witnessScript` ne doit pas être confondu avec le `scriptWitness`. Tandis que le `witnessScript` définit les conditions de dépense d'un UTXO P2WSH ou P2SH-P2WSH et constitue un script à part entière, le `scriptWitness` contient les données de témoin de tout input SegWit.*
 
+## WITNESS TRANSACTION
+
+Dans le cadre du protocole RGB, la Witness Transaction désigne la transaction Bitcoin qui clôt le Single-use Seal autour d’un message intégrant un Multi Protocol Commitment (MPC). Cette opération consiste soit à dépenser un UTXO existant, soit à en créer un nouveau, afin de verrouiller l’engagement contractuel inscrit dans le protocole. La Witness Transaction constitue donc une preuve on-chain que l’état du contrat RGB a été fixé à un instant précis.
+
 ## WTXID
 
 Extension du TXID traditionnel, incluant les données de témoin (*witness*) introduites avec SegWit. Alors que le TXID est un hachage des données de transaction hors témoin, le WTXID est le `SHA256d` de l'intégralité des données de la transaction, témoin inclus. Les WTXID sont stockés dans un second arbre de Merkle dont la racine est mise dans la transaction coinbase. Cette séparation permet de supprimer la malléabilité du TXID de la transaction.

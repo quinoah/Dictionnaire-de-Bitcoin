@@ -40,6 +40,10 @@ Avant SegWit, les signatures pouvaient être légèrement modifiées sans être 
 
 > ► *Pour plus d'informations, voir la définition de **[SEGWIT](./S.md#segwit)**.*
 
+## TERMINAL CONSIGNEMENT
+
+Dans le cadre du protocole RGB, le Terminal Consignment, également appelé Consignment Endpoint, désigne le transfert consignment intégrant l’état final d’un contrat, obtenu par la State Transition générée à partir de l’Invoice du destinataire (payee). Ce mécanisme représente le point d’aboutissement d’un transfert, en rassemblant l’ensemble des données nécessaires pour attester que la propriété ou l’état du contrat a été dûment transmis et validé.
+
 ## TESTNET
 
 Version alternative de Bitcoin utilisée exclusivement à des fins de test et de développement. Il s'agit d'un réseau séparé du réseau principal (mainnet), avec ses propres blocs et transactions, permettant aux développeurs de tester de nouvelles fonctionnalités, applications et mises à jour sans risque pour le réseau principal. Le testnet permet également d'éviter de payer des frais de transaction lors de tests. Les bitcoins utilisés sur le testnet n'ont aucune valeur réelle.
@@ -120,6 +124,10 @@ Transaction Bitcoin qui, en plus de respecter les règles de consensus, entre é
 Ces règles sont donc configurées et exécutées en local par chaque nœud et peuvent varier d'un nœud à l'autre. Elles s'appliquent exclusivement sur les transactions non confirmées. Ainsi, un nœud n'acceptera une transaction qu'il jugerait non standard que si celle-ci est déjà incluse dans un bloc valide. 
 
 Notons que la majorité des nœuds laissent les configurations par défaut telles que préétablies dans Bitcoin Core, engendrant de fait une homogénéité des règles de standardisation à travers le réseau. Une transaction qui, bien que conforme aux règles de consensus, ne respecte pas ces règles de standardisation, aura des difficultés à se propager sur le réseau. Elle pourra toutefois être incluse dans un bloc valide si jamais elle atteint un mineur. Dans la pratique, ces transactions, qualifiées de non standard, sont souvent transmises directement à un mineur par des voies externes au réseau pair-à-pair de Bitcoin. C'est souvent le seul moyen pour confirmer ce type de transaction. Par exemple, une transaction qui n'alloue aucuns frais est à la fois valide selon les règles de consensus et non standard, car la politique par défaut de Bitcoin Core pour le paramètre `minRelayTxFee` est de `0.00001` (en BTC/kB).
+
+## TRANSITION BUNDLE
+
+Dans le cadre du protocole RGB, un Transition Bundle désigne un regroupement de State Transitions appartenant à un même contrat, toutes engagées simultanément dans une unique witness transaction Bitcoin. Ce mécanisme permet de consolider plusieurs mises à jour ou transferts dans un seul point d’ancrage on-chain, afin d'optimiser l’utilisation de l’espace de bloc.
 
 ## TUMBLEBIT
 

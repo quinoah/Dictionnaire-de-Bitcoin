@@ -1,3 +1,7 @@
+## VALENCY
+
+Dans le cadre du protocole RGB, une Valency désigne un droit public qui ne nécessite pas le stockage explicite d’un état, mais qui peut être ultérieurement activé via une State Extension. Ce mécanisme constitue une possibilité préalablement déclarée dans la logique du contrat, accessible à tous ou à certains acteurs spécifiques, et permet de déclencher une extension spécifique de l’état contractuel lorsque les conditions définies sont remplies. La Valency offre ainsi une solution flexible et modulable pour anticiper des évolutions futures du contrat.
+
 ## VANITY (ADDRESS)
 
 Adresse de réception personnalisée qui contient une séquence spécifique de caractères choisie par l'utilisateur, généralement pour des raisons esthétiques. Ces adresses sont générées en exécutant un processus de calcul, où de multiples clés privées sont créées jusqu'à ce que l'une d'entre elles corresponde à une adresse de réception contenant la séquence désirée. Ce processus ne compromet pas la sécurité de l'adresse, mais peut nécessiter un temps et des ressources de calcul considérables, surtout pour des séquences plus longues ou plus spécifiques. C'est une sorte de processus de brute force.

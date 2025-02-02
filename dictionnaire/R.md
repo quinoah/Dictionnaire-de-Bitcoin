@@ -50,6 +50,10 @@ De manière plus générale, en informatique, ce que l’on appelle la « récu
 
 > ► *Pour plus d'informations, voir la définition de [**COVENANT**](./C.md#covenant).*
 
+## REDEEM
+
+Dans le cadre du protocole RGB, dans une State Extension, le terme Redeem désigne l’action de récupérer ou d’exploiter une Valency préalablement déclarée. La Valency, en tant que droit public inscrit dans l’état du contrat, confère à un participant autorisé la possibilité de réclamer une extension précise de cet état. Ce mécanisme permet ainsi de formaliser l’exercice de droits spécifiques définis dans le schéma du contrat, garantissant que seule la partie légitimement habilitée peut initier la transition correspondante et exploiter les ressources associées.
+
 ## REDEEMSCRIPT
 
 Script qui défini les conditions spécifiques que doivent remplir les inputs pour débloquer les fonds associés à un output P2SH. Dans un UTXO P2SH, le `scriptPubKey` contient le hachage du `redeemScript`. Lorsqu'une transaction souhaite dépenser cet UTXO en entrée, elle doit fournir le `redeemScript` en clair qui correspond au hachage contenu dans le `scriptPubKey`. Le `redeemScript` est donc donné dans le `scriptSig` de l'input, en plus des autres éléments nécessaires pour satisfaire les conditions du script, comme les signatures ou les clés publiques. Cette structure encapsulée garantit que les détails des conditions de dépense restent cachés jusqu'à ce que les bitcoins soient effectivement dépensés. On l'utilise notamment pour les portefeuilles multisignatures Legacy P2SH.
@@ -163,6 +167,12 @@ On dit d'une réutilisation d'adresse qu'elle est "externe" lorsqu'elle survient
 On dit d'une réutilisation d'adresse qu'elle est "interne" lorsqu'elle survient au sein d'une même transaction en input et en output. Dans cette configuration, la réutilisation d'adresse interne est une heuristique d'analyse de chaîne qui permet d'émettre une hypothèse vraisemblable sur le change de la transaction. En effet, s'il y a deux outputs et que l'un d'eux utilise la même adresse de réception qu'en input, alors il est vraisemblable que le second output quitte la possession de l'utilisateur initial. L'output avec l'adresse réutilisée représente vraisemblablement le change.
 
 ![](assets/10.png)
+
+## RGB
+
+Système de contrats intelligents décentralisé et confidentiel, conçu pour fonctionner avec Bitcoin et le Lightning Network. RGB fonctionne sur un modèle de validation côté client et sépare le stockage de l’état des contrats de la blockchain, afin de ne conserver que des engagements cryptographiques sur celle-ci. Ainsi, l’historique complet des états est maintenu en dehors de la chaîne, ce qui permet une meilleure scalabilité et confidentialité. RGB permet ainsi la création de contrats complexes afin d'emmètre des tokens, des NFT, des identités décentralisées ou des solutions de DeFi, directement par-dessus Bitcoin.
+
+Sur RGB, la résistance à la double dépense est assurée par l'utilisation de Single-use Seal, un mécanisme cryptographique qui tire parti du fait que les UTXOs sur Bitcoin ne peuvent être utilisés qu'une seule fois. Quant à l'authenticité des jetons, elle est garantie par la vérification côté client de l'historique des états, depuis la création du contrat jusqu'à son état le plus récent.
 
 ## RICOCHET
 

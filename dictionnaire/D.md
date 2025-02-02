@@ -108,6 +108,14 @@ Processus de génération de clés enfants dans les portefeuilles HD. La dériva
 
 > ► *Pour plus d'informations, voir la définition de [**CHEMIN DE DÉRIVATION**](./C.md#chemin-de-dérivation).*
 
+## DETERMINISTIC BITCOIN COMMITMENT
+
+Ensemble de règles permettant d’inscrire de manière prouvable et unique un engagement dans une transaction Bitcoin. Dans le protocole RGB, il existe deux formes principales de DBC :
+- Opret ;
+- Tapret.
+
+Ces mécanismes définissent précisément comment l'engagement est encodé dans les sorties ou dans la structure d’une transaction Bitcoin, afin de s’assurer que cet engagement est repérable et vérifiable de façon déterministe.
+
 ## DGM
 
 Sigle de « *Double Geometric Method* ». C'est une méthode de calcul de la rémunération des mineurs dans le contexte des pools de minage. DGM est une méthode hybride, censée combiner les avantages de PPLNS et de la méthode dite « géométrique ». Elle dispose d'une faible variance sur les parts, à la manière de PPLNS, puis permet au mineur d'absorber de la variance pour réduire celle de la pool dans un second temps. DGM est résistant au pool hopping en garantissant que le paiement attendu par share reste constant. La méthode est établie sur des scores, rendant les paiements indépendants de l'historique de la pool et presque totalement indépendants des changements futurs de difficulté.
@@ -135,6 +143,12 @@ Processus par lequel les informations, comme les transactions et les blocs, sont
 Dans le contexte du protocole Ordinals, c'est un sat qui a été inscrit avec des données spécifiques via le mécanisme d'inscriptions. Ces artefacts peuvent inclure des images, des textes, ou tout autre type de contenu numérique et sont liés indissociablement au satoshi correspondant.
 
 > ► *En français, on peut traduire ce terme par « artefact numérique ». Pour plus d'informations, voir les définitions de **[INSCRIPTIONS](./I.md#inscriptions)** et de **[ORDINALS THEORY](./O.md#ordinals-theory)**.*
+
+## DIRECTED ACYCLIC GRAPH
+
+► ***FR : GRAPHE ORIENTÉ ACYCLIQUE***
+
+Un DAG est une structure mathématique composée de nœuds interconnectés par des arcs orientés, sans former de cycle, ce qui permet un ordonnancement topologique rigoureux. Dans le cadre du protocole RGB, le DAG sert à représenter la structure des shards de contrats, pour la gestion et la vérification des transitions d’état. Cette représentation graphique permet d’assurer la cohérence et la traçabilité des modifications dans un environnement distribué.
 
 ## DISTRIBUÉ
 

@@ -297,6 +297,12 @@ K = 03678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb6
 
 Acronyme de « *Command Line Interface* », ou « interface en ligne de commande » en français. C'est une méthode d'interaction avec des logiciels qui repose sur la saisie de commandes textuelles dans un terminal ou une console. La CLI se différencie de la GUI (interface graphique utilisateur) qui dispose de méthodes d'interactions de pointage (avec la souris) et d'éléments visuels interactifs.
 
+## CLIENT-SIDE VALIDATION
+
+► ***FR : VALIDATION CÔTÉ CLIENT***
+
+Processus par lequel chaque partie (client) vérifie un ensemble de données échangées en privé, selon les règles d’un protocole. Dans le cas du protocole RGB, ces données échangées sont regroupées dans ce qu’on appelle des consignments. Contrairement au protocole Bitcoin qui exige que toutes les transactions soient publiées on-chain, RGB permet de ne stocker en public que des commitments (ancrés dans Bitcoin), tandis que l’essentiel des informations de contrat (transitions, attestations, preuves) reste off-chain, partagé seulement entre les utilisateurs concernés.
+
 ## C-LIGHTNING (CLN)
 
 Ancien nom de l'implémentation Core-Lightning. 
@@ -460,6 +466,34 @@ Toute personne physique ou morale qui accepte d'échanger un bien ou un service 
 
 Dans le cadre de Git, représente une capture instantanée des modifications apportées à l'ensemble de fichiers d'un dépôt. Chaque commit est identifié par un hachage unique et inclut un message descriptif, l'identité de l'auteur et la date. Il permet de suivre l'évolution du projet et de revenir à des états antérieurs si nécessaire.
 
+## COMMITMENT
+
+► ***FR : ENGAGEMENT***
+
+Un Commitment (au sens cryptographique) est un objet mathématique, noté $C$, dérivé de façon déterministe à partir d’une opération sur une donnée structurée $m$ (le message) et d’une valeur aléatoire $r$. On écrit :
+$$
+C = \text{commit}(m, r)
+$$
+
+Ce mécanisme comprend deux opérations principales :
+- *Commit* : on applique une fonction cryptographique à un message $m$ et à un aléa $r$ pour produire $C$ ;
+- *Verify* : on utilise $C$, le message $m$ et la valeur $r$ pour vérifier que ce commitment est correct. La fonction renvoie `Vrai` ou `Faux`.
+
+Un commitment doit respecter deux propriétés :
+- *Binding* : il doit être impossible de trouver deux messages différents produisant le même $C$ :
+$$
+m' : \, | \, : m' \neq m \quad \text{and} \quad r' : \, | \, : r' \neq r \quad 
+$$
+Tels que :
+$$
+\text{verify}(m, r, C) = \text{verify}(m', r', C) \rightarrow \text{True}
+$$
+
+- *Hiding* : la connaissance de $C$ ne doit pas révéler le contenu de $m$.
+
+Dans le cas du protocole RGB, un commitment est inclus dans une transaction Bitcoin afin de prouver l’existence d’une certaine information à un instant donné, sans dévoiler cette information elle-même.
+
+
 ## COMPACT BLOCK RELAY
 
 Protocole introduit dans Bitcoin Core en 2016 via le BIP152 qui propose une méthode d'économie de bande passante pour les nœuds du réseau. Compact Block Relay permet de communiquer les informations des blocs de manière compacte, en se basant sur l'hypothèse que les nœuds ont déjà une grande partie des transactions d'un bloc récent dans leur mempool. Plutôt que de transmettre chaque transaction intégralement, ce qui constituerait un doublon, Compact Block Relay propose d'envoyer uniquement de courts identifiants pour les transactions déjà connues des pairs, accompagnés de quelques transactions sélectionnées (notamment la transaction coinbase et celles que le nœud est susceptible de ne pas connaître). Le nœud peut ensuite demander à ses pairs les éventuelles transactions manquantes. Compact Block Relay permet ainsi de diminuer la quantité de données échangées lors de la propagation des blocs, ce qui réduit ainsi les pics de bande passante et améliore l'efficacité globale du réseau.
@@ -506,6 +540,14 @@ Mécanisme par lequel tous les nœuds du réseau Bitcoin parviennent à s'accord
 
 > ► *Par extension, certaines personnes appellent par « Consensus » les règles tacites du protocole Bitcoin.*
 
+## CONSIGNMENT
+
+Dans le cadre du protocole RGB, regroupe les données échangées entre les parties, soumises à la *Client-side Validation*. Il existe deux grandes catégories de consignments :
+- Contract Consignment : fourni par l’issuer (émetteur du contrat), il comprend les informations d’initialisation telles que le Schema, la Genesis, l’Interface et l’Implementation de l'Interface.
+- Transfer Consignment : fourni par la partie qui paie (payer). Il contient tout l’historique de transitions d’état aboutissant au terminal consignment (c’est-à-dire l’état final reçu par le payeur).
+
+Ces consignments ne sont pas enregistrés publiquement dans la blockchain ; ils sont échangés directement entre les parties concernées sur le canal de communication de leur choix.
+
 ## CONSOLIDATION
 
 Transaction spécifique dans laquelle plusieurs petits UTXOs sont fusionnés en entrée pour former un seul et plus gros UTXO en sortie. Cette opération est une transaction effectuée vers son propre portefeuille. L'objectif de la consolidation est de tirer profit des périodes où les frais sur le réseau Bitcoin sont bas pour fusionner plusieurs petits UTXOs en un seul plus grand en valeur. Ainsi, on anticipe les dépenses obligatoires en cas de hausse des frais, permettant d'économiser sur les frais de transaction futurs. 
@@ -522,6 +564,35 @@ Cependant, il est important de noter que les transactions de consolidation sont 
 
 Dans le cadre du minage, un conteneur est une structure modulaire utilisée pour héberger et opérer un grand nombre d'ASICs. Ces containers sont conçus pour optimiser l'espace, la gestion de la chaleur et l'alimentation électrique. Ils sont équipés de systèmes de refroidissement à l'air. Leur avantage principal réside dans leur mobilité et leur capacité à être déployés rapidement, souvent à proximité de sources d'énergie bon marché.
 
+## CONTRACT OPERATION
+
+Dans le cadre du protocole RGB, désigne une mise à jour de l’état du contrat effectuée selon les règles du Schema. Les opérations suivantes existent dans RGB :
+- State Transition ;
+- Genesis ;
+- State Extension.
+
+Chaque opération modifie l’état en y ajoutant ou en y remplaçant certaines données (Global State, Owned State…).
+
+## CONTRACT PARTICIPANT
+
+Dans le cadre de RGB, un Contract Participant est un acteur prenant part aux opérations relatives au contrat. On distingue ainsi :
+- L’issuer du contrat, qui crée la Genesis (l’origine du contrat) ;
+- Les contract parties, c’est-à-dire les détenteurs de droits sur l’état du contrat ;
+- Les public parties, acteurs pouvant construire des State Extensions si le contrat propose des Valencies accessibles au public.
+
+## CONTRACT RIGHTS
+
+Les Contract Rights désignent les différents droits que peuvent exercer les acteurs d’un contrat RGB. Ils se classent en plusieurs catégories :
+- Les ownership rights, associés à la détention d’un UTXO particulier (via un Seal Definition) ;
+- Les executive rights, c’est-à-dire la capacité de construire une ou plusieurs transitions (State Transitions) conformes au Schema ;
+- Les public rights, lorsque le Schema autorise certains usages publics, par exemple la création d’une State Extension via la rédemption d’une Valency.
+
+## CONTRACT STATE
+
+Dans le cadre de RGB, le Contract State correspond à l’état courant d’un contrat à un instant donné. Il peut être constitué de données à la fois publiques et privées, qui reflète la situation du contrat. Dans RGB, on distingue :
+- Le Global State, qui comprend les propriétés publiques du contrat (mises en place dès la Genesis ou ajoutées via des mises à jour autorisées) ;
+- Les Owned States, qui appartiennent à des détenteurs précis, identifiés par leurs UTXOs.
+
 ## CONTRAT INTELLIGENT
 
 ► ***EN : SMART CONTRACT***
@@ -529,6 +600,10 @@ Dans le cadre du minage, un conteneur est une structure modulaire utilisée pour
 Programme qui s'exécute automatiquement lorsque certaines conditions prédéfinies sont remplies. Un contrat intelligent est donc un ensemble de clauses entre plusieurs parties qui peuvent se réaliser sans nécessiter l'intervention d'un tiers de confiance. Ces contrats déclenchent généralement des actions spécifiques comme un transfert de bitcoins.
 
 > ► *En français, on parle également parfois de « contrat autonome ».*
+
+## CONTRAT RGB
+
+Désigne un ensemble de droits exécutés numériquement entre plusieurs acteurs via le protocole RGB. Il possède un état actif et une logique d’affaires, définie par un Schema, qui précise quelles opérations sont autorisées (transferts, extensions, etc.). L’état d’un contrat, ainsi que les règles de validité, s’expriment dans le Schema. À tout moment, le contrat n’évolue que conformément à ce qui est permis par ce Schema et par les scripts de validation (exécutés, par exemple, dans AluVM).
 
 ## CONTRIBUTEUR (CORE)
 

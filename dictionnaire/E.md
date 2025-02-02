@@ -78,6 +78,10 @@ Comme le précise LaurentMT dans le Space Kek #19 (un podcast francophone), l'ut
 
 Désigne l'ordre dans lequel une séquence d'octets est arrangée et interprétée en informatique. On distingue deux types : « big-endian », où l'octet de poids le plus fort (le plus significatif) est stocké en premier, et « little-endian », où l'octet de poids le plus faible (le moins significatif) est stocké en premier.
 
+## ENGRAVING
+
+Dans le cadre du protocole RGB, l’*engraving* désigne une chaîne de données optionnelle que peuvent inscrire successivement les détenteurs d’un contrat dans l’historique de ses transitions. Accessible notamment via l’interface RGB21, cette fonctionnalité permet d’ajouter des informations commémoratives ou descriptives sans modifier la validité des opérations. Elle enrichit l’historique du contrat en intégrant des métadonnées supplémentaires.
+
 ## ENTÊTE DE BLOC
 
 ► ***EN : BLOCK HEADER***
@@ -210,3 +214,7 @@ Modifier l’extra-nonce dans la transaction coinbase change l’identifiant de 
 Dans le cadre des pools de minage, l'extra-nonce est souvent divisé en deux parties : une générée par la pool pour identifier chaque hacheur, et une autre modifiée par le hacheur dans la recherche d'une share valide. Cela permet aux différents hacheurs de la pool de travailler simultanément sur un même bloc candidat avec l'entièreté de la plage des nonces, sans pour autant dupliquer le même travail au niveau de la pool.
 
 > ► *Pour plus d'informations, voir la définition de [**NONCE**](./N.md#nonce).*
+
+## EXTRA TRANSACTION PROOF
+
+Dans le cadre du protocole RGB, l’ETP constitue la partie de l’Anchor qui intègre les données complémentaires indispensables à la validation d’un commitment de type Tapret (dans le contexte de Taproot). Elle comprend, entre autres, la clé publique interne associée au script Taproot et les informations spécifiques requises pour le *Script Path Spend*. Cette composante assure ainsi la vérification précise des engagements cryptographiques.

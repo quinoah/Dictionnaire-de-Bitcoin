@@ -73,6 +73,14 @@ Ces artefacts numériques, comme des NFTs, peuvent être échangés et conservé
 
 > ► *Pour plus d'informations, voir les définitions de **[ORDINALS THEORY](./O.md#ordinals-theory)** et de **[DIGITAL ARTIFACTS](./D.md#digital-artifacts)**.*
 
+## INTERFACE
+
+Dans le cadre du protocole RGB, l’Interface désigne l’ensemble des instructions qui décodent les données binaires compilées dans un Schema ou au sein des opérations et états d’un contrat. Elle sert de couche d’interprétation, afin de transformer les informations brutes en une représentation lisible par l’utilisateur ou son wallet.
+
+## INTERFACE IMPLEMENTATION
+
+Dans le cadre du protocole RGB, l’Interface Implementation désigne l’ensemble des déclarations établissant la correspondance entre une Interface et un Schema. Elle permet de réaliser la traduction sémantique des données binaires d’un contrat, afin d'assurer leur interprétation correcte par l’utilisateur ou par les applications, telles que les wallets.
+
 ## INVOICE LIGHTNING
 
 Requête de paiement Lightning générée par le destinataire, qui contient toutes les informations nécessaires pour réaliser la transaction. 
@@ -80,6 +88,10 @@ Requête de paiement Lightning générée par le destinataire, qui contient tout
 Une invoice Lightning contient la destination du paiement sous la forme de la clé publique du nœud destinataire, mais également un préfixe `ln`, le montant, un temps avant expiration, le hachage du secret utilisé dans le cadre des HTLCs, ainsi que d'autres métadonnées, pour certaines optionnelles, comme des options relatives au routage. Ces invoices sont définies par la norme BOLT11. Une fois payée, une invoice Lightning ne peut plus être réutilisée.
 
 > ► *En français, on pourrait traduire « invoice » par « facture », mais on utilise généralement le terme anglais même en français.*
+
+## INVOICE RGB
+
+Dans le cadre du protocole RGB, une Invoice se présente sous la forme d’une URL encodée en base58, qui intègre les informations indispensables à la construction d’une State Transition par le payeur. En pratique, il s’agit d’une facture qui permet à la contrepartie de générer la transition adéquate pour transférer un actif ou actualiser l’état d’un contrat.
 
 ## IOU
 

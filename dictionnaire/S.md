@@ -18,6 +18,10 @@ Fait référence à la capacité de Bitcoin à gérer une augmentation du volume
 
 > ► *Le terme de « scalabilité » est un anglicisme. La bonne traduction du terme anglais « scalabilty » est « évolutivité » ou bien « passage à l'échelle ». Toutefois, il est généralement admis au sein de la communauté d'utiliser directement le terme de « scalabilité ». Pour plus d'informations, voir la définition de **[BLOCKSIZE WAR](./B.md#blocksize-war)**.*
 
+## SCHEMA
+
+Dans le cadre du protocole RGB, un Schema désigne un morceau de code déclaratif qui définit l’ensemble des variables, règles et logiques d’affaires (*Business Logic*) régissant le fonctionnement d’un contrat. Il spécifie la structure de l’état, notamment la configuration initiale établie lors de la Genesis, et détaille les types de transitions autorisées ainsi que les conditions strictes de leur validation. Le Schema sert de cadre normatif, garantissant que toute évolution de l’état du contrat se conforme aux règles établies par l’émetteur.
+
 ## SCHNORR (PROTOCOLE)
 
 ► ***EN : SCHNORR PROTOCOL***
@@ -95,6 +99,10 @@ OP_DUP OP_HASH160 OP_PUSHBYTES_20 <adresse> OP_EQUALVERIFY OP_CHECKSIG
 Ensemble d'outils logiciels fournissant les ressources nécessaires aux développeurs pour créer des applications sur une plateforme spécifique. Un SDK inclut des bibliothèques, des guides de développement, des exemples de code ou encore des processus de compilation. Les SDK facilitent et accélèrent le développement en offrant des modules réutilisables. Sur Bitcoin, il existe le BDK (*Bitcoin Dev Kit*) et le LDK (*Lightning Dev Kit*).
 
 > ► *En anglais, les SDK sont également parfois appelés « devkit ». Pour plus d'informations, voir les définitions de [**BDK**](./B.md#bdk-bitcoin-dev-kit) et de [**LDK**](./L.md#ldk-lightning-dev-kit).*
+
+## SEAL DEFINITION
+
+Dans le cadre du protocole RGB, la Seal Definition constitue la composante d’un Assignment qui relie explicitement un commitment à un UTXO détenu par le nouveau propriétaire. Elle précise l’emplacement de l’état en identifiant l'UTXO dans lequel celui-ci est conservé, ce qui établit de manière formelle la propriété d’un actif ou d’un droit sur RGB.
 
 ## SECP256K1
 
@@ -193,7 +201,13 @@ Sigle pour « *Secure Hash Algorithm 512 bits* ». C'est une fonction de hacha
 
 > ► *Pour plus d'informations, voir la définition de [**FONCTION DE HACHAGE**](./F.md#fonction-de-hachage).*
 
-## SHARDS
+## SHAREDCOIN
+
+Service de mixage de pièces Bitcoin lancé en 2013 par Blockchain.info, mais qui n'est plus en service aujourd'hui. Ce service proposait aux utilisateurs d'améliorer leur confidentialité sur Bitcoin en combinant leurs transactions avec celles d'autres personnes, grâce à une technique de mixage similaire aux coinjoins. SharedCoin apportait une forme de confidentialité sans nécessiter de faire confiance au coordinateur, car les pièces des utilisateurs restaient sous leur contrôle tout au long du processus. Contrairement aux services de mixage centralisés de l'époque, les bitcoins ne pouvaient pas être volés par l'intermédiaire. SharedCoin a par la suite fait face à des problèmes menant à la désanonymisassions de certains de leurs mixages au début de l'été 2014. 
+
+> ► *Pour plus d'informations, voir la définition de [**COINJOIN**](./C.md#coinjoin).*
+
+## SHARDS (LIGHTNING)
 
 ► ***FR : FRACTIONS***
 
@@ -203,11 +217,9 @@ Dans le cadre des MPP, tous les shards partagent le même secret, alors que dans
 
 > ► *Pour plus d'informations, voir la définition de **[MULTI-PATH PAYMENT (MPP)](./M.md#multi-path-payments-mpp)**.*
 
-## SHAREDCOIN
+## SHARDS (RGB)
 
-Service de mixage de pièces Bitcoin lancé en 2013 par Blockchain.info, mais qui n'est plus en service aujourd'hui. Ce service proposait aux utilisateurs d'améliorer leur confidentialité sur Bitcoin en combinant leurs transactions avec celles d'autres personnes, grâce à une technique de mixage similaire aux coinjoins. SharedCoin apportait une forme de confidentialité sans nécessiter de faire confiance au coordinateur, car les pièces des utilisateurs restaient sous leur contrôle tout au long du processus. Contrairement aux services de mixage centralisés de l'époque, les bitcoins ne pouvaient pas être volés par l'intermédiaire. SharedCoin a par la suite fait face à des problèmes menant à la désanonymisassions de certains de leurs mixages au début de l'été 2014. 
-
-> ► *Pour plus d'informations, voir la définition de [**COINJOIN**](./C.md#coinjoin).*
+Dans le cadre du protocole RGB, un Shard représente une branche distincte au sein du graphe orienté acyclique (DAG) qui retrace l’historique des State Transitions d’un contrat. Il constitue un sous-ensemble cohérent de l’ensemble des transitions, correspondant par exemple à la séquence d’opérations nécessaires pour attester la validité d’un actif particulier depuis la Genesis. Ce mécanisme permet d’isoler des segments spécifiques de l’historique global, afin de faciliter la vérification côté client.
 
 ## SHARES
 
@@ -424,6 +436,10 @@ Méthode permettant aux clients légers de vérifier les transactions Bitcoin sa
 
 > ► *On utilise souvent le sigle « SPV » pour évoquer cette méthode. Pour plus d'informations, voir la définition de [**NOEUD SPV**](./N.md#noeud-spv-noeud-léger).*
 
+## SINGLE-USE SEAL
+
+Désigne une promesse d’engagement cryptographique relative à un message encore inconnu, lequel sera révélé une seule fois à l’avenir et devra être accessible à l’ensemble d’une audience déterminée. Ce mécanisme vise à prévenir la création de multiples engagements concurrents pour un même sceau, ce qui garantie l’unicité de chaque validation. En imposant cette contrainte d’utilisation unique, le Single-use Seal est utilisé sur RGB pour éviter la double-dépense.
+
 ## SLIP
 
 Sigle de « *Satoshi Labs Improvement Proposals* ». C'est un ensemble de propositions visant à améliorer ou à standardiser l'utilisation de Bitcoin, émanant de SatoshiLabs, la société à l'origine des portefeuilles matériels Trezor. Ces propositions s'articulent souvent comme des extensions de BIP (*Bitcoin Improvement Proposals*), dans le but d'enrichir les standards existants. Elles exposent les décisions techniques prises par SatoshiLabs qui ne trouvent pas leur place dans les BIP, mais qui restent pertinentes pour d'autres développeurs de logiciels de portefeuilles ou de portefeuilles matériels, notamment pour contribuer à l'uniformisation des processus.
@@ -507,6 +523,18 @@ Catégorie de cryptomonnaie conçue pour maintenir une valeur stable par rapport
 Protocole qui permet d'intégrer des données d'image formatées directement sur la blockchain Bitcoin via des transactions multisignatures brutes (P2MS). Stamps encode le contenu binaire d'une image en base 64 et l'ajoute dans les clés d’un P2MS 1/3. Une clé est réelle et sert à dépenser les fonds, tandis que les deux autres sont des fausses clés (on ne connait pas la clé privée associée) qui stockent les données. En encodant les données directement sous forme de clés publiques plutôt qu'en utilisant des sorties `OP_RETURN`, les images stockées avec le protocole Stamps sont particulièrement intensives en termes de charge de travail pour les nœuds. Cette méthode crée notamment de multiples UTXOs, ce qui augmente la taille de l'UTXO set et pose des problèmes pour les nœuds complets.
 
 > ► *Pour plus d'informations, voir les définitions d'**[UTREEXO](./U.md#utreexo)** et d'**[UTXO SET](./U.md#utxo-set)**.*
+
+## STASH
+
+Dans le cadre du protocole RGB, le Stash désigne l’ensemble des données stockées côté client par un utilisateur pour un ou plusieurs contrats. Ces données comprennent notamment l’historique des transitions, les consignments ainsi que les preuves de validité, indispensables au processus de validation côté client (*Client-side Validation*). Chaque détenteur conserve uniquement les fragments pertinents de l’historique (*shards*) nécessaires à la vérification et à la mise à jour de ses contrats.
+
+## STATE EXTENSION
+
+Dans le cadre du protocole RGB, une State Extension désigne une opération contractuelle permettant d’initier une mise à jour de l’état d’un contrat via la rédemption de Valencies préalablement déclarées. Cette procédure exploite un droit public inscrit dans le contrat pour déclencher une modification, qui ne devient effective qu’après avoir été clôturée par une State Transition. Cette dernière intègre la mise à jour définitive de l’état du contrat.
+
+## STATE TRANSITION
+
+Dans le cadre du protocole RGB, la State Transition désigne l’opération permettant de faire évoluer l’état d’un contrat vers une nouvelle configuration. Elle peut modifier tant les données du Global State que celles des Owned States. Chaque transition est strictement vérifiée selon les règles définies dans le Schema du contrat, ce qui garantie la conformité des modifications aux contraintes établies lors de la Genesis. Cette opération est ancrée dans la blockchain Bitcoin via un commitment.
 
 ## STÉGANOGRAPHIE
 

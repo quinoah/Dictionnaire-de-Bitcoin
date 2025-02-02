@@ -181,6 +181,24 @@ Identifiant unique lié à un portefeuille Bitcoin qui implémente cette option.
 
 Dans le contexte de Bitcoin, `PBKDF2` est utilisée en conjonction avec la fonction `HMAC-SHA512` pour créer la graine d'un portefeuille déterministe et hiérarchique (seed) à partir d'une phrase de récupération de 12 ou de 24 mots. Le sel cryptographique utilisé dans ce cas est la passphrase BIP39, et le nombre d’itérations est de `2048`.
 
+## PEDERSEN COMMITMENT
+
+Un Pedersen commitment est un type d'engagement cryptographique présentant la propriété d’être homomorphique vis-à-vis de l’opération d’addition. Cela signifie qu’il est possible de valider la somme de deux engagements sans dévoiler les valeurs individuelles.
+
+Formellement, si :
+
+$$
+C1=\text{commit}(m1,r1) \quad C2=\text{commit}(m2,r2)
+$$
+
+alors :
+
+$$
+C3=C1⋅C2=\text{commit}(m1+m2, r1+r2)
+$$
+
+Cette propriété devient utile, par exemple, pour dissimuler les montants de tokens échangés dans des système de cryptomonnaies, comme par exemple RGB, tout en pouvant vérifier les totaux.
+
 ## PEER DISCOVERY
 
 ► ***FR : DÉCOUVERTE DES PAIRS***

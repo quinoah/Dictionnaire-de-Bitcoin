@@ -119,6 +119,10 @@ Suite finie et non ambiguë d'instructions permettant de réaliser une tâche. D
 
 Désigne toute cryptomonnaie autre que le bitcoin (BTC). Le terme « altcoin » est la contraction de « alternative » et de « coin » (pièce alternative). Certains bitcoiners maximalistes parlent également de « shitcoins » pour désigner les altcoins.
 
+## ALUVM
+
+Sigle de « *Algorithmic Logic Unit Virtual Machine* ». Machine virtuelle à registres spécifiquement conçue pour l’exécution déterministe de tâches de calcul distribuées et la validation de smart contracts, notamment dans le cadre des contrats RGB. AluVM a initialement été développé par Dr. Maxim Orlovsky et est actuellement maintenu par l'association LNP/BP Standards.
+
 ## ANALYSE DE CHAINE
 
 ► ***EN : CHAIN ANALYSIS***
@@ -141,6 +145,16 @@ Notons que les deux premières heuristiques sur Bitcoin ont été formulées par
 Autre nom parfois donné à CPFP (*Child-Pay-For-Parent*). Le minage des ancêtres est le principe selon lequel un mineur ne choisit pas une transaction uniquement sur la base de ses propres frais de transaction, mais prend aussi en compte les frais des transactions ascendantes.
 
 > ► *Pour plus d'informations, voir la définition de [**CPFP (CHILD PAY FOR PARENT)**](./C.md#cpfp-child-pay-for-parent).*
+
+## ANCHOR
+
+Dans le cadre du protocole RGB, un Anchor représente un ensemble de données côté client permettant de prouver l’inclusion d’un engagement unique dans une transaction. Dans le protocole RGB, un Anchor est constitué des éléments suivants :
+- L’identifiant de la transaction Bitcoin (TXID) de la witness transaction ;
+- Le Multi Protocol Commitment (MPC) ;
+- Le Deterministic Bitcoin Commitment (DBC) ;
+- L’Extra Transaction Proof (ETP) si l’on emploie le mécanisme d'engagement Tapret.
+
+Un Anchor sert donc à établir un lien vérifiable entre une transaction Bitcoin précise et des données privées validées par le protocole RGB. Il garantit que ces données sont bel et bien incluses dans la blockchain, sans pour autant que leur contenu exact soit exposé publiquement.
 
 ## ANCHOR OUTPUTS
 
@@ -253,6 +267,14 @@ Pour résumer, AsicBoost permet de ne pas avoir à effectuer un vrai SHA256 comp
 ## ASMAP
 
 Outil inventé par Gleb Naumenko et utilisé par Bitcoin Core pour améliorer la sécurité et la topologie du réseau Bitcoin en diversifiant les connexions entre les nœuds. Il s'agit d'une carte d'adressage IP vers les numéros de systèmes autonomes (ASN), permettant une meilleure répartition des connexions sortantes en fonction de l'ASN plutôt que des préfixes IP. Cela aide à prévenir les attaques Eclipse (notamment l'attaque Erebus) en rendant plus difficile pour un attaquant de simuler plusieurs nœuds.
+
+## ASSIGNMENT
+
+Dans la logique du protocole RGB, un Assignment est l’équivalent d’une sortie de transaction (output) qui modifie, met à jour ou crée certaines propriétés au sein de l’état d’un contract. Un Assignment comporte deux éléments :
+- Une Seal Definition (la référence à un UTXO précis) ;
+- Un Owned State (les données décrivant l’état associé à ce nouveau détenteur).
+
+Un Assignment indique donc qu’une portion de l’état (par exemple, un actif) est désormais allouée à un détenteur particulier, identifié via un Single-use Seal lié à un UTXO.
 
 ## ASSUME UTXO
 
