@@ -4,5 +4,3 @@ Processeur de paiement open-source qui permet aux commerçants et aux utilisateu
 
 > « _This is lies, my trust in you is broken, I will make you obsolete_ ».
 
-![](../../dictionnaire/assets/53.png)
-

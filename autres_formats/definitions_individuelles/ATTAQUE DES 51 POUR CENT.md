@@ -1,4 +1,5 @@
 ## ATTAQUE DES 51 POUR CENT
+▪ **Attaque**
 
 ► ***EN : 51% ATTACK***
 

@@ -1,4 +1,5 @@
 ## ATOMIC SWAP
+▪ **Outils**
 
 ► ***FR : ÉCHANGE ATOMIQUE***
 

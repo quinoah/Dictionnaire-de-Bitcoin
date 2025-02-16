@@ -1,4 +1,5 @@
 ## AGORISME
+▪ **Économie et régulation**
 
 ► ***EN : AGORISM***
 

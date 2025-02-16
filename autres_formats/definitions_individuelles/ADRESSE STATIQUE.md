@@ -1,4 +1,5 @@
 ## ADRESSE STATIQUE
+▪ **Confidentialité**
 
 ► ***EN : STATIC ADDRESS***
 

@@ -1,4 +1,5 @@
 ## AJUSTEMENT DE LA DIFFICULTE
+▪ **Protocole**
 
 ► ***EN : DIFFICULTY ADJUSTMENT***
 

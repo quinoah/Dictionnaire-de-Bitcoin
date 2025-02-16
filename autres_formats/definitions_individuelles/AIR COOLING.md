@@ -1,4 +1,5 @@
 ## AIR COOLING
+▪ **Minage**
 
 ► ***FR : REFROIDISSEMENT À L'AIR***
 

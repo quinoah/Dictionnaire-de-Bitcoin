@@ -1,4 +1,5 @@
 ## ADAPTOR SIGNATURE
+▪ **Cryptographie**
 
 Méthode cryptographique permettant de combiner une vraie signature avec une signature supplémentaire (appelée « adaptor signature ») pour révéler une donnée secrète. Cette méthode fonctionne telle que la connaissance de deux éléments parmi la signature valide, l'adaptor signature et le secret permet de déduire le troisième manquant. Une des propriétés intéressantes de cette méthode est que si nous connaissons l'adaptor signature de notre pair et le point spécifique sur la courbe elliptique lié au secret utilisé pour calculer cette adaptor signature, nous pouvons alors dériver notre propre adaptor signature qui correspondra avec le même secret, et ce, sans jamais avoir accédé directement au secret lui-même. Dans un échange entre deux parties prenantes ne se faisant pas confiance, cette technique permet un dévoilement simultané de deux informations sensibles entre les participants. Ce processus élimine la nécessité de confiance lors de transactions instantanées telles qu'un coinswap ou un Atomic Swap. Prenons un exemple pour bien comprendre. Alice et Bob souhaitent s'envoyer 1 BTC chacun, mais ils ne se font pas confiance. Ils vont donc utiliser des adaptors signatures pour annihiler le besoin de confiance envers l'autre partie dans cet échange (c'est donc un échange « atomique »). Ils procèdent comme ceci :
 * Alice lance cet échange atomique. Elle crée une transaction $m_A$ qui envoie 1 BTC vers Bob. Elle crée une signature $s_A$ qui permet de valider cette transaction grâce à sa clé privée $p_A$ ($P_A = p_A \cdot G$), et en utilisant un nonce $n_A$ et un secret $t$ ($N_A = n_A \cdot G$ et $T = t \cdot G$) : 
@@ -28,14 +29,17 @@ $$(s_A' + t) \cdot G = N_A + T + H(N_A + T \parallel P_A \parallel m_A) \cdot P_
 &nbsp;
 
 ## ADDR
+▪ **Réseau**
 
 Message réseau anciennement utilisé sur Bitcoin pour communiquer les adresses des nœuds qui acceptent des connexions entrantes. Cet ancien format, se limitant à 128 bits par adresse, était seulement adapté aux adresses IPv6, IPv4 et aux adresses Tor de version 2. Face à l'arrivée de nouveaux protocoles comme Tor V3 et la nécessité de disposer d'une meilleure évolutivité pour de futurs protocoles réseau, le format `addr` a été supplanté par `addrv2`, introduit dans le BIP155.
 
 ## ADDR.DAT
+▪ **Réseau**
 
 Nom de l'ancien fichier utilisé dans Bitcoin Core pour stocker des informations sur les pairs (c'est-à-dire, les nœuds) du réseau avec lesquels le nœud de l'utilisateur a interagi ou peut potentiellement interagir. Ce fichier a été remplacé par le fichier peers.dat depuis la version 0.7.0.
 
 ## ADDRESS SPOOFING
+▪ **Attaque**
 
 ► ***FR : USURPATION D'ADRESSE***
 
@@ -50,10 +54,12 @@ Pour se protéger contre ces différentes méthodes d'attaque, il est important 
 > ► *On parle également parfois d'Address Poisoning pour désigner cette attaque.*
 
 ## ADDRV2
+▪ **Réseau**
 
 Évolution proposée avec le BIP155 du message `addr` sur le réseau Bitcoin. Le message `addr` servait à diffuser les adresses de nœuds qui acceptent des connexions entrantes, mais il était limité à des adresses de 128 bits. Cette taille était adéquate pour les adresses IPv6, IPv4, et Tor V2, mais insuffisante pour d'autres protocoles. La version mise à jour `addrv2` est conçue pour supporter des adresses plus longues, notamment les services cachés Tor v3 de 256 bits, ainsi que d'autres protocoles réseau tels que I2P ou de futurs protocoles.
 
 ## ADRESSE DE RÉCEPTION
+▪ **Portefeuille**
 
 ► ***EN : BITCOIN ADDRESS***
 
@@ -71,6 +77,7 @@ Une adresse de réception peut être représentée sous la forme d'une chaîne d
 ![](assets/23.png)
 
 ## ADRESSE STATIQUE
+▪ **Confidentialité**
 
 ► ***EN : STATIC ADDRESS***
 
@@ -81,18 +88,21 @@ Cette adresse est composée de deux clés publiques : $B_{\text{scan}}$ pour le 
 > ► *Pour plus d'informations, voir la définition de **[SILENT PAYMENTS](./S.md#silent-payments)**.*
 
 ## AGORISME
+▪ **Économie et régulation**
 
 ► ***EN : AGORISM***
 
 Philosophie politique fondée par Samuel Edward Konkin III dans les années 1980. Elle est une extension du libertarianisme, mettant en avant une action directe pour s'extraire des jougs de l'autorité étatique par le biais de la contre-économie, une pratique économique qui se déroule en dehors des cadres régulés par le gouvernement. L'idéologie agoriste repose sur le jusnaturalisme, qui affirme que les droits naturels des individus sont supérieurs aux lois imposées par l'État. Cela inclut la primauté de la propriété privée, le respect de l'intégrité physique, et la liberté de contracter. Les agoristes rejettent toute forme de participation politique traditionnelle comme le vote, qu'ils considèrent comme une validation de l'autorité coercitive de l'État. Ils aspirent à une société où les échanges économiques et sociaux se déroulent librement dans un marché ouvert, appelé l'Agora, visant ainsi à une révolution pacifique pour éroder progressivement le pouvoir de l'État. Leur emblème est d’ailleurs « A3 », pour « Agora, Anarchie, Action ». Le principe de l'agorisme est décrit dans le *Manifeste néo-Libertarien* paru en 1980. Ce papier est établi sur le *Manifeste Libertarien* de Murray Rothbard, mais il va encore plus loin. Beaucoup de bitcoiners se réclament de l'agorisme et pensent que Bitcoin en est l'outil parfait.
 
 ## AIR COOLING
+▪ **Minage**
 
 ► ***FR : REFROIDISSEMENT À L'AIR***
 
 Système de refroidissement utilisé pour les ASICs dans le cadre du minage de Bitcoin. L'air cooling consiste à utiliser des ventilateurs pour dissiper la chaleur générée par les composants. L'air ambiant est aspiré pour refroidir les puces avant d'être expulsé. Cette méthode de refroidissement est la plus répandue, car les ventilateurs sont présents directement sur les machines à l'achat. C'est généralement la moins onéreuse à l'acquisition, mais elle est moins efficace comparée à des techniques telles que l'hydro cooling ou l'immersion cooling.
 
 ## AJUSTEMENT DE LA DIFFICULTE
+▪ **Protocole**
 
 ► ***EN : DIFFICULTY ADJUSTMENT***
 
@@ -110,20 +120,24 @@ Où :
 > ► *En français, on parle également parfois de « reciblage » pour évoquer l'ajustement. En anglais, on parle de « Difficulty Adjustment ».*
 
 ## ALGORITHME
+▪ **Informatique**
 
 ► ***EN : ALGORITHM***
 
 Suite finie et non ambiguë d'instructions permettant de réaliser une tâche. Dans le cadre de l'informatique, il s'agit d'un processus écrit dans un langage de programmation qui indique à un ordinateur comment effectuer une mission.
 
 ## ALTCOIN
+▪ **Économie et régulation**
 
 Désigne toute cryptomonnaie autre que le bitcoin (BTC). Le terme « altcoin » est la contraction de « alternative » et de « coin » (pièce alternative). Certains bitcoiners maximalistes parlent également de « shitcoins » pour désigner les altcoins.
 
 ## ALUVM
+▪ **RGB**
 
 Sigle de « *Algorithmic Logic Unit Virtual Machine* ». Machine virtuelle à registres spécifiquement conçue pour l’exécution déterministe de tâches de calcul distribuées et la validation de smart contracts, notamment dans le cadre des contrats RGB. AluVM a initialement été développé par Dr. Maxim Orlovsky et est actuellement maintenu par l'association LNP/BP Standards.
 
 ## ANALYSE DE CHAINE
+▪ **Confidentialité**
 
 ► ***EN : CHAIN ANALYSIS***
 
@@ -139,6 +153,7 @@ Un des objectifs de l’analyse de chaîne consiste à regrouper diverses activi
 Notons que les deux premières heuristiques sur Bitcoin ont été formulées par Satoshi Nakamoto lui-même. Il les expose dans la partie 10 du White Paper (livre blanc). Il est intéressant d’observer que ces deux heuristiques conservent toujours une prééminence dans l’analyse de chaîne aujourd’hui. Ce sont la CIOH (*Common Input Ownership Heuristic*) et la réutilisation d’adresse.
 
 ## ANCESTOR MINING
+▪ **Protocole**
 
 ► ***FR : MINAGE DES ANCÊTRES***
 
@@ -147,6 +162,7 @@ Autre nom parfois donné à CPFP (*Child-Pay-For-Parent*). Le minage des ancêtr
 > ► *Pour plus d'informations, voir la définition de [**CPFP (CHILD PAY FOR PARENT)**](./C.md#cpfp-child-pay-for-parent).*
 
 ## ANCHOR
+▪ **RGB**
 
 Dans le cadre du protocole RGB, un Anchor représente un ensemble de données côté client permettant de prouver l’inclusion d’un engagement unique dans une transaction. Dans le protocole RGB, un Anchor est constitué des éléments suivants :
 * L’identifiant de la transaction Bitcoin (TXID) de la witness transaction ;
@@ -157,16 +173,19 @@ Dans le cadre du protocole RGB, un Anchor représente un ensemble de données c�
 Un Anchor sert donc à établir un lien vérifiable entre une transaction Bitcoin précise et des données privées validées par le protocole RGB. Il garantit que ces données sont bel et bien incluses dans la blockchain, sans pour autant que leur contenu exact soit exposé publiquement.
 
 ## ANCHOR OUTPUTS
+▪ **Lightning Network**
 
 ► ***FR : SORTIES D'ANCRAGE***
 
 Proposition qui vise à améliorer la gestion des frais de transaction dans le cadre des canaux Lightning. À chaque changement d'état dans un canal Lightning, les parties prenantes créent et signent une nouvelle transaction d'engagement qui reflète la nouvelle répartition des fonds au sein du canal. Le problème de ce mécanisme réside dans la détermination des frais de transaction au moment de sa création. En effet, les frais de transaction sur le réseau Bitcoin sont sujets à de fortes fluctuations, tant à la hausse qu'à la baisse. Si les frais fixés pour la dernière transaction d'engagement sont insuffisants au moment de la fermeture unilatérale du canal, non seulement la transaction prendra un temps considérable à se confirmer, mais les mécanismes de verrouillage temporel (timelocks) pourraient également permettre un vol des fonds. Les anchor outputs permettent de réserver une petite partie des fonds dans une transaction d'engagement pour couvrir les frais futurs. En cas de congestion du réseau et d'augmentation des frais, les anchor outputs permettent de modifier les frais de transaction après la création de la transaction d'engagement, garantissant ainsi une fermeture suffisamment rapide du canal Lightning.
 
 ## ANCHORS.DAT
+▪ **Réseau**
 
 Fichier utilisé dans le client Bitcoin Core pour stocker les adresses IP des nœuds sortants auxquels un client était connecté avant d'être éteint. Anchors.dat est donc créé à chaque fois que le nœud est arrêté et supprimé lorsqu'il est relancé. Les nœuds dont les adresses IP sont contenues dans ce fichier sont utilisés pour aider à établir rapidement des connexions lors du redémarrage du nœud.
 
 ## ANCRAGE BILATÉRAL
+▪ **Sidechain**
 
 ► ***EN : TWO-WAY PEG (2WP)***
 
@@ -176,6 +195,7 @@ Mécanisme qui permet d'établir une connexion entre le système principal de Bi
 * Les mineurs de la chaîne principale (drivechain).
 
 ## ANONSETS (ANONYMITY SETS)
+▪ **Confidentialité**
 
 ► ***FR : ENSEMBLES D'ANONYMAT***
 
@@ -194,34 +214,40 @@ Le second indique le nombre de sources possibles pour une pièce donnée, sachan
 > ► *En français, il est globalement admis d'utiliser le terme « anonset ». On pourrait toutefois le traduire par « ensemble d'anonymat » ou « potentiel d'anonymat ». En anglais et en français, on parle également parfois de « score » pour évoquer les anonsets (score prospectif et score rétrospectif). Pour plus d'informations, voir la définition [**COINJOIN**](./C.md#coinjoin).*
 
 ## ANTI MONEY LAUNDERING (AML)
+▪ **Économie et régulation**
 
 ► ***FR : LUTTE CONTRE LE BLANCHIMENT D'ARGENT***
 
 Désigne l'ensemble des procédures, lois et régulations destinées à prévenir le blanchiment d'argent. Ces règles obligent les institutions financières comme les plateformes d'échange de bitcoins à surveiller activement les transactions de leurs clients, à effectuer des vérifications d'identité, à tenir des registres et à signaler les activités suspectes aux autorités.
 
 ## ANYPREVOUT (APO)
+▪ **BIP**
 
 Nom donné au BIP118 qui propose d'ajouter deux nouveaux SigHash Flag modificateurs, nommés `SIGHASH_ANYPREVOUT` et `SIGHASH_ANYPREVOUTANYSCRIPT`. Le terme « *AnyPrevOut* » provient de la contraction de « *Any Previous Output* » que l'on pourrait traduire en français par « toute sortie précédente ».
 
 > ► *Pour plus d'informations, voir la définition de **[SIGHASH_ANYPREVOUT](./S.md#sighash_anyprevout)**.*
 
 ## AOPP
+▪ **Portefeuille**
 
 Sigle de « *Address Ownership Proof Protocol* ». C'est un protocole controversé, conçu pour prouver automatiquement la propriété d'adresses Bitcoin. Ce mécanisme permet aux utilisateurs de démontrer qu'ils contrôlent une adresse spécifique, directement à travers leur logiciel de portefeuille compatible. Initialement, l'AOPP a été créé pour simplifier la vérification de possession d'adresses, une exigence légale pour les clients désirant transférer leurs bitcoins hors des plateformes d'échange dans certaines juridictions, telles que la Suisse.
 
 Néanmoins, ce protocole a été l'objet de critiques importantes au sein de la communauté Bitcoin, car il pourrait établir un précédent où les utilisateurs devraient demander l'autorisation pour exercer leur droit de possession sur leurs propres fonds (self-custody). Face à ces critiques, de nombreux logiciels de portefeuille ont choisi de ne pas adopter ce protocole.
 
 ## API
+▪ **Informatique**
 
 Sigle de « *Application Programming Interface* ». Dans le contexte général de l'informatique, une API est un ensemble de règles et de spécifications que les logiciels peuvent suivre pour communiquer entre eux. Elles permettent aux développeurs d'accéder à des fonctionnalités ou à des données d'une application, d'un système d'exploitation ou d'un autre service pour leur propre logiciel.
 
 > ► *En français, on peut le traduire par « interface de programmation d'applications » ou directement « interface de programmation ».*
 
 ## ARBITRAGE
+▪ **Économie et régulation**
 
 Pratique consistant à exploiter les différences de prix du BTC (ou de tout autre actif) entre différentes plateformes d'échange pour réaliser un profit. L'arbitrage implique d'acheter du bitcoin sur une plateforme où le prix est relativement bas et de le vendre simultanément sur une autre plateforme où le prix est plus élevé. Les écarts de prix peuvent survenir en raison de différences dans la liquidité, la demande, les volumes de transaction et les délais de transfert entre les plateformes d'échange. L'arbitrage contribue à équilibrer les prix sur différentes plateformes.
 
 ## ARBRE DE MERKLE
+▪ **Cryptographie**
 
 ► ***EN : MERKLE TREE***
 
@@ -243,20 +269,24 @@ Les arbres de Merkle sont notamment utilisés pour les nœuds légers (dits « 
 > ► *L'arbre de Merkle porte le nom de Ralph Merkle, un cryptographe qui a conçu cette structure en 1979. Un arbre de Merkle peut également être nommé « arbre de hachage ». En anglais, on dit « Merkle Tree » ou « Hash Tree ».*
 
 ## ARK
+▪ **Couche supérieure**
 
 Nouveau protocole de seconde couche dévoilé par Burak en mai 2023. Comme le Lightning Network, Ark est un système se déployant par-dessus la chaîne principale de Bitcoin. Il permettrait de faire des paiements en bitcoins en dehors de la chaîne de manière rapide, anonyme et à bas frais. Par rapport à Lightning, Ark ne nécessite pas d’avoir des liquidités entrantes pour recevoir des paiements, ce qui permet d’améliorer considérablement l’expérience utilisateur. De plus, il procure une confidentialité se rapprochant des transactions coinjoins, alors que Lightning est un assez mauvais modèle pour protéger sa vie privée. Enfin, Ark pourrait également être non interactif si des covenants sont ajoutés à Bitcoin. Burak critique souvent la capacité de Lightning à passer à l’échelle en raison de sa dépendance à la chaîne principale et suggère qu'Ark pourrait théoriquement intégrer toute la population mondiale en self-custody. Même si Ark peut être vu comme un protocole concurrent au Lightning Network, les deux peuvent en réalité coexister. Ils pourraient même être plutôt complémentaires. Notons toutefois que pour le moment, Ark n’est qu’une simple idée. Burak n’a pas encore dévoilé le code de son invention.
 
 ## ASCII
+▪ **Informatique**
 
 Sigle de « *American Standard Code for Information Interchange* ». C'est un système de codage de caractères pour les ordinateurs. Le standard ASCII utilise 7 bits pour représenter 128 caractères différents : des lettres majuscules et minuscules de l'alphabet latin, des chiffres, des symboles de ponctuation, et des commandes de contrôle, comme le saut de ligne ou la tabulation.
 
 ## ASIC
+▪ **Minage**
 
 Un ASIC est un composant électronique conçu pour exécuter une fonction spécifique avec une efficacité optimale. Dans le contexte du minage de Bitcoin, les ASIC sont des circuits intégrés spécialisés qui effectuent des opérations de hachage à haute vitesse et faible consommation d'énergie. Ils sont spécialisés dans l'exécution de la fonction de hachage `SHA256` utilisée dans le mécanisme de la preuve de travail. L'ASIC est initialement le nom de la puce. Par extension, l'acronyme « ASIC » vise souvent à désigner également la machine qui héberge cette puce. Ainsi, les ordinateurs spécialisés dans le minage de Bitcoin sont parfois appelés des « ASIC », ou bien des « mineurs ». Les ASIC ont progressivement remplacé les autres méthodes de minage, telles que l'utilisation de processeurs (CPU) et de cartes graphiques (GPU), en raison de leur efficacité énergétique supérieure et de leur taux de hachage bien plus élevé.
 
 > ► *L'acronyme « ASIC » désigne en anglais « Application-Specific Integrated Circuit ». En français, ce terme peut être traduit par « Circuit intégré spécifique à une application ».*
 
 ## ASICBOOST
+▪ **Minage**
 
 Méthode d'optimisation algorithmique inventée en 2016, conçue pour augmenter l'efficacité du minage de Bitcoin d'environ 20 % en réduisant la quantité de calculs nécessaires pour chaque tentative de hachage de l'entête. Cette technique exploite une particularité de la fonction de hachage SHA256, utilisée pour le minage, qui divise les données en blocs avant de les traiter. AsicBoost conserve l'un de ces blocs inchangé à travers plusieurs tentatives de hachage, ce qui permet au mineur de ne réaliser qu'une partie du travail pour ce bloc sur plusieurs tentatives. Ce partage de données permet une réutilisation des résultats de calculs précédents, ce qui diminue ainsi le nombre total de calculs nécessaires pour trouver un hachage valide.
 
@@ -265,10 +295,12 @@ AsicBoost peut être utilisé sous deux formes : Overt ASICBoost et Covert ASICB
 Pour résumer, AsicBoost permet de ne pas avoir à effectuer un vrai SHA256 complet pour toutes les tentatives de hachage, car une partie du résultat reste inchangée, ce qui permet d'accélérer le travail des mineurs.
 
 ## ASMAP
+▪ **Réseau**
 
 Outil inventé par Gleb Naumenko et utilisé par Bitcoin Core pour améliorer la sécurité et la topologie du réseau Bitcoin en diversifiant les connexions entre les nœuds. Il s'agit d'une carte d'adressage IP vers les numéros de systèmes autonomes (ASN), permettant une meilleure répartition des connexions sortantes en fonction de l'ASN plutôt que des préfixes IP. Cela aide à prévenir les attaques Eclipse (notamment l'attaque Erebus) en rendant plus difficile pour un attaquant de simuler plusieurs nœuds.
 
 ## ASSIGNMENT
+▪ **RGB**
 
 Dans la logique du protocole RGB, un Assignment est l’équivalent d’une sortie de transaction (output) qui modifie, met à jour ou crée certaines propriétés au sein de l’état d’un contract. Un Assignment comporte deux éléments :
 * Une Seal Definition (la référence à un UTXO précis) ;
@@ -277,6 +309,7 @@ Dans la logique du protocole RGB, un Assignment est l’équivalent d’une sort
 Un Assignment indique donc qu’une portion de l’état (par exemple, un actif) est désormais allouée à un détenteur particulier, identifié via un Single-use Seal lié à un UTXO.
 
 ## ASSUME UTXO
+▪ **Protocole**
 
 Paramètre de configuration dans le client majoritaire Bitcoin Core qui permet à un nœud qui vient d'être initialisé (mais qui n'a pas encore fait l'IBD) de reporter la vérification des transactions et de l'UTXO set avant un snapshot donné. Le concept repose sur l'utilisation d'un UTXO set (liste de tous les UTXOs existants à un moment donné) fourni par Core et présumé exact, ce qui permet au nœud d'être synchronisé très rapidement sur la chaîne avec le plus de travail accumulé. Puisque le nœud saute la longue étape de l'IBD, il est très rapidement fonctionnel pour son utilisateur. Assume UTXO divise la synchronisation (IBD) en deux parties : 
 * Tout d'abord, le nœud réalise le Header First Sync (vérification des en-têtes seulement) et il considère comme valide l'UTXO set qui lui est fourni par Core ;
@@ -285,24 +318,28 @@ Paramètre de configuration dans le client majoritaire Bitcoin Core qui permet �
 Assume UTXO permet donc d'accélérer la préparation d'un nouveau nœud Bitcoin en reportant le processus de vérification des transactions et de l'UTXO set grâce à un snapshot actualisé fourni dans Core.
 
 ## ASSUME VALID
+▪ **Protocole**
 
 Paramètre de configuration dans le client majoritaire Bitcoin Core qui permet à un nœud qui vient d'être initialisé (mais qui n'a pas encore fait l'IBD) de sauter la vérification des signatures pour toutes les transactions incluses dans les blocs antérieurs à un certain bloc donné. Ce fameux bloc est défini par l'empreinte de son en-tête, c'est-à-dire son hash. Le bloc choisi est renouvelé lors de chaque nouvelle version de Bitcoin Core. À son initialisation, si le nœud a activé ce paramètre, il va donc vérifier la chaîne d'en-têtes de blocs pour trouver la branche avec le plus de travail accumulé. Si le nœud détecte le hash fourni par Core dans la branche qu'il a retenue, il omettra la vérification des signatures pour les blocs antérieurs. Dans le cas contraire, le nœud procédera à une synchronisation traditionnelle (IBD) pour tout vérifier par lui-même.
 
 L'objectif d'Assume Valid est d'accélérer le processus de synchronisation initiale d'un nœud sans compromettre la sécurité, en supposant que la majorité du réseau ait déjà validé ces transactions dans le passé. Le seul vrai compromis pour le nœud est qu'en cas de vol antérieur de bitcoins, il ne sera pas averti. Cependant, il peut toujours s'assurer de l'exactitude de la quantité de bitcoins émis. Les nœuds poursuivent la vérification des signatures de transactions postérieures au bloc Assume Valid. Cette approche repose sur l'hypothèse que si une transaction est acceptée par le réseau depuis assez longtemps sans contestation, il est improbable qu'elle soit frauduleuse.
 
 ## ATH (ALL-TIME HIGH)
+▪ **Économie et régulation**
 
 ► ***FR : PLUS HAUT HISTORIQUE***
 
 Désigne le niveau le plus élevé jamais atteint par l'élément étudié. Souvent, l'ATH désigne le plus haut niveau de prix du bitcoin en comparaison avec une monnaie étatique sur une période donnée.
 
 ## ATLC
+▪ **Couche supérieure**
 
 Sigle de « *Anchor Timelock Contracts* ». C'est un paiement conditionnel utilisé dans le cadre du protocole Ark pour fournir un calendrier de paiement atomique à un hub, grâce à des connecteurs permettant de former ce que l'on appelle un « txlock ». L'objectif d'un ATLC est sensiblement le même que celui d'un HTLC sur Lightning.
 
 > ► *Pour plus d'informations, voir la définition de [**ARK**](./A.md#ark).*
 
 ## ATOMIC MULTI-PATH PAYMENTS
+▪ **Lightning Network**
 
 ► ***FR : PAIEMENTS MULTICHEMINS ATOMIQUES***
 
@@ -317,6 +354,7 @@ Un avantage des AMP est qu'ils fonctionnent même si seuls le receveur et l'envo
 > ► *On parle également parfois de « Atomic Multi-Part Payment » pour désigner cette même méthode. Pour plus d'informations, voir la définition de [**MULTI-PATH PAYMENT (MPP)**](./M.md#multi-path-payments-mpp).*
 
 ## ATOMIC SWAP
+▪ **Outils**
 
 ► ***FR : ÉCHANGE ATOMIQUE***
 
@@ -327,6 +365,7 @@ Technologie permettant un échange de cryptomonnaies directement entre deux part
 Les Atomic Swaps peuvent s'effectuer soit avec une même cryptomonnaie, dans ce cas, on parle également de « *coinswap* », soit entre des cryptomonnaies différentes. Historiquement, ils s'appuyaient sur des « *Hash Time-Locked Contracts* » (HTLC), un système de verrouillage temporel qui garantit la complétude ou l'annulation totale de l'échange, préservant ainsi l'intégrité des fonds des parties impliquées. Cette méthode exigeait des protocoles capables de gérer à la fois les scripts et les timelocks. Toutefois, ces dernières années, la tendance s'est orientée vers l'utilisation des *Adaptor Signatures*. Cette seconde approche présente l'avantage de se passer de scripts, ce qui réduit ainsi les coûts opérationnels. Son autre atout majeur réside dans le fait qu'elle n'exige pas l'emploi d'un hachage identique pour les deux volets de la transaction, ce qui permet d'éviter de révéler un lien entre elles.
 
 ## ATTAQUE DES 51 POUR CENT
+▪ **Attaque**
 
 ► ***EN : 51% ATTACK***
 
@@ -335,6 +374,7 @@ Scénario hypothétique sur le système Bitcoin où un acteur malveillant contr�
 > ► *Cette attaque est également nommée « Attaque Goldfinger ».*
 
 ## AVG. ROUND DURATION
+▪ **Minage**
 
 La durée moyenne de tour est un indicateur utilisé pour estimer le temps nécessaire à une pool de minage pour trouver un bloc, en fonction de la difficulté du réseau et du hashrate de la pool. Il est calculé en prenant le nombre de shares attendues pour trouver un bloc et en le divisant par le hashrate de la pool. Par exemple, si une pool de minage compte 200 mineurs, et que chacun génère en moyenne 4 shares par seconde, la puissance totale de calcul de la pool est de 800 shares par seconde :
 

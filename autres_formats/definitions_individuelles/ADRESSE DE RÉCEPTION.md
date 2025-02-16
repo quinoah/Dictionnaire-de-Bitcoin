@@ -1,4 +1,5 @@
 ## ADRESSE DE RÉCEPTION
+▪ **Portefeuille**
 
 ► ***EN : BITCOIN ADDRESS***
 

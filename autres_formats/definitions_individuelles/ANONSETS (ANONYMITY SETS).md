@@ -1,4 +1,5 @@
 ## ANONSETS (ANONYMITY SETS)
+▪ **Confidentialité**
 
 ► ***FR : ENSEMBLES D'ANONYMAT***
 

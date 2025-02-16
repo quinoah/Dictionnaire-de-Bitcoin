@@ -1,4 +1,5 @@
 ## ANCRAGE BILATÉRAL
+▪ **Sidechain**
 
 ► ***EN : TWO-WAY PEG (2WP)***
 

@@ -1,4 +1,5 @@
 ## ANALYSE DE CHAINE
+▪ **Confidentialité**
 
 ► ***EN : CHAIN ANALYSIS***
 

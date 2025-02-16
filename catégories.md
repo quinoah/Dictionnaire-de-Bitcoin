@@ -24,7 +24,7 @@
 
 - **Économie et régulation** : Toutes les définitions relatives aux aspects économiques, politiques, réglementaires et légaux influant sur Bitcoin. Elle aborde le trading, l’impact des régulations, ainsi que les dynamiques économiques et juridiques autour de Bitcoin.
 
-- **Outils** : L’ensemble des logiciels, matériels et implémentations techniques qui ne trouvent pas leur place dans les autres catégories. Elle comprend par exemple les portefeuilles logiciels, les hardware wallets et autres outils d’analyse ou de gestion utilisés dans l’écosystème Bitcoin.
+- **Outil** : L’ensemble des logiciels, matériels et implémentations techniques qui ne trouvent pas leur place dans les autres catégories. Elle comprend par exemple les portefeuilles logiciels, les hardware wallets et autres outils d’analyse ou de gestion utilisés dans l’écosystème Bitcoin.
 
 - **Histoire** : Les définitions des événements et concepts historiques propres à Bitcoin. Elles couvrent l’évolution de la cryptomonnaie, les jalons marquants et les figures emblématiques qui ont contribué à son développement. Les définitions avec des noms de personnes ou des pseudos se trouveront ici.
 

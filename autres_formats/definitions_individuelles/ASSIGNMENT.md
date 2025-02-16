@@ -1,4 +1,5 @@
 ## ASSIGNMENT
+▪ **RGB**
 
 Dans la logique du protocole RGB, un Assignment est l’équivalent d’une sortie de transaction (output) qui modifie, met à jour ou crée certaines propriétés au sein de l’état d’un contract. Un Assignment comporte deux éléments :
 * Une Seal Definition (la référence à un UTXO précis) ;
