@@ -874,8 +874,6 @@ Processeur de paiement open-source qui permet aux commerçants et aux utilisateu
 
 > « _This is lies, my trust in you is broken, I will make you obsolete_ ».
 
-![](assets/53.png)
-
 ## BULL MARKET
 
 ► ***FR : MARCHÉ HAUSSIER***

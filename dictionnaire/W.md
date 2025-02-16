@@ -20,8 +20,6 @@ Fichier journal dans Bitcoin Core spécifique à la base de données des portefe
 
 Portefeuille Bitcoin axé sur la confidentialité offrant des fonctionnalités telles que le coinjoin.
 
-![](assets/48.png)
-
 ## WATCHMEN
 
 ► ***FR : GARDIENS***
@@ -43,8 +41,6 @@ Désigne un individu ou une entité qui possède une quantité très importante 
 ## WHIRLPOOL
 
 Protocole de coinjoins chaumiens ZeroLink, développée par les équipes du portefeuille Samourai Wallet. Whirlpool est actuellement disponible sur les portefeuilles Samourai Wallet (Android), Sparrow Wallet (PC) et Bitcoin Keeper (IOS et Android).
-
-![](assets/44.png)
 
 > ► *Pour plus d'informations, voir la définition de **[CHAUMIAN COINJOIN](./C.md#chaumian-coinjoin)** et de [**ZEROLINK**](./Z.md#zerolink).*
 
