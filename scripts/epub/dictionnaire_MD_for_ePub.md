@@ -4,7 +4,7 @@
 Dictionnaire de Bitcoin : Tout le vocabulaire technique de Bitcoin
 
 
-Version du 16 fÃ©vrier 2025
+Version du 03 mars 2025
 
 https://github.com/LoicPandul/Dictionnaire-de-Bitcoin
 
@@ -485,7 +485,7 @@ Dans les AMP, on utilise des secrets partiels uniques pour chaque fraction. Une 
 
 Un avantage des AMP est qu'ils fonctionnent même si seuls le receveur et l'envoyeur ont implémenté cette méthode. Les nœuds intermédiaires traitent ces paiements comme des transactions classiques en utilisant des HTLCs, sans être conscients qu'ils traitent des fractions d'un paiement plus important.
 
-> ► *On parle également parfois de « Atomic Multi-Part Payment » pour désigner cette même méthode. Pour plus d'informations, voir la définition de [**MULTI-PATH PAYMENT (MPP)**](#multi-path-payments-mpp).*
+> ► *On parle également parfois de « Atomic Multi-Part Payment » pour désigner cette même méthode. Pour plus d'informations, voir la définition de [**MULTI-PATH PAYMENTS (MPP)**](#multi-path-payments-mpp).*
 
 ## ATOMIC SWAP
 ▪ **Outils**
@@ -800,7 +800,7 @@ Proposition d'amélioration de Bitcoin qui introduit un mécanisme de chiffremen
 
 Le BIP39 introduit une méthode pour convertir la graine aléatoire d'un portefeuille en une suite de mots mémorisables et lisibles par l'Homme, connue sous le nom de phrase mnémonique. Cette phrase, généralement composée de 12 ou de 24 mots, permet de régénérer l'ensemble des clés privées d'un portefeuille de manière déterministe. Ainsi, au lieu de devoir mémoriser ou stocker une graine cryptographique complexe, les utilisateurs peuvent sauvegarder leurs bitcoins via une phrase de quelques mots. Le BIP39 a ainsi contribué à simplifier la gestion d'un portefeuille Bitcoin.
 
-> ► *Pour plus d'informations, voir la définition de [**PHRASE DE RÉCUPÉRATION (MNÉMONIQUE)**](#phrase-de-récupération).*
+> ► *Pour plus d'informations, voir la définition de [**PHRASE DE RÉCUPÉRATION**](#phrase-de-récupération).*
 
 ## BIP42
 
@@ -857,7 +857,7 @@ Introduit un message de rejet dans le protocole de communication entre les nœud
 
 Introduit un nouvel opcode nommé `OP_CHECKLOCKTIMEVERIFY` qui permet de rendre un UTXO inutilisable jusqu'à un moment donné dans le futur. L'application de ce BIP a nécessité un soft fork, qui est intervenu le 14 décembre 2015. Il a également introduit la version 4 des blocs.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_CHECKLOCKTIMEVERIFY**](#op_checklocktimeverify-0xb1).*
+> ► *Pour plus d'informations, voir la définition de [**OP_CHECKLOCKTIMEVERIFY (0XB1)**](#op_checklocktimeverify-0xb1).*
 
 ## BIP66
 
@@ -941,13 +941,13 @@ Proposition présentée par Gavin Andresen en janvier 2016 dans le cadre de la B
 
 Propose l'ajout d'un bit de service nommé `NODE_BLOOM` pour permettre aux nœuds de signaler explicitement leur prise en charge des Bloom Filters tels que décris dans le BIP37. L'introduction de `NODE_BLOOM` permet aux opérateurs de nœuds de désactiver ce service afin de réduire les risques de DoS. L'option du BIP37 est par défaut désactivée dans Bitcoin Core. Pour l'activer, il faut entrer le paramètre `peerbloomfilters=1` dans le fichier de configuration.
 
-> ► *Pour plus d'informations, voir la définition de [**DOS**](#dos-denial-of-service).*
+> ► *Pour plus d'informations, voir la définition de [**DOS (DENIAL OF SERVICE)**](#dos-denial-of-service).*
 
 ## BIP112
 
 Introduit l'opcode `OP_CHECKSEQUENCEVERIFY` (CSV) dans le langage Script de Bitcoin. Cette opération permet de créer des transactions dont la validité ne devient effective qu'après un certain délai relatif à une transaction antérieure, défini soit en nombre de blocs, soit en durée de temps. `OP_CHECKSEQUENCEVERIFY` compare la valeur en haut de la pile avec la valeur du champ `nSequence` de l'input. Si elle est supérieure et que toutes les autres conditions sont respectées, le script est valide. Ainsi, `OP_CHECKSEQUENCEVERIFY` restreint les valeurs possibles pour le champ `nSequence` de l'input qui le dépense, et ce champ `nSequence` restreint lui-même le moment où la transaction qui comprend cet input peut être incluse dans un bloc. Le BIP112 a été introduit via un soft fork le 4 juillet 2016 en même temps que le BIP68 et le BIP113, activé pour la première fois grâce à la méthode du BIP9.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_CHECKSEQUENCEVERIFY**](#op_checksequenceverify-0xb2).*
+> ► *Pour plus d'informations, voir la définition de [**OP_CHECKSEQUENCEVERIFY (0XB2)**](#op_checksequenceverify-0xb2).*
 
 ## BIP113
 
@@ -1012,13 +1012,13 @@ Met à jour l'appel JSON-RPC `getblocktemplate` pour intégrer le support de Seg
 
 Proposition incluse dans le soft fork SegWit visant à résoudre un vecteur de malléabilité lié à l'élément fictif (« *dummy element* ») consommé par les opérations `OP_CHECKMULTISIG` et `OP_CHECKMULTISIGVERIFY`. En raison d'un bug off-by-one historique (erreur de décalage unitaire), ces 2 opcodes suppriment un élément supplémentaire sur la pile en plus de leur fonction de base. Pour éviter une erreur, il est donc obligatoire d'inclure une valeur factice au début du `scriptSig` afin de satisfaire la suppression et outrepasser le bug. Cette valeur est inutile, mais elle doit forcément être là pour que le script soit valide. Le BIP11, qui a introduit le standard P2MS, conseillait de mettre un `OP_0` comme valeur inutile. Mais ce standard n'était pas imposé au niveau des règles de consensus, ce qui veut dire que n'importe quelle valeur pouvait y être placée, sans invalider la transaction. C'est en ça que `OP_CHECKMULTISIG` et `OP_CHECKMULTISIGVERIFY` contenaient un vecteur de malléabilité. Le BIP147 introduit une nouvelle règle de consensus, désignée sous le nom de `NULLDUMMY`, exigeant que cet élément fictif soit un tableau d'octets vide (`OP_0`). Toute autre valeur entraîne l'échec immédiat de l'évaluation du script. Cette modification s'applique aux scripts pré-SegWit ainsi qu'aux scripts P2WSH et nécessitait un soft fork.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_CHECKMULTISIG**](#op_checkmultisig-0xae).*
+> ► *Pour plus d'informations, voir la définition de [**OP_CHECKMULTISIG (0XAE)**](#op_checkmultisig-0xae).*
 
 ## BIP148
 
 Proposition introduite en mars 2017 par un développeur sous le pseudonyme de Shaolin Fry. L'objectif du BIP148 était de forcer l'activation de la mise à jour SegWit sur le protocole Bitcoin, face à la stagnation de la signalisation de ce soft fork par les mineurs via la méthode du BIP9. Le BIP148 suggérait la mise en œuvre d'un UASF (*User-Activated Soft Fork*) pour activer SegWit de force par les nœuds le 15 novembre 2017, si les mineurs n'avaient pas verrouillé SegWit d'ici au 1er août 2017. Si l'adoption de l'UASF du BIP148 avait eu lieu, les nœuds du réseau Bitcoin auraient refusé les blocs ne signalant pas le support à SegWit, exerçant ainsi une pression sur les mineurs pour qu'ils adoptent la mise à jour. Bien que ce BIP historique n'ait finalement pas été activé, il a joué un rôle déterminant dans la réussite de l'adoption de SegWit, en contraignant les mineurs à verrouiller le soft fork via le BIP91. À plus long terme, le BIP148 a établi un précédent important, démontrant l'influence que peuvent exercer les utilisateurs via leurs nœuds complets sur les décisions de gouvernance du protocole Bitcoin.
 
-> ► *Pour plus d'informations, voir la définition de [**UASF (USER-ACTIVATED SOFT FORK)**](#uasf).*
+> ► *Pour plus d'informations, voir la définition de [**UASF**](#uasf).*
 
 ## BIP149
 
@@ -1451,7 +1451,7 @@ Concept utilisé dans les systèmes distribués pour assurer un consensus fiable
 
 Ce concept est lié au [problème des généraux byzantins](#prob.-des-généraux-byzantins), une métaphore utilisée pour illustrer les défis de la coordination et de la prise de décision dans un système distribué où les acteurs peuvent ne pas se faire confiance.
 
-> ► *L'algorithme de preuve de travail (Proof-of-Work ou PoW) utilisé par Bitcoin est un mécanisme de consensus dit « Tolérant aux pannes byzantines » ou « Byzantine Fault Tolerant (BFT) ». Pour plus d'informations, voir la définition de **[PROBLÈME DES GÉNÉRAUX BYZANTINS](#prob.-des-généraux-byzantins)**.*
+> ► *L'algorithme de preuve de travail (Proof-of-Work ou PoW) utilisé par Bitcoin est un mécanisme de consensus dit « Tolérant aux pannes byzantines » ou « Byzantine Fault Tolerant (BFT) ». Pour plus d'informations, voir la définition de **[PROB. DES GÉNÉRAUX BYZANTINS](#prob.-des-généraux-byzantins)**.*
 
 
 ## C++ (PLUS PLUS)
@@ -1491,7 +1491,7 @@ Quantité de bitcoins bloqués sur une adresse multisignatures qui représente u
 
 Protocole open-source de monnaie électronique chaumienne, similaire au système eCash de David Chaum, mais qui fonctionne sur Bitcoin et le Lightning Network. Plus précisément, Cashu est inspiré d'une variante d'eCash proposée en 1996 par David Wagner nommée « *Chaumian ecash without RSA* ». Cashu peut être utilisé sur des portefeuilles custodiaux afin que le serveur ne puisse identifier ni les propriétaires des fonds, ni les détails des transactions, offrant ainsi une amélioration de la confidentialité. Les utilisateurs peuvent générer des jetons Cashu en échange de bitcoins, qui sont signés par le serveur sans connaitre l'utilisateur. Les jetons peuvent ensuite être transférés entre utilisateurs de manière instantanée, privée et sans frais.
 
-> ► *Pour plus d'informations, voir la définition de [**ECASH**](#ecash-david-chaum).*
+> ► *Pour plus d'informations, voir la définition de [**ECASH (DAVID CHAUM)**](#ecash-david-chaum).*
 
 ## CET
 
@@ -1771,7 +1771,7 @@ Processus par lequel chaque partie (client) vérifie un ensemble de données éc
 
 Ancien nom de l'implémentation Core-Lightning. 
 
-> ► *Pour plus d'informations, voir la définition de [**CORE-LIGHTNING**](#core-lightning-cln).*
+> ► *Pour plus d'informations, voir la définition de [**CORE-LIGHTNING (CLN)**](#core-lightning-cln).*
 
 ## CLONE
 
@@ -2315,7 +2315,7 @@ Désigne le processus de génération de paires de clés enfants à partir d'une
 
 Le résultat de HMAC-SHA512 est divisé en deux : les premiers 256 bits deviennent la clé enfant (privée ou publique après un passage dans ECDSA), et les 256 bits restants deviennent le code de chaîne enfant.
 
-> ► *Pour plus d'informations, voir la définition de [**INDEX**](#index-key).*
+> ► *Pour plus d'informations, voir la définition de [**INDEX (KEY)**](#index-key).*
 
 ## DÉRIVATION ENDURCIE
 
@@ -2441,7 +2441,7 @@ Le dual funding est inclus dans la version 2 du protocole de construction des ca
 
 Fait référence à un élément supplémentaire et inutile consommé par les opcodes `OP_CHECKMULTISIG` et `OP_CHECKMULTISIGVERIFY` lors de la vérification des signatures dans une transaction. En raison d'un bug off-by-one historique (erreur de décalage unitaire), ces 2 opcodes suppriment un élément supplémentaire sur la pile en plus de leur fonction de base. Pour éviter une erreur, il est donc obligatoire d'inclure une valeur factice au début du `scriptSig` afin de satisfaire la suppression et outrepasser le bug. Cette valeur inutile, c'est ce que l'on appelle le « *dummy element* ». Le BIP11, qui a introduit le standard P2MS, conseillait de mettre un `OP_0` comme valeur inutile. Mais ce standard n'était pas imposé au niveau des règles de consensus, ce qui veut dire que n'importe quelle valeur pouvait y être placée, sans invalider la transaction. Le dummy element était donc un vecteur de malléabilité des transactions. Le BIP147, introduit avec le soft fork SegWit, a imposé que cet élément factice soit strictement un tableau d'octets vide (`OP_0`), éliminant ainsi la malléabilité associée à cet élément en rendant toute transaction non conforme invalide selon les règles de consensus. Cette règle, nommée `NULLDUMMY`, s'applique à la fois aux transactions SegWit et pré-SegWit.
 
-> ► *Pour plus d'informations, voir la définition de [**BIP147**](#bip147) et [**OP_CHECKMULTISIG**](#op_checkmultisig-0xae).*
+> ► *Pour plus d'informations, voir la définition de [**BIP147**](#bip147) et [**OP_CHECKMULTISIG (0XAE)**](#op_checkmultisig-0xae).*
 
 ## DUST
 
@@ -3790,7 +3790,7 @@ Terme générique pour désigner toutes les techniques de paiement sur Lightning
 
 Les paiements multi-path offrent également de légers avantages en termes de confidentialité, car il devient plus difficile pour un observateur de lier chaque fraction de paiement à l’ensemble de la transaction. Toutefois, dans sa version de base, tous les fragments partagent le même secret pour les HTLCs, ce qui peut rendre la transaction traçable si un observateur est présent sur plusieurs routes. De plus, du fait que le secret est unique pour toutes les fractions du paiement, celui-ci n'est pas atomique. Cela signifie que certaines parties du paiement peuvent être exécutées avec succès, tandis que d'autres peuvent échouer. Ces inconvénients sont corrigés avec les « *Atomic Multi-Path Payment* ».
 
-> ► *On parle également parfois de « Multi-Part Payment » pour désigner cette même méthode. Pour plus d'informations, voir la définition de **[ATOMIC MULTI-PATH PAYMENT (AMP)](#atomic-multi-path-payments)**.*
+> ► *On parle également parfois de « Multi-Part Payment » pour désigner cette même méthode. Pour plus d'informations, voir la définition de **[ATOMIC MULTI-PATH PAYMENTS](#atomic-multi-path-payments)**.*
 
 ## MULTI PROTOCOL COMMITMENT
 
@@ -3854,7 +3854,7 @@ Sur Bitcoin, des protocoles de seconde couche comme Ordinals et Stamps permetten
 
 Champ intégré dans les transactions qui définit une condition temporelle avant laquelle la transaction ne peut être ajoutée à un bloc valide. Ce paramètre permet de spécifier un temps précis (timestamp Unix) ou un nombre de blocs spécifique comme condition pour que la transaction soit considérée comme valide. C'est donc un timelock absolu (pas relatif). Le `nLockTime` agit sur l'intégralité de la transaction et permet effectivement de vérifier le temps, alors que l'opcode `OP_CHECKLOCKTIMEVERIFY` permet uniquement de comparer la valeur en haut de la pile avec la valeur du `nLockTime`.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_CHECKLOCKTIMEVERIFY**](#op_checklocktimeverify-0xb1) et [**TIMELOCK**](#timelock).*
+> ► *Pour plus d'informations, voir la définition de [**OP_CHECKLOCKTIMEVERIFY (0XB1)**](#op_checklocktimeverify-0xb1) et [**TIMELOCK**](#timelock).*
 
 ## NO2X
 
@@ -3914,7 +3914,7 @@ On utilise également des nonces dans le processus de minage sur Bitcoin. Les mi
 
 Le champ `nSequence` dans une entrée de transaction Bitcoin est utilisé pour indiquer la manière dont cette entrée est verrouillée dans le temps. À l'origine, il visait à permettre le remplacement dynamique de transactions dans les mempools afin de permettre un système de paiement en surcouche similaire à Lightning. Toutefois, son utilisation a évolué avec l'introduction du timelock relatif via le BIP68. Le champ `nSequence` peut désormais spécifier un délai relatif avant qu'une transaction soit incluse dans un bloc. Ce délai peut être défini en termes de nombre de blocs, ou bien comme un multiple de 512 secondes (c'est-à-dire, du temps réel). Notons que cette nouvelle interprétation du champ `nSequence` est uniquement valide si le champ `nVersion` est supérieur ou égal à `2`. Cette interprétation du champ `nSequence` se fait au niveau des règles de consensus de Bitcoin. Par ailleurs, au niveau des règles de standardisation, ce champ est également utilisé pour le signalement de RBF. Si une transaction inclue un `nSequence` inférieur à `0xfffffffe`, alors elle pourra être remplacée via RBF sur les nœuds qui suivent cette politique.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_CHECKSEQUENCEVERIFY**](#op_checksequenceverify-0xb2) et [**TIMELOCK**](#timelock).*
+> ► *Pour plus d'informations, voir la définition de [**OP_CHECKSEQUENCEVERIFY (0XB2)**](#op_checksequenceverify-0xb2) et [**TIMELOCK**](#timelock).*
 
 ## NULL DATA
 
@@ -4032,7 +4032,7 @@ Fichier utilisé dans Bitcoin Core pour stocker une clé privée associée à un
 
 Pousse la valeur 0 sur la pile. Il est souvent utilisé pour représenter la valeur booléenne faux dans les scripts. `OP_0` est également utilisé pour initialiser les scripts.
 
-> ► *OP_0 est identique à **[OP_FALSE](#op_false-0x00)** et OP_PUSHNUM_0.*
+> ► *OP_0 est identique à **[OP_FALSE (0X00)](#op_false-0x00)** et OP_PUSHNUM_0.*
 
 ## OP_0NOTEQUAL (0X92)
 
@@ -4042,7 +4042,7 @@ Vérifie si l'élément au sommet de la pile est différent de zéro. Si l'élé
 
 Pousse la valeur `1` sur la pile. Il est souvent utilisé pour représenter la valeur booléenne vrai dans les scripts.
 
-> ► *OP_1 est identique à **[OP_TRUE](#op_true-0x51)** et OP_PUSHNUM_1.*
+> ► *OP_1 est identique à **[OP_TRUE (0X51)](#op_true-0x51)** et OP_PUSHNUM_1.*
 
 ## OP_1ADD (0X8B)
 
@@ -4289,13 +4289,13 @@ Duplique le sommet de la pile. L'élément en haut de la pile est donc copié et
 
 Modifie le flux d'exécution dans un script conditionnel : il indique que les opérations qui le suivent doivent être exécutées si la condition précédente spécifiée par un `OP_IF`, un `OP_NOTIF` ou un autre `OP_ELSE` n'est pas remplie.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_IF**](#op_if-0x63).*
+> ► *Pour plus d'informations, voir la définition de [**OP_IF (0X63)**](#op_if-0x63).*
 
 ## OP_ENDIF (0X68)
 
 Marque la fin d'une structure de contrôle conditionnelle initiée par un `OP_IF` ou un `OP_NOTIF`, normalement suivis par un ou plusieurs `OP_ELSE`. Il indique que l'exécution du script doit continuer au-delà de la structure conditionnelle, quelle que soit la branche qui a été exécutée. Autrement dit, `OP_ENDIF` permet de délimiter la fin des blocs conditionnels dans les scripts.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_IF**](#op_if-0x63).*
+> ► *Pour plus d'informations, voir la définition de [**OP_IF (0X63)**](#op_if-0x63).*
 
 ## OP_EQUAL (0X87)
 
@@ -4313,7 +4313,7 @@ Opcode proposé par Gavin Andresen en 2011. Il prend le script situé au sommet 
 
 Identique à `OP_0`.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_0**](#op_0-0x00).*
+> ► *Pour plus d'informations, voir la définition de [**OP_0 (0X00)**](#op_0-0x00).*
 
 ## OP_FROMALTSTACK (0X6C)
 
@@ -4396,7 +4396,7 @@ Inverse la valeur booléenne du sommet de la pile : si cette valeur est non null
 
 Fonctionne de manière opposée à `OP_IF`, exécutant la portion suivante du script si la valeur au sommet de la pile est nulle (fausse).
 
-> ► *Pour plus d'informations, voir la définition de [**OP_IF**](#op_if-0x63).*
+> ► *Pour plus d'informations, voir la définition de [**OP_IF (0X63)**](#op_if-0x63).*
 
 ## OP_NUMEQUAL (0X9C)
 
@@ -4486,7 +4486,7 @@ Prend le sommet de la pile principale (*main stack*) et le déplace vers la pile
 
 Identique à OP_1.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_1**](#op_1-0x51).*
+> ► *Pour plus d'informations, voir la définition de [**OP_1 (0X51)**](#op_1-0x51).*
 
 ## OP_TUCK (0X7D)
 
@@ -4525,7 +4525,7 @@ Vérifie si le premier élément en haut de la pile se trouve dans l'intervalle 
 
 Ensemble des commandes utilisées dans le système script de Bitcoin. Script est un langage de programmation à pile utilisé pour établir des conditions de dépense, et donc, indirectement, sécuriser des bitcoins. Les instructions utilisées en langage script sont appelées « opcodes ». Ce sont des opérateurs logiques et des commandes pour manipuler les piles (*stacks*). Ces instructions spécifiques sont exécutées par les nœuds du réseau lors de l'ajout d'une transaction à la blockchain. Script est un langage non-Turing complet. Il peut être catégorisé comme un langage de niveau intermédiaire (presque bas niveau) inspiré du Forth.
 
-> ► *« Opcode » peut être traduit en français par « code opératoire ». Dans la pratique, on utilise directement le terme « opcode » dans le langage courant. Pour plus d'informations, voir les définitions de **[PILE (STACK)](#pile)** et **[SCRIPT](#script)**.*
+> ► *« Opcode » peut être traduit en français par « code opératoire ». Dans la pratique, on utilise directement le terme « opcode » dans le langage courant. Pour plus d'informations, voir les définitions de **[PILE](#pile)** et **[SCRIPT](#script)**.*
 
 ## OPEN ASSETS PROTOCOL (OAP)
 
@@ -4804,7 +4804,7 @@ Les « pannes byzantines naturelles » sont couramment distinguées des « panne
 
 L'authentification, la signature et le consensus par des moyens cryptographiques et des algorithmes « Tolérants aux pannes byzantines » ou « Byzantine Fault Tolerant (BFT) » permettent de limiter ces dernières.
 
-> ► *La panne byzantine fait référence au problème des généraux byzantins, une métaphore traitant de la remise en cause de la fiabilité des transmissions et de l'intégrité des interlocuteurs. Pour plus d'informations, voir la définition de **[PROBLÈME DES GÉNÉRAUX BYZANTINS](#prob.-des-généraux-byzantins)**.*
+> ► *La panne byzantine fait référence au problème des généraux byzantins, une métaphore traitant de la remise en cause de la fiabilité des transmissions et de l'intégrité des interlocuteurs. Pour plus d'informations, voir la définition de **[PROB. DES GÉNÉRAUX BYZANTINS](#prob.-des-généraux-byzantins)**.*
 
 ## PAPER WALLET
 
@@ -5417,7 +5417,7 @@ Protocole développé par la même équipe que les Ordinals qui permet l'utilisa
 
 Bibliothèque Lightning développée en Rust par la communauté Rust Bitcoin en collaboration avec Square. Rust-Lightning fournit une implémentation de Lightning. Elle sert de base au *Lightning Development Kit* (LDK).
 
-> ► *Pour plus d'informations, voir la définition de **[LDK](#ldk-lightning-dev-kit)**.
+> ► *Pour plus d'informations, voir la définition de **[LDK (LIGHTNING DEV KIT)](#ldk-lightning-dev-kit)**.
 
 
 ## SAMOURAI WALLET
@@ -5458,7 +5458,7 @@ Méthode de calcul de la rémunération des mineurs dans le contexte des pools d
 
 Langage de programmation à piles utilisé pour établir des conditions de dépense, et donc, indirectement, sécuriser des bitcoins. Script est essentiellement une liste d'instructions, composée d'opérateurs logiques et de commandes pour manipuler les piles (*stacks*). Il se matérialise par l'utilisation d'opcodes qui donnent des instructions spécifiques qui sont exécutées par les nœuds pour vérifier la validité d'une transaction. Script est un langage non-Turing complet. Il peut être catégorisé comme un langage de niveau intermédiaire (presque bas niveau) inspiré du Forth.
 
-> ► *Pour plus d'informations, voir les définitions de **[PILE (STACK)](#pile)** et **[OPCODES](#opcodes)**.*
+> ► *Pour plus d'informations, voir les définitions de **[PILE](#pile)** et **[OPCODES](#opcodes)**.*
 
 ## SCRIPTLESS SCRIPTS
 
@@ -5518,7 +5518,7 @@ OP_DUP OP_HASH160 OP_PUSHBYTES_20 <adresse> OP_EQUALVERIFY OP_CHECKSIG
 
 Ensemble d'outils logiciels fournissant les ressources nécessaires aux développeurs pour créer des applications sur une plateforme spécifique. Un SDK inclut des bibliothèques, des guides de développement, des exemples de code ou encore des processus de compilation. Les SDK facilitent et accélèrent le développement en offrant des modules réutilisables. Sur Bitcoin, il existe le BDK (*Bitcoin Dev Kit*) et le LDK (*Lightning Dev Kit*).
 
-> ► *En anglais, les SDK sont également parfois appelés « devkit ». Pour plus d'informations, voir les définitions de [**BDK**](#bdk-bitcoin-dev-kit) et de [**LDK**](#ldk-lightning-dev-kit).*
+> ► *En anglais, les SDK sont également parfois appelés « devkit ». Pour plus d'informations, voir les définitions de [**BDK (BITCOIN DEV KIT)**](#bdk-bitcoin-dev-kit) et de [**LDK (LIGHTNING DEV KIT)**](#ldk-lightning-dev-kit).*
 
 ## SEAL DEFINITION
 
@@ -5603,7 +5603,7 @@ Ce procédé génère une sorte d'embranchement secret de la blockchain, qui res
 
 Le selfish mining est embêtant pour les utilisateurs, car il diminue la sécurité du système en gaspillant une partie de la puissance de calcul du réseau. En cas de réussite, il conduit également à des réorganisations de la blockchain, affectant ainsi la fiabilité des confirmations de transaction pour les utilisateurs. Cette pratique reste tout de même risquée pour le groupe de mineurs attaquants, car il est souvent plus rentable de miner normalement au-dessus du dernier bloc connu publiquement plutôt que d'allouer de la puissance de calcul à un embranchement secret qui ne dépassera probablement jamais la blockchain honnête. Au plus le nombre de blocs dans la réorganisation est grand, au plus la probabilité de réussite de l'attaque est basse.
 
-> ► *Attention, une attaque par selfish mining ne doit pas être confondue avec une attaque de block withholding (rétention de bloc). Pour plus d'informations, voir la définition de **[RÉTENTION](#rétention-de-bloc)**.*
+> ► *Attention, une attaque par selfish mining ne doit pas être confondue avec une attaque de block withholding (rétention de bloc). Pour plus d'informations, voir la définition de **[RÉTENTION (DE BLOC)](#rétention-de-bloc)**.*
 
 ## SETTINGS.JSON
 
@@ -5629,7 +5629,7 @@ Dans le cadre des *Multi-Path Payments (MPP)* ou des *Atomic Multi-Path Payments
 
 Dans le cadre des MPP, tous les shards partagent le même secret, alors que dans les AMP, chaque shard dispose d'un secret partiel unique. Le destinataire regroupe les shards pour reconstituer et finaliser le paiement complet. Ce mécanisme permet de contourner les limitations de liquidité sur un canal unique.
 
-> ► *Pour plus d'informations, voir la définition de **[MULTI-PATH PAYMENT (MPP)](#multi-path-payments-mpp)**.*
+> ► *Pour plus d'informations, voir la définition de **[MULTI-PATH PAYMENTS (MPP)](#multi-path-payments-mpp)**.*
 
 ## SHARDS (RGB)
 
@@ -5860,7 +5860,7 @@ Silk Road a été fermé en 2013. Ross Ulbricht a été arrêté la même année
 
 Méthode permettant aux clients légers de vérifier les transactions Bitcoin sans télécharger l'intégralité de la blockchain. Un nœud qui utilise SPV télécharge uniquement les entêtes de blocs qui sont beaucoup plus légers que les blocs complets. Lorsqu'il doit vérifier une transaction, le nœud SPV demande une preuve de Merkle aux nœuds complets pour confirmer que la transaction est incluse dans un bloc spécifique. Cette approche est efficace pour les appareils avec des ressources limitées, comme les smartphones, mais implique une dépendance vis-à-vis des nœuds complets, ce qui peut réduire la sécurité et augmenter la confiance requise.
 
-> ► *On utilise souvent le sigle « SPV » pour évoquer cette méthode. Pour plus d'informations, voir la définition de [**NOEUD SPV**](#noeud-spv-noeud-léger).*
+> ► *On utilise souvent le sigle « SPV » pour évoquer cette méthode. Pour plus d'informations, voir la définition de [**NOEUD SPV (NOEUD LÉGER)**](#noeud-spv-noeud-léger).*
 
 ## SINGLE-USE SEAL
 
@@ -6118,7 +6118,7 @@ Primitive de contrat intelligent qui permet de définir une condition temporelle
 </ul>
 Le timelock peut être défini soit sous la forme d'une date exprimée en temps Unix, soit sous la forme d'un numéro de bloc. Enfin, le timelock peut s'appliquer soit à un output de transaction grâce à l'utilisation d'un opcode spécifique dans le script de verrouillage (`OP_CHECKLOCKTIMEVERIFY` ou `OP_CHECKSEQUENCEVERIFY`), soit à une transaction entière grâce à l'utilisation de champs de transaction spécifiques (`nLockTime` ou `nSequence`).
 
-> ► *On parle également parfois d'un « locktime » pour évoquer un timelock. Pour plus d'informations, voir la définition de [**OP_CHECKLOCKTIMEVERIFY**](#op_checklocktimeverify-0xb1), [**OP_CHECKSEQUENCEVERIFY**](#op_checksequenceverify-0xb2), [**NLOCKTIME**](#nlocktime) et [**NSEQUENCE**](#nsequence).*
+> ► *On parle également parfois d'un « locktime » pour évoquer un timelock. Pour plus d'informations, voir la définition de [**OP_CHECKLOCKTIMEVERIFY (0XB1)**](#op_checklocktimeverify-0xb1), [**OP_CHECKSEQUENCEVERIFY (0XB2)**](#op_checksequenceverify-0xb2), [**NLOCKTIME**](#nlocktime) et [**NSEQUENCE**](#nsequence).*
 
 ## TOR (THE ONION ROUTER)
 
@@ -6458,7 +6458,7 @@ Dans le cadre du protocole RGB, la Witness Transaction désigne la transaction B
 
 Extension du TXID traditionnel, incluant les données de témoin (*witness*) introduites avec SegWit. Alors que le TXID est un hachage des données de transaction hors témoin, le WTXID est le `SHA256d` de l'intégralité des données de la transaction, témoin inclus. Les WTXID sont stockés dans un second arbre de Merkle dont la racine est mise dans la transaction coinbase. Cette séparation permet de supprimer la malléabilité du TXID de la transaction.
 
-> ► *Pour plus d'informations, voir la définition de [**TXID**](#txid-transaction-identifier) et [**SEGWIT**](#segwit).*
+> ► *Pour plus d'informations, voir la définition de [**TXID (TRANSACTION IDENTIFIER)**](#txid-transaction-identifier) et [**SEGWIT**](#segwit).*
 
 
 ## XBT

@@ -93,7 +93,7 @@ Fichier utilisé dans Bitcoin Core pour stocker une clé privée associée à un
 
 Pousse la valeur 0 sur la pile. Il est souvent utilisé pour représenter la valeur booléenne faux dans les scripts. `OP_0` est également utilisé pour initialiser les scripts.
 
-> ► *OP_0 est identique à **[OP_FALSE](./O.md#op_false-0x00)** et OP_PUSHNUM_0.*
+> ► *OP_0 est identique à **[OP_FALSE (0X00)](./O.md#op_false-0x00)** et OP_PUSHNUM_0.*
 
 ## OP_0NOTEQUAL (0X92)
 
@@ -103,7 +103,7 @@ Vérifie si l'élément au sommet de la pile est différent de zéro. Si l'élé
 
 Pousse la valeur `1` sur la pile. Il est souvent utilisé pour représenter la valeur booléenne vrai dans les scripts.
 
-> ► *OP_1 est identique à **[OP_TRUE](./O.md#op_true-0x51)** et OP_PUSHNUM_1.*
+> ► *OP_1 est identique à **[OP_TRUE (0X51)](./O.md#op_true-0x51)** et OP_PUSHNUM_1.*
 
 ## OP_1ADD (0X8B)
 
@@ -342,13 +342,13 @@ Duplique le sommet de la pile. L'élément en haut de la pile est donc copié et
 
 Modifie le flux d'exécution dans un script conditionnel : il indique que les opérations qui le suivent doivent être exécutées si la condition précédente spécifiée par un `OP_IF`, un `OP_NOTIF` ou un autre `OP_ELSE` n'est pas remplie.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_IF**](./O.md#op_if-0x63).*
+> ► *Pour plus d'informations, voir la définition de [**OP_IF (0X63)**](./O.md#op_if-0x63).*
 
 ## OP_ENDIF (0X68)
 
 Marque la fin d'une structure de contrôle conditionnelle initiée par un `OP_IF` ou un `OP_NOTIF`, normalement suivis par un ou plusieurs `OP_ELSE`. Il indique que l'exécution du script doit continuer au-delà de la structure conditionnelle, quelle que soit la branche qui a été exécutée. Autrement dit, `OP_ENDIF` permet de délimiter la fin des blocs conditionnels dans les scripts.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_IF**](./O.md#op_if-0x63).*
+> ► *Pour plus d'informations, voir la définition de [**OP_IF (0X63)**](./O.md#op_if-0x63).*
 
 ## OP_EQUAL (0X87)
 
@@ -366,7 +366,7 @@ Opcode proposé par Gavin Andresen en 2011. Il prend le script situé au sommet 
 
 Identique à `OP_0`.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_0**](./O.md#op_0-0x00).*
+> ► *Pour plus d'informations, voir la définition de [**OP_0 (0X00)**](./O.md#op_0-0x00).*
 
 ## OP_FROMALTSTACK (0X6C)
 
@@ -449,7 +449,7 @@ Inverse la valeur booléenne du sommet de la pile : si cette valeur est non null
 
 Fonctionne de manière opposée à `OP_IF`, exécutant la portion suivante du script si la valeur au sommet de la pile est nulle (fausse).
 
-> ► *Pour plus d'informations, voir la définition de [**OP_IF**](./O.md#op_if-0x63).*
+> ► *Pour plus d'informations, voir la définition de [**OP_IF (0X63)**](./O.md#op_if-0x63).*
 
 ## OP_NUMEQUAL (0X9C)
 
@@ -539,7 +539,7 @@ Prend le sommet de la pile principale (*main stack*) et le déplace vers la pile
 
 Identique à OP_1.
 
-> ► *Pour plus d'informations, voir la définition de [**OP_1**](./O.md#op_1-0x51).*
+> ► *Pour plus d'informations, voir la définition de [**OP_1 (0X51)**](./O.md#op_1-0x51).*
 
 ## OP_TUCK (0X7D)
 
@@ -578,7 +578,7 @@ Vérifie si le premier élément en haut de la pile se trouve dans l'intervalle 
 
 Ensemble des commandes utilisées dans le système script de Bitcoin. Script est un langage de programmation à pile utilisé pour établir des conditions de dépense, et donc, indirectement, sécuriser des bitcoins. Les instructions utilisées en langage script sont appelées « opcodes ». Ce sont des opérateurs logiques et des commandes pour manipuler les piles (*stacks*). Ces instructions spécifiques sont exécutées par les nœuds du réseau lors de l'ajout d'une transaction à la blockchain. Script est un langage non-Turing complet. Il peut être catégorisé comme un langage de niveau intermédiaire (presque bas niveau) inspiré du Forth.
 
-> ► *« Opcode » peut être traduit en français par « code opératoire ». Dans la pratique, on utilise directement le terme « opcode » dans le langage courant. Pour plus d'informations, voir les définitions de **[PILE (STACK)](./P.md#pile)** et **[SCRIPT](./S.md#script)**.*
+> ► *« Opcode » peut être traduit en français par « code opératoire ». Dans la pratique, on utilise directement le terme « opcode » dans le langage courant. Pour plus d'informations, voir les définitions de **[PILE](./P.md#pile)** et **[SCRIPT](./S.md#script)**.*
 
 ## OPEN ASSETS PROTOCOL (OAP)
 

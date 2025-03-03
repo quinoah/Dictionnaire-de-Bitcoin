@@ -36,7 +36,7 @@ Méthode de calcul de la rémunération des mineurs dans le contexte des pools d
 
 Langage de programmation à piles utilisé pour établir des conditions de dépense, et donc, indirectement, sécuriser des bitcoins. Script est essentiellement une liste d'instructions, composée d'opérateurs logiques et de commandes pour manipuler les piles (*stacks*). Il se matérialise par l'utilisation d'opcodes qui donnent des instructions spécifiques qui sont exécutées par les nœuds pour vérifier la validité d'une transaction. Script est un langage non-Turing complet. Il peut être catégorisé comme un langage de niveau intermédiaire (presque bas niveau) inspiré du Forth.
 
-> ► *Pour plus d'informations, voir les définitions de **[PILE (STACK)](./P.md#pile)** et **[OPCODES](./O.md#opcodes)**.*
+> ► *Pour plus d'informations, voir les définitions de **[PILE](./P.md#pile)** et **[OPCODES](./O.md#opcodes)**.*
 
 ## SCRIPTLESS SCRIPTS
 
@@ -96,7 +96,7 @@ OP_DUP OP_HASH160 OP_PUSHBYTES_20 <adresse> OP_EQUALVERIFY OP_CHECKSIG
 
 Ensemble d'outils logiciels fournissant les ressources nécessaires aux développeurs pour créer des applications sur une plateforme spécifique. Un SDK inclut des bibliothèques, des guides de développement, des exemples de code ou encore des processus de compilation. Les SDK facilitent et accélèrent le développement en offrant des modules réutilisables. Sur Bitcoin, il existe le BDK (*Bitcoin Dev Kit*) et le LDK (*Lightning Dev Kit*).
 
-> ► *En anglais, les SDK sont également parfois appelés « devkit ». Pour plus d'informations, voir les définitions de [**BDK**](./B.md#bdk-bitcoin-dev-kit) et de [**LDK**](./L.md#ldk-lightning-dev-kit).*
+> ► *En anglais, les SDK sont également parfois appelés « devkit ». Pour plus d'informations, voir les définitions de [**BDK (BITCOIN DEV KIT)**](./B.md#bdk-bitcoin-dev-kit) et de [**LDK (LIGHTNING DEV KIT)**](./L.md#ldk-lightning-dev-kit).*
 
 ## SEAL DEFINITION
 
@@ -181,7 +181,7 @@ Ce procédé génère une sorte d'embranchement secret de la blockchain, qui res
 
 Le selfish mining est embêtant pour les utilisateurs, car il diminue la sécurité du système en gaspillant une partie de la puissance de calcul du réseau. En cas de réussite, il conduit également à des réorganisations de la blockchain, affectant ainsi la fiabilité des confirmations de transaction pour les utilisateurs. Cette pratique reste tout de même risquée pour le groupe de mineurs attaquants, car il est souvent plus rentable de miner normalement au-dessus du dernier bloc connu publiquement plutôt que d'allouer de la puissance de calcul à un embranchement secret qui ne dépassera probablement jamais la blockchain honnête. Au plus le nombre de blocs dans la réorganisation est grand, au plus la probabilité de réussite de l'attaque est basse.
 
-> ► *Attention, une attaque par selfish mining ne doit pas être confondue avec une attaque de block withholding (rétention de bloc). Pour plus d'informations, voir la définition de **[RÉTENTION](./R.md#rétention-de-bloc)**.*
+> ► *Attention, une attaque par selfish mining ne doit pas être confondue avec une attaque de block withholding (rétention de bloc). Pour plus d'informations, voir la définition de **[RÉTENTION (DE BLOC)](./R.md#rétention-de-bloc)**.*
 
 ## SETTINGS.JSON
 
@@ -207,7 +207,7 @@ Dans le cadre des *Multi-Path Payments (MPP)* ou des *Atomic Multi-Path Payments
 
 Dans le cadre des MPP, tous les shards partagent le même secret, alors que dans les AMP, chaque shard dispose d'un secret partiel unique. Le destinataire regroupe les shards pour reconstituer et finaliser le paiement complet. Ce mécanisme permet de contourner les limitations de liquidité sur un canal unique.
 
-> ► *Pour plus d'informations, voir la définition de **[MULTI-PATH PAYMENT (MPP)](./M.md#multi-path-payments-mpp)**.*
+> ► *Pour plus d'informations, voir la définition de **[MULTI-PATH PAYMENTS (MPP)](./M.md#multi-path-payments-mpp)**.*
 
 ## SHARDS (RGB)
 
@@ -430,7 +430,7 @@ Silk Road a été fermé en 2013. Ross Ulbricht a été arrêté la même année
 
 Méthode permettant aux clients légers de vérifier les transactions Bitcoin sans télécharger l'intégralité de la blockchain. Un nœud qui utilise SPV télécharge uniquement les entêtes de blocs qui sont beaucoup plus légers que les blocs complets. Lorsqu'il doit vérifier une transaction, le nœud SPV demande une preuve de Merkle aux nœuds complets pour confirmer que la transaction est incluse dans un bloc spécifique. Cette approche est efficace pour les appareils avec des ressources limitées, comme les smartphones, mais implique une dépendance vis-à-vis des nœuds complets, ce qui peut réduire la sécurité et augmenter la confiance requise.
 
-> ► *On utilise souvent le sigle « SPV » pour évoquer cette méthode. Pour plus d'informations, voir la définition de [**NOEUD SPV**](./N.md#noeud-spv-noeud-léger).*
+> ► *On utilise souvent le sigle « SPV » pour évoquer cette méthode. Pour plus d'informations, voir la définition de [**NOEUD SPV (NOEUD LÉGER)**](./N.md#noeud-spv-noeud-léger).*
 
 ## SINGLE-USE SEAL
 
