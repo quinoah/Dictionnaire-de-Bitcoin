@@ -221,7 +221,7 @@ Attaque informatique qui vise à rendre une ressource (site web, nœud, service 
 
 > ► *En français, on peut le traduire par « attaque par déni de service ».*
 
-## DOUBLE DÉPENSE (ATTAQUE)
+## DOUBLE DÉPENSE
 ▪ **Attaque**
 
 ► ***EN : DOUBLE SPENDING ATTACK***
