@@ -94,10 +94,12 @@ Comme le précise LaurentMT dans le Space Kek #19 (un podcast francophone), l'ut
 Désigne l'ordre dans lequel une séquence d'octets est arrangée et interprétée en informatique. On distingue deux types : « big-endian », où l'octet de poids le plus fort (le plus significatif) est stocké en premier, et « little-endian », où l'octet de poids le plus faible (le moins significatif) est stocké en premier.
 
 ## ENGRAVING
+▪ **RGB**
 
 Dans le cadre du protocole RGB, l’*engraving* désigne une chaîne de données optionnelle que peuvent inscrire successivement les détenteurs d’un contrat dans l’historique de ses transitions. Accessible notamment via l’interface RGB21, cette fonctionnalité permet d’ajouter des informations commémoratives ou descriptives sans modifier la validité des opérations. Elle enrichit l’historique du contrat en intégrant des métadonnées supplémentaires.
 
 ## ENTÊTE DE BLOC
+▪ **Protocole**
 
 ► ***EN : BLOCK HEADER***
 
@@ -157,6 +159,7 @@ b2e00517
 Pour être valide, un bloc doit disposer d'un entête qui, une fois haché avec `SHA256d`, produit une empreinte inférieure ou égale à la cible de difficulté.
 
 ## ENTROPIE
+▪ **Cryptographie**
 
 ► ***EN : ENTROPY***
 
@@ -167,6 +170,7 @@ Dans le contexte de Bitcoin, l'entropie est utilisée pour générer des clés p
 Il est essentiel de disposer d'une source d'entropie de qualité pour garantir la sécurité des systèmes cryptographiques. Les sources d'entropie peuvent être des processus physiques, tels que le bruit électronique ou les variations thermiques, ou des processus logiciels, tels que les générateurs de nombres pseudo-aléatoires.
 
 ## ENTROPIE (ANALYSE)
+▪ **Confidentialité**
 
 ► ***EN : ENTROPY (CHAIN ANALYSIS)***
 
@@ -183,12 +187,14 @@ $$
 En prenant en compte les valeurs des UTXOs impliqués dans la transaction, le nombre d'interprétations $C$ représente le nombre de manières dont les entrées peuvent être associées aux sorties. Autrement dit, il détermine le nombre d'interprétations qu'une transaction peut susciter du point de vue d'un observateur extérieur qui l'analyse.
 
 ## EREBUS (ATTAQUE)
+▪ **Attaque**
 
 Forme très sophistiquée d'attaque contre le réseau Bitcoin qui permet à un fournisseur de services Internet malveillant d'isoler des nœuds Bitcoin spécifiques. C'est donc une forme d'attaque Eclipse. L'attaque Erebus exploite la structure du réseau Internet, en particulier les points de passage obligés (ou « bottlenecks ») dans le routage entre les systèmes autonomes (AS). Un attaquant, en contrôlant un système autonome, peut manipuler le trafic réseau pour isoler un nœud Bitcoin du reste du réseau, et ainsi lui faire croire à un faux état de la blockchain (blocs ou transactions non connues par le nœud). Cette isolation peut conduire à des doubles dépenses ou de la censure à l'encontre du nœud isolé. Cette attaque est rendue beaucoup plus difficile depuis la version 0.20.0 de Bitcoin Core et l'introduction d'Asmap.
 
 > ► *Pour plus d'informations, voir la définition de **[ASMAP](./A.md#asmap)**.*
 
 ## ERLAY
+▪ **Réseau**
 
 Proposition de protocole réseau dont l'objectif est d'améliorer l'efficacité du relais des transactions non confirmées entre les nœuds Bitcoin.
 
@@ -199,12 +205,14 @@ Erlay réduirait la consommation de bande passante d'environ 40 %, ce qui rendra
 Erlay est proposé dans le BIP330.
 
 ## ESMPPS
+▪ **Minage**
 
 Sigle de « *Equalized Shared Maximum Pay Per Share* ». C'est une méthode de calcul de la rémunération des mineurs dans le contexte des pools de minage. ESMPPS vise à répartir la récompense de manière équitable entre toutes les shares soumises, indépendamment du moment de leur soumission ou de la luck de la pool. Cela fonctionne essentiellement comme SMPPS, mais avec une notion d'égalité pour les parts soumises en plus.
 
 > ► *Pour plus d'informations, voir la définition de **[SHARES](./S.md#shares)**.*
 
 ## ÉTIQUETAGE
+▪ **Portefeuille**
 
 ► ***EN : LABELING***
 
@@ -215,12 +223,14 @@ L'étiquetage est une bonne pratique qui aide à se rappeler l'origine ou la des
 > ► *Pour plus d'informations, voir la définition de [**COIN CONTROL**](./C.md#coin-control).*
 
 ## EXPLORATEUR DE BLOC
+▪ **Outil**
 
 ► ***EN : BLOCK EXPLORER***
 
 Outil en ligne ou en local qui permet de transformer les données brutes de la blockchain Bitcoin en un format structuré et facilement lisible par l'Homme. L'explorateur inclut généralement un moteur de recherche afin de localiser facilement un bloc, une transaction ou une adresse spécifique.
 
 ## EXTRA-NONCE
+▪ **Minage**
 
 Champ utilisé dans le `scriptSig` de la transaction coinbase d’un bloc, qui permet d'avoir un plus grand nombre de possibilités à tester pour avoir un hachage inférieur à la cible de difficulté, en plus du nonce classique qui se trouve, lui, directement dans l'entête de chaque bloc.
 
@@ -231,5 +241,6 @@ Dans le cadre des pools de minage, l'extra-nonce est souvent divisé en deux par
 > ► *Pour plus d'informations, voir la définition de [**NONCE**](./N.md#nonce).*
 
 ## EXTRA TRANSACTION PROOF
+▪ **RGB**
 
 Dans le cadre du protocole RGB, l’ETP constitue la partie de l’Anchor qui intègre les données complémentaires indispensables à la validation d’un commitment de type Tapret (dans le contexte de Taproot). Elle comprend, entre autres, la clé publique interne associée au script Taproot et les informations spécifiques requises pour le *Script Path Spend*. Cette composante assure ainsi la vérification précise des engagements cryptographiques.
