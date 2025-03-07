@@ -378,6 +378,12 @@ Proposition de James Hilliard (ingénieur chez Bitmain) pour faciliter l'activat
 
 BIP informationnel qui suggère un standard pour sauvegarder et restaurer la graine d’un portefeuille déterministe hiérarchique (selon le BIP32) en utilisant le Partage de clé secrète de Shamir. Ce protocole définit le format « codex32 », qui s’inspire du format bech32, en introduisant une chaîne structurée composée d’un préfixe, d’un paramètre de seuil, d’un identifiant, d’un index de partage, d’une charge utile et d’une checksum (BCH). La méthode permet de scinder la graine en jusqu’à 31 parts, dont un seuil défini (entre 1 et 9) est requis pour la récupération complète de la graine.
 
+## BIP94
+
+Définit le Testnet 4, un nouveau réseau testnet destiné à remplacer le Testnet 3 en 2024. Ce dernier, qui était en service depuis 13 ans, était devenu vulnérable à diverses attaques et avait été le théâtre d'abus d'utilisation par le biais d'airdrops frauduleux d'altcoins, perturbant la distribution normalement gratuite de TBTC. Pour corriger ces failles, Testnet 4 intègre 3 ajustements majeurs dans les règles de consensus : la modification de l’exception des 20 minutes, une correction de l’algorithme d’ajustement de la difficulté (*block storm fix*) et la mise en place d’une protection contre l’attaque « time warp ».
+
+> ► *Pour plus d'informations, voir la définition de [**TESTNET**](./T.md#testnet).*
+
 ## BIP101
 
 Proposition présentée par Gavin Andresen en 2015 qui visait à augmenter la taille maximale des blocs de 1 Mo à 8 Mo et à doubler cette limite tous les deux ans jusqu'à atteindre un peu plus de 8 Go en 2036. Cette proposition a été intégrée à l'implémentation Bitcoin XT en août 2015, qui est devenu de fait un fork de Bitcoin, mais n'a pas été suivie. Cette proposition n'a donc jamais été adoptée. Certains considèrent l'implémentation du BIP101 sur Bitcoin XT comme le casus belli de la Blocksize War.
