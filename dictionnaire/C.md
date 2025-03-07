@@ -91,7 +91,7 @@ Nom technique donné au dossier utilisé pour stocker l'UTXO set sur Bitcoin Cor
 
 > ► *Pour plus d'informations, voir la définition de [**UTXO SET**](./U.md#utxo-set).*
 
-## CHAMPION (BIP)
+## CHAMPION
 ▪ **BIP**
 
 ► ***EN : CHAMPION (BIP)***
@@ -397,7 +397,7 @@ Dans l'implémentation PayNym du BIP47, les codes de paiement peuvent également
 
 L'utilisation de codes de paiements avec l'implémentation PayNym est actuellement disponible sur Sparrow Wallet sur PC et sur Samourai Wallet sur mobile.
 
-## COINBASE (TRANSACTION)
+## COINBASE
 ▪ **Protocole**
 
 La transaction coinbase est une transaction spéciale et unique incluse dans chaque bloc de la blockchain Bitcoin. Elle représente la première transaction d'un bloc et est créée par le mineur qui a réussi à trouver un entête validant la preuve de travail (*Proof-of-Work*), c'est-à-dire inférieur ou égal à la cible.
@@ -615,10 +615,10 @@ Cependant, il est important de noter que les transactions de consolidation sont 
 
 ![](assets/7.png)
 
-## CONTENEUR (MINAGE)
+## CONTENEUR
 ▪ **Minage**
 
-► ***EN : CONTAINER (MINING)***
+► ***EN : CONTAINER***
 
 Dans le cadre du minage, un conteneur est une structure modulaire utilisée pour héberger et opérer un grand nombre d'ASICs. Ces containers sont conçus pour optimiser l'espace, la gestion de la chaleur et l'alimentation électrique. Ils sont équipés de systèmes de refroidissement à l'air. Leur avantage principal réside dans leur mobilité et leur capacité à être déployés rapidement, souvent à proximité de sources d'énergie bon marché.
 
@@ -676,14 +676,14 @@ Désigne un ensemble de droits exécutés numériquement entre plusieurs acteurs
 
 Un contributeur dans le contexte de Bitcoin Core (l'implémentation majoritaire de nœuds sur le réseau Bitcoin) est une personne qui participe activement au développement du logiciel en écrivant du code, en examinant et en testant les modifications proposées par d'autres. Contrairement aux mainteneurs, les contributeurs n'ont pas le pouvoir de fusionner les modifications dans le code principal ; leur rôle est plutôt de soumettre des pull requests (PR) et de participer à la discussion et à la validation de ces propositions. Tout individu intéressé peut devenir contributeur sans nécessité d'une nomination ou d'une approbation formelle, ce qui diffère des mainteneurs qui sont chargés de responsabilités administratives et de décision plus élevées dans le projet.
 
-## CONTROL BOARD (MINING)
+## CONTROL BOARD
 ▪ **Minage**
 
-► ***FR : CARTE DE CONTRÔLE (MINAGE)***
+► ***FR : CARTE DE CONTRÔLE***
 
 Composant dans une machine de minage qui permet de gérer et de coordonner les opérations de l'appareil. La carte de contrôle gère la communication entre le logiciel et les puces ASICs. Elle permet également de relever les performances du matériel et de contrôler sa température.
 
-## COOKIE (.COOKIE)
+## COOKIE
 ▪ **Protocole**
 
 Fichier utilisé pour l'authentification RPC (*Remote Procedure Call*) dans Bitcoin Core. Lorsque bitcoind démarre, il génère un cookie d'authentification unique et le stocke dans ce fichier. Les clients ou les scripts qui souhaitent interagir avec bitcoind via l'interface RPC peuvent utiliser ce cookie pour s'authentifier de manière sécurisée. Ce mécanisme permet une communication sûre entre le bitcoind et les applications externes (comme les logiciels de portefeuille par exemple), sans nécessiter une gestion manuelle des noms d'utilisateur et des mots de passe. Le fichier `.cookie` est régénéré à chaque redémarrage de bitcoind et supprimé à l'arrêt.
@@ -787,7 +787,7 @@ Science mathématique qui traite de la cryptanalyse et de la cryptographie.
 
 Qualificatif générique donné à toute forme de monnaie, d'actif, de crédit ou d'unité numérique au sein d'un système informatique dans lequel on utilise de la cryptographie pour les échanges et les transactions entre les utilisateurs.
 
-## CURTAILMENT (MINING)
+## CURTAILMENT
 ▪ **Minage**
 
 ► ***FR : RÉDUCTION (MINAGE)***
