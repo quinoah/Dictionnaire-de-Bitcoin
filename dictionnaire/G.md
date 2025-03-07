@@ -9,7 +9,7 @@ En effet, une seule `xpub` peut théoriquement dériver plus de 4 milliards d'ad
 
 Si, par exemple, le Gap Limit est fixé à `20`, et que l'adresse `m/84'/0'/0'/0/15/` est vide, le portefeuille dérivera les adresses jusqu'à `m/84'/0'/0'/0/34/`. Si cette plage d'adresses reste inutilisée, la recherche s'arrête là. Par conséquent, une transaction utilisant l'adresse `m/84'/0'/0'/0/40/` ne serait pas détectée dans cet exemple.
 
-## GENÈSE (BLOC)
+## GENÈSE
 ▪ **Protocole**
 
 ► ***EN : GENESIS BLOCK***
@@ -30,7 +30,7 @@ Cette citation est une référence à un article du journal *The Times*. Le mess
 
 Puisqu’il incarne le tout premier bloc de la blockchain Bitcoin, le bloc de Genèse ne possède évidemment pas de champ contenant le hachage du bloc antérieur (car il n'y en pas). Par ailleurs, les 50 bitcoins générés en récompense dans ce bloc ne sont pas dépensables au niveau protocolaire.
 
-## GENESIS (RGB)
+## GENESIS
 ▪ **RGB**
 
 Dans le cadre du protocole RGB, la Genesis désigne l’ensemble des données initiales, régies par un schéma spécifique, qui établissent l’état de départ de tout contrat. Ces informations constituent le point d’ancrage à partir duquel s’opère l’évolution des smart contracts et la gestion des jetons RGB. On peut la rapprocher du concept de *Genesis Block* sur Bitcoin, ou bien au concept de transaction Coinbase, mais ici au niveau *client-side* et des jetons RGB.
@@ -74,7 +74,7 @@ Projet initié en 1983 par Richard Stallman pour créer un système d'exploitati
 
 > ► *Le nom de « GNU » est un acronyme récursif signifiant « GNU's Not Unix », que l'on peut traduire en français « GNU n'est pas Unix ».*
 
-## GOLDFINGER (ATTAQUE)
+## GOLDFINGER
 ▪ **Attaque**
 
 Scénario hypothétique sur le système Bitcoin où un acteur malveillant contrôle plus de 50 % de la puissance de calcul totale du minage (*hashrate*). Avec une telle dominance, l'attaquant peut manipuler le processus de consensus, permettant des actions malveillantes telles que la double dépense, où les mêmes bitcoins sont dépensés une première fois sur une chaîne finalement rendue désuète, puis une seconde fois sur la chaîne valide. Une autre finalité d'une attaque Goldfinger est la censure des transactions. Cependant, réaliser une attaque de ce type nécessite des ressources financières, humaines, énergétiques et techniques considérables, et rend l'acteur malveillant susceptible d'être découvert avant que l'attaque n'ait lieu. Bien que théoriquement possible, une attaque Goldfinger sur Bitcoin est considérée comme très peu probable en raison de la décentralisation du minage et de la grande puissance de calcul actuellement déployée.
