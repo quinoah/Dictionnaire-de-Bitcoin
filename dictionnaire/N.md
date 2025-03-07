@@ -1,9 +1,11 @@
 
 ## NAKAMOTO SATOSHI
+▪ **Histoire**
 
 Pseudonyme de la personne ou du groupe qui a créé Bitcoin et écrit son livre blanc original en 2008 (White Paper). Nakamoto, qui a communiqué uniquement en ligne, a finalement disparu de la scène publique en 2011.
 
 ## NESTED SEGWIT
+▪ **Protocole**
 
 ► ***FR : SEGWIT IMBRIQUÉ***
 
@@ -12,6 +14,7 @@ Standard de scripts utilisé pour envelopper des scripts SegWit natifs, au sein 
 > ► *Pour plus d'informations, voir la définition de [**P2SH-P2WPKH**](./P.md#p2sh-p2wpkh).*
 
 ## NETWORK-ADJUSTED TIME (NAT)
+▪ **Protocole**
 
 ► ***FR : TEMPS AJUSTÉ PAR LE RÉSEAU***
 
@@ -22,6 +25,7 @@ MTP < Horodatage valide < (NAT + 2h)
 ```
 
 ## NEW YORK AGREEMENT (NYA)
+▪ **Histoire**
 
 ► ***FR : ACCORD DE NEW YORK***
 
@@ -32,24 +36,28 @@ Réunion privée qui s'est tenue en 2017, rassemblant plus de 50 entreprises de 
 Malgré le signalement positif de plus de 80 % des mineurs, le projet n'a pas su rallier un consensus suffisant, aboutissant à son abandon. Cet événement a été interprété par de nombreux utilisateurs et développeurs comme une tentative d'attaque de Bitcoin.
 
 ## NFT
+▪ **Couche supérieure**
 
 Acronyme de *Non Fongible Token*. Un NFT représente une unité de bitcoin qui, par des utilisateurs d'un protocole de seconde couche, est interprétée non fongible et associée à la propriété d'un actif externe à Bitcoin, tel qu'une image ou tout autre type de donnée.
 
 Sur Bitcoin, des protocoles de seconde couche comme Ordinals et Stamps permettent la création et la gestion de ces NFTs. Ces protocoles sont souvent controversés, car leur activité encombre la blockchain avec des données non financières. Cela peut avoir des conséquences négatives sur le système, notamment induire une charge opérationnelle accrue pour les nœuds complets ou augmenter les frais de transaction par l'influence de facteurs économiques externes.
 
 ## NLOCKTIME
+▪ **Script**
 
 Champ intégré dans les transactions qui définit une condition temporelle avant laquelle la transaction ne peut être ajoutée à un bloc valide. Ce paramètre permet de spécifier un temps précis (timestamp Unix) ou un nombre de blocs spécifique comme condition pour que la transaction soit considérée comme valide. C'est donc un timelock absolu (pas relatif). Le `nLockTime` agit sur l'intégralité de la transaction et permet effectivement de vérifier le temps, alors que l'opcode `OP_CHECKLOCKTIMEVERIFY` permet uniquement de comparer la valeur en haut de la pile avec la valeur du `nLockTime`.
 
 > ► *Pour plus d'informations, voir la définition de [**OP_CHECKLOCKTIMEVERIFY (0XB1)**](./O.md#op_checklocktimeverify-0xb1) et [**TIMELOCK**](./T.md#timelock).*
 
 ## NO2X
+▪ **Histoire**
 
 Nom de la campagne lancée en août 2017 suite au verrouillage du soft fork SegWit dont le but est de convaincre les utilisateurs de ne pas implémenter le doublement de la taille des blocs de 1 Mo à 2 Mo tel que prévu dans la mise à jour SEGWIT2X.
 
 > ► *Pour plus d'informations, voir la définition de **[BLOCKSIZE WAR](./B.md#blocksize-war)** et [**SEGWIT2X**](./S.md#segwit2x).*
 
 ## NOEUD
+▪ **Protocole**
 
 ► ***EN : NODE***
 
@@ -60,12 +68,14 @@ Il existe plusieurs types de nœuds sur Bitcoin, dont les nœuds complets et les
 > ► *Certains différencient également les nœuds dits « élagués » (« pruned node » en anglais). Ce sont des nœuds complets, qui téléchargent et vérifient tous les blocs depuis le bloc de Genèse, mais qui ne conserve que les blocs les plus récents en mémoire.*
 
 ## NOEUD COMPLET
+▪ **Protocole**
 
 ► ***EN : FULL NODE***
 
 Ordinateur qui exécute un client du protocole Bitcoin, et qui télécharge, vérifie et stocke la totalité de la blockchain, soit l'historique complet des transactions depuis le bloc de Genèse. Un nœud complet vérifie de manière autonome toutes les transactions et les blocs en fonction des règles de consensus de Bitcoin. C’est donc ce type de nœud qui procure le plus haut niveau de vérification pour son utilisateur, et qui permet de réduire au maximum le besoin de confiance envers une tierce partie. Le nœud complet nécessite plus de ressources de stockage, de puissance de calcul, de RAM et de bande passante qu'un nœud léger (SPV).
 
 ## NOEUD ÉLAGUÉ
+▪ **Protocole**
 
 ► ***EN : PRUNED NODE***
 
@@ -74,12 +84,14 @@ Nœud complet qui exécute un élagage de la blockchain. Cela consiste à suppri
 Les nœuds élagués sont parfois considérés comme des types de nœuds différents des nœuds complets. L'utilisation d'un nœud élagué peut s'avérer particulièrement intéressante pour les utilisateurs confrontés à des contraintes en termes de capacité de stockage. Actuellement, un nœud complet doit disposer de presque 600 Go rien que pour le stockage de la blockchain. Un nœud élagué peut limiter le stockage requis jusqu’à 550 Mo. Bien qu’il utilise moins d’espace disque, un nœud élagué maintient un niveau de vérification et de validation semblable à celui d'un nœud complet. Les nœuds élagués offrent donc plus de confiance à leurs utilisateurs en comparaison avec les nœuds légers (SPV).
 
 ## NOEUD LIGHTNING
+▪ **Lightning Network**
 
 ► ***EN : LIGHTNING NODE***
 
 Ordinateur qui exécute une implémentation du Lightning Network (Eclair, LND, C-Lightning...). Un nœud Lightning est établi sur un nœud Bitcoin, et permet de créer et de gérer des canaux de paiement bidirectionnels entre différents utilisateurs. Les nœuds Lightning sont connectés les uns aux autres, ce qui forme un réseau de canaux de paiement. Ces canaux permettent de réaliser un nombre presque illimité de transactions sans avoir besoin de les publier individuellement sur la blockchain Bitcoin.
 
 ## NOEUD SPV (NOEUD LÉGER)
+▪ **Protocole**
 
 ► ***EN : SPV NODE (LIGHTWEIGHT NODE)***
 
@@ -88,6 +100,7 @@ Un nœud SPV (*Simple Payment Verification*), parfois nommé « nœud léger �
 Cette approche est avantageuse pour les appareils avec des ressources limitées, tels que les téléphones portables. Cependant, les nœuds SPV font confiance aux nœuds complets pour la disponibilité des informations, ce qui implique un niveau de confiance supplémentaire et, par conséquent, une moindre sécurité par rapport aux nœuds complets. Les nœuds SPV ne peuvent pas valider les transactions de manière autonome, mais ils peuvent vérifier si une transaction est incluse dans un bloc en consultant les preuves de Merkle.
 
 ## NONCE
+▪ **Cryptographie**
 
 Dans le contexte de l’informatique, le terme « nonce » désigne un nombre utilisé seulement une seule fois, puis remplacé. Il est souvent aléatoire ou pseudo-aléatoire. On l'utilise dans divers protocoles cryptographiques pour garantir la sécurité du procédé. Par exemple, les signatures ECDSA utilisées au sein du protocole Bitcoin incluent l’utilisation d’un nonce. Cela veut dire que ce nombre doit être nouveau pour chaque signature. Si ce n’est pas le cas, il est possible de calculer la clé privée utilisée en rapprochant deux signatures qui utilisent le même nonce.
 
@@ -98,22 +111,26 @@ On utilise également des nonces dans le processus de minage sur Bitcoin. Les mi
 > ► *Il existe une idée reçue sur l'origine du terme de « nonce ». Certains affirment qu'il représenterait l'abréviation de « number only used once ». En réalité, l'origine du mot remonte au 18ème siècle et provient de l'évolution sémantique de l'expression en vieil anglais « then anes » qui signifiait « pour cette occasion ».*
 
 ## NSEQUENCE
+▪ **Script**
 
 Le champ `nSequence` dans une entrée de transaction Bitcoin est utilisé pour indiquer la manière dont cette entrée est verrouillée dans le temps. À l'origine, il visait à permettre le remplacement dynamique de transactions dans les mempools afin de permettre un système de paiement en surcouche similaire à Lightning. Toutefois, son utilisation a évolué avec l'introduction du timelock relatif via le BIP68. Le champ `nSequence` peut désormais spécifier un délai relatif avant qu'une transaction soit incluse dans un bloc. Ce délai peut être défini en termes de nombre de blocs, ou bien comme un multiple de 512 secondes (c'est-à-dire, du temps réel). Notons que cette nouvelle interprétation du champ `nSequence` est uniquement valide si le champ `nVersion` est supérieur ou égal à `2`. Cette interprétation du champ `nSequence` se fait au niveau des règles de consensus de Bitcoin. Par ailleurs, au niveau des règles de standardisation, ce champ est également utilisé pour le signalement de RBF. Si une transaction inclue un `nSequence` inférieur à `0xfffffffe`, alors elle pourra être remplacée via RBF sur les nœuds qui suivent cette politique.
 
 > ► *Pour plus d'informations, voir la définition de [**OP_CHECKSEQUENCEVERIFY (0XB2)**](./O.md#op_checksequenceverify-0xb2) et [**TIMELOCK**](./T.md#timelock).*
 
 ## NULL DATA
+▪ **Protocole**
 
 Type de transaction Bitcoin qui permet d'insérer une petite quantité de données arbitraires grâce à un `OP_RETURN`. Les bitcoins éventuellement associés à ce type d'output sont non dépensables de manière prouvée, car l'`OP_RETURN` signale un script invalide.
 
 ## NULLDUMMY
+▪ **Protocole**
 
 Règle de consensus introduite avec le BIP147 dans le soft fork SegWit qui exige que l'élément factice (« *dummy element* ») utilisé dans les opcodes `OP_CHECKMULTISIG` et `OP_CHECKMULTISIGVERIFY` soit un tableau d'octets vide (`OP_0`). Cette mesure a été mise en place pour éliminer un vecteur de malléabilité en interdisant toute valeur autre que `OP_0` pour cet élément.
 
 > ► *Pour plus d'informations, voir la définition de [**DUMMY ELEMENT**](./D.md#dummy-element) et [**BIP147**](./B.md#bip147).*
 
 ## NVERSION
+▪ **Protocole**
 
 Le champ `nVersion` dans une transaction Bitcoin sert à indiquer la version du format de transaction utilisé. Il permet au réseau de distinguer les différentes évolutions du format de transaction au fil du temps, et d'appliquer les règles correspondantes. Ce champ n'a aucun impact au niveau des règles de consensus. Cela signifie que toute valeur attribuée à ce champ n'entraîne pas l'invalidation de la transaction. En revanche, le champ `nVersion` dispose de règles de standardisation qui n'acceptent que la valeur de `1` et de `2` actuellement. Pour le moment, ce champ est seulement utile pour l'activation du champ `nSequence`.
 
