@@ -1,4 +1,5 @@
 ## CANDIDAT (BLOC)
+▪ **Minage**
 
 ► ***EN : CANDIDATE BLOCK***
 

@@ -1,4 +1,5 @@
 ## DUSTING ATTACK
+▪ **Attaque**
 
 ► ***FR : ATTAQUE DE POUSSIÈRE***
 

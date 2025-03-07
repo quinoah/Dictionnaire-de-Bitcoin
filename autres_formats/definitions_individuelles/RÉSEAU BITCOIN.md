@@ -1,4 +1,5 @@
 ## RÉSEAU BITCOIN
+▪ **Réseau**
 
 ► ***EN : BITCOIN NETWORK***
 

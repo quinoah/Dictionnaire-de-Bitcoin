@@ -1,4 +1,5 @@
 ## QR CODE
+▪ **Informatique**
 
 Type de code-barres en deux dimensions pouvant être scanné rapidement par des appareils mobiles. Le QR code stocke des informations sous forme de pixels noirs et blancs disposés dans un carré sur un fond blanc. Une caractéristique importante des QR codes est qu'ils embarquent des codes de correction d'erreur BCH qui permettent de restaurer les données même si le QR code est partiellement obscurci.
 

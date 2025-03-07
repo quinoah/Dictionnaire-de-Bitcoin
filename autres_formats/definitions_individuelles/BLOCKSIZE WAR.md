@@ -1,4 +1,5 @@
 ## BLOCKSIZE WAR
+▪ **Histoire**
 
 ► ***FR : GUERRE DE LA TAILLE DES BLOCS***
 

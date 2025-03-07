@@ -1,4 +1,5 @@
 ## SHOR (ALGORITHME)
+▪ **Informatique**
 
 ► ***EN : SHOR'S ALGORITHM***
 

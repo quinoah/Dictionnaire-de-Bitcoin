@@ -1,4 +1,5 @@
 ## ÉCOLE AUTRICHIENNE
+▪ **Économie et régulation**
 
 ► ***EN : AUSTRIAN SCHOOL OF ECONOMICS***
 

@@ -1,4 +1,5 @@
 ## CIBLE DE DIFFICULTÉ
+▪ **Minage**
 
 ► ***EN : DIFFICULTY TARGET***
 

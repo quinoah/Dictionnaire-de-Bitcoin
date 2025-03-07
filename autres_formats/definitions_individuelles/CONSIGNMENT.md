@@ -1,4 +1,5 @@
 ## CONSIGNMENT
+▪ **RGB**
 
 Dans le cadre du protocole RGB, regroupe les données échangées entre les parties, soumises à la *Client-side Validation*. Il existe deux grandes catégories de consignments :
 * Contract Consignment : fourni par l’issuer (émetteur du contrat), il comprend les informations d’initialisation telles que le Schema, la Genesis, l’Interface et l’Implementation de l'Interface.

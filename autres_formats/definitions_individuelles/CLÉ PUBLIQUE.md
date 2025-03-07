@@ -1,4 +1,5 @@
 ## CLÉ PUBLIQUE
+▪ **Portefeuille**
 
 ► ***EN : PUBLIC KEY***
 

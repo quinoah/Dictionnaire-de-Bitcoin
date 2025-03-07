@@ -1,4 +1,5 @@
 ## HACHEUR
+▪ **Minage**
 
 ► ***EN : HASHER***
 

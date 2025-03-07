@@ -1,4 +1,5 @@
 ## OUTPUT LINKING
+▪ **Confidentialité**
 
 ► ***FR : LIAISON DE SORTIES***
 

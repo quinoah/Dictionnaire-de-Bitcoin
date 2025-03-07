@@ -1,4 +1,5 @@
 ## RESYNCHRONISATION
+▪ **Protocole**
 
 ► ***EN : REORGANIZATION***
 

@@ -1,4 +1,5 @@
 ## OUTBOUND CAPACITY
+▪ **Lightning Network**
 
 ► ***FR : CAPACITÉ SORTANTE***
 

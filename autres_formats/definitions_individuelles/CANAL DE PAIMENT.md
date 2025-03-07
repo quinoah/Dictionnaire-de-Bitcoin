@@ -1,4 +1,5 @@
 ## CANAL DE PAIMENT
+▪ **Lightning Network**
 
 ► ***EN : PAYMENT CHANNEL***
 

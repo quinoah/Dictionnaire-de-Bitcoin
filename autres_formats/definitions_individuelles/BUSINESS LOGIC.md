@@ -1,4 +1,5 @@
 ## BUSINESS LOGIC
+▪ **RGB**
 
 ► ***FR : LOGIQUE MÉTIER***
 

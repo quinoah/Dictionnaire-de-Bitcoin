@@ -1,4 +1,5 @@
 ## INITIAL BLOCK DOWNLOAD (IBD)
+▪ **Protocole**
 
 ► ***FR : SYNCHRONISATION INITIALE***
 

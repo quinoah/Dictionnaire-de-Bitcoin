@@ -1,4 +1,5 @@
 ## PRÉFIXES BINAIRES
+▪ **Informatique**
 
 ► ***EN : BINARY PREFIXES***
 

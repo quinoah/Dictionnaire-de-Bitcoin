@@ -1,4 +1,5 @@
 ## TXID (TRANSACTION IDENTIFIER)
+▪ **Protocole**
 
 ► ***FR : IDENTIFIANT DE TRANSACTION***
 

@@ -1,4 +1,5 @@
 ## BATCHED SPENDING
+▪ **Protocole**
 
 ► ***FR : DÉPENSES GROUPÉES***
 

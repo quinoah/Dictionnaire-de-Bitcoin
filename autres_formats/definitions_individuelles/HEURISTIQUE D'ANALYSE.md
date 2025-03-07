@@ -1,4 +1,5 @@
 ## HEURISTIQUE D'ANALYSE
+▪ **Confidentialité**
 
 ► ***EN : ANALYSIS HEURISTIC***
 

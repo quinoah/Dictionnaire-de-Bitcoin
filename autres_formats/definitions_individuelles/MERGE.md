@@ -1,4 +1,5 @@
 ## MERGE
+▪ **Informatique**
 
 ► ***FR : FUSIONNER***
 

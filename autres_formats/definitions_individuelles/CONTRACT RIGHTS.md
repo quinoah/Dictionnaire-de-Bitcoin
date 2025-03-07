@@ -1,4 +1,5 @@
 ## CONTRACT RIGHTS
+▪ **RGB**
 
 Les Contract Rights désignent les différents droits que peuvent exercer les acteurs d’un contrat RGB. Ils se classent en plusieurs catégories :
 * Les ownership rights, associés à la détention d’un UTXO particulier (via un Seal Definition) ;

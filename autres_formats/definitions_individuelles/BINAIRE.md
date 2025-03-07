@@ -1,4 +1,5 @@
 ## BINAIRE
+▪ **Informatique**
 
 ► ***EN : BINARY***
 

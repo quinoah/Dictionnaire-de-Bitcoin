@@ -1,4 +1,5 @@
 ## LUCK
+▪ **Minage**
 
 ► ***FR : CHANCE***
 

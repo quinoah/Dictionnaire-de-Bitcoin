@@ -1,4 +1,5 @@
 ## TRANSACTION COLLABORATIVE
+▪ **Confidentialité**
 
 ► ***EN : COLLABORATIVE TRANSACTION***
 

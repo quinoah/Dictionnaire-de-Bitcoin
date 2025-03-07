@@ -1,4 +1,5 @@
 ## DÉRIVATION NORMALE
+▪ **Portefeuille**
 
 ► ***EN : NORMAL DERIVATION***
 

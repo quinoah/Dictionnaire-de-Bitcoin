@@ -1,4 +1,5 @@
 ## ORDINALS THEORY
+▪ **Couche supérieure**
 
 ► ***FR : THÉORIE DES ORDINALS***
 

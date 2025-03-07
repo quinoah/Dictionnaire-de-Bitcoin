@@ -1,4 +1,5 @@
 ## CHAINE EXTERNE
+▪ **Portefeuille**
 
 ► ***EN : EXTERNAL KEYCHAIN***
 

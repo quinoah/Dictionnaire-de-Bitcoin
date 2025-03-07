@@ -1,4 +1,5 @@
 ## PAIR SORTANT
+▪ **Réseau**
 
 ► ***EN : OUTBOUND PEER / OUTGOING CONNECTION***
 

@@ -1,4 +1,5 @@
 ## POOL HOPPING
+▪ **Minage**
 
 ► ***FR : SAUT DE COOPÉRATIVES***
 

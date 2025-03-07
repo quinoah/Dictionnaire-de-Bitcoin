@@ -1,4 +1,5 @@
 ## MYSTERY SHOPPER PAYMENTS
+▪ **Attaque**
 
 ► ***FR : PAIEMENTS DE CLIENT MYSTÈRE***
 

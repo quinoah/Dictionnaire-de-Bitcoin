@@ -1,4 +1,5 @@
 ## DIFFICULTÉ
+▪ **Minage**
 
 ► ***EN : DIFFICULTY***
 

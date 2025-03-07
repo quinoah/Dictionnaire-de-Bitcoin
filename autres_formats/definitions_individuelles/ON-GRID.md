@@ -1,4 +1,5 @@
 ## ON-GRID
+▪ **Minage**
 
 ► ***FR : RACCORDÉ AU RÉSEAU***
 

@@ -1,4 +1,5 @@
 ## OP_CHECKSEQUENCEVERIFY (0XB2)
+▪ **Script**
 
 Rend la transaction invalide si une seule de ces caractéristiques est observée :
 * La pile est vide ;

@@ -1,4 +1,5 @@
 ## ENTROPIE (ANALYSE)
+▪ **Confidentialité**
 
 ► ***EN : ENTROPY (CHAIN ANALYSIS)***
 

@@ -1,4 +1,5 @@
 ## BITCOIN (B MAJUSCULE)
+▪ **Protocole**
 
 Bitcoin est le nom du système de cash électronique pair-à-pair créé par Satoshi Nakamoto en 2009. L'utilisation du terme Bitcoin avec un « B » majuscule peut vouloir évoquer trois choses différentes :
 * Le système Bitcoin ;

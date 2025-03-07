@@ -1,4 +1,5 @@
 ## PROB. DES GÉNÉRAUX BYZANTINS
+▪ **Attaque**
 
 ► ***EN : BYZANTINE GENERALS PROBLEM***
 

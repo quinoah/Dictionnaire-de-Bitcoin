@@ -1,4 +1,5 @@
 ## MAINTENEUR PRINCIPAL (CORE)
+▪ **Communauté**
 
 ► ***EN : LEAD MAINTAINER***
 

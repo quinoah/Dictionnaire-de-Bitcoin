@@ -1,4 +1,5 @@
 ## CRYPTOMONNAIE
+▪ **Économie et régulation**
 
 ► ***EN : CRYPTOCURRENCY***
 

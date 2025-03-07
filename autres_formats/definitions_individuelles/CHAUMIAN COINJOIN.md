@@ -1,4 +1,5 @@
 ## CHAUMIAN COINJOIN
+▪ **Confidentialité**
 
 ► ***FR : COINJOIN CHAUMIEN***
 

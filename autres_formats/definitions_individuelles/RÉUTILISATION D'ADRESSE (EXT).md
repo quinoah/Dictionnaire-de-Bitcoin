@@ -1,4 +1,5 @@
 ## RÉUTILISATION D'ADRESSE (EXT)
+▪ **Confidentialité**
 
 ► ***EN : EXTERNAL ADDRESS REUSE***
 

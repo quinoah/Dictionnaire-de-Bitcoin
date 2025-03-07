@@ -1,4 +1,5 @@
 ## SHARES DIFFICULTY
+▪ **Minage**
 
 ► ***FR : DIFFICULTÉ DES PARTS***
 

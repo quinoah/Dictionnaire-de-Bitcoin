@@ -1,4 +1,5 @@
 ## BEAR MARKET
+▪ **Économie et régulation**
 
 ► ***FR : MARCHÉ BAISSIER***
 

@@ -1,4 +1,5 @@
 ## MESURE À LA PRISE
+▪ **Minage**
 
 ► ***EN : MEASURE AT THE WALL***
 

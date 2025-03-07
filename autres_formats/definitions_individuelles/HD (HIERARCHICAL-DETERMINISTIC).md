@@ -1,4 +1,5 @@
 ## HD (HIERARCHICAL-DETERMINISTIC)
+▪ **Portefeuille**
 
 ► ***FR : DÉTERMINISTE ET HIÉRARCHIQUE***
 

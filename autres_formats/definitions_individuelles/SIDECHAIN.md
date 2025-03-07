@@ -1,4 +1,5 @@
 ## SIDECHAIN
+▪ **Sidechain**
 
 ► ***FR : CHAÎNE LATÉRALE / PARALLÈLE***
 

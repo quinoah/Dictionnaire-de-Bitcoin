@@ -1,4 +1,5 @@
 ## DIFFUSION
+▪ **Réseau**
 
 ► ***EN : PROPAGATION / BROADCAST***
 

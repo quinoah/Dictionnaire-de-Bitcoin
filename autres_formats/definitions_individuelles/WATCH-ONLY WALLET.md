@@ -1,4 +1,5 @@
 ## WATCH-ONLY WALLET
+▪ **Portefeuille**
 
 ► ***FR : PORTEFEUILLE EN LECTURE SEULE***
 

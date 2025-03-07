@@ -1,4 +1,5 @@
 ## WHALE
+▪ **Économie et régulation**
 
 ► ***FR : BALEINE***
 

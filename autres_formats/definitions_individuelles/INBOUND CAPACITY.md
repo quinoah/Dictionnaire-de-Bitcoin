@@ -1,4 +1,5 @@
 ## INBOUND CAPACITY
+▪ **Lightning Network**
 
 ► ***FR : CAPACITÉ ENTRANTE***
 

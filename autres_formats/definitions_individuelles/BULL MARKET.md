@@ -1,4 +1,5 @@
 ## BULL MARKET
+▪ **Économie et régulation**
 
 ► ***FR : MARCHÉ HAUSSIER***
 

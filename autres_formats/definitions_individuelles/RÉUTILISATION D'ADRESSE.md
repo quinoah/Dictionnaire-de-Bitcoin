@@ -1,4 +1,5 @@
 ## RÉUTILISATION D'ADRESSE
+▪ **Confidentialité**
 
 ► ***EN : ADDRESS REUSE***
 

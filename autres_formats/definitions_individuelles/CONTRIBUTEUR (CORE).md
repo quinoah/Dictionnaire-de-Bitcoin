@@ -1,4 +1,5 @@
 ## CONTRIBUTEUR (CORE)
+▪ **Communauté**
 
 ► ***EN : CONTRIBUTOR***
 

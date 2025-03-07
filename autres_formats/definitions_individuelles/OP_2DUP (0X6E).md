@@ -1,4 +1,5 @@
 ## OP_2DUP (0X6E)
+▪ **Script**
 
 Duplique les deux éléments en haut de la pile, puis les place en haut de la pile. Par exemple, si la pile est :
 

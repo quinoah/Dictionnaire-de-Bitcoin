@@ -1,4 +1,5 @@
 ## NETWORK-ADJUSTED TIME (NAT)
+▪ **Protocole**
 
 ► ***FR : TEMPS AJUSTÉ PAR LE RÉSEAU***
 

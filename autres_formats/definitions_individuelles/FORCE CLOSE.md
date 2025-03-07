@@ -1,4 +1,5 @@
 ## FORCE CLOSE
+▪ **Lightning Network**
 
 ► ***FR : FERMETURE FORCÉE***
 

@@ -1,4 +1,5 @@
 ## CHAINE INTERNE
+▪ **Portefeuille**
 
 ► ***EN : INTERNAL KEYCHAIN***
 

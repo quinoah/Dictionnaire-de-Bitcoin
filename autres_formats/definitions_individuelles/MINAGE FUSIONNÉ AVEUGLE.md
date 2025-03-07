@@ -1,4 +1,5 @@
 ## MINAGE FUSIONNÉ AVEUGLE
+▪ **Sidechain**
 
 ► ***EN : BLIND MERGED MINING (BMM)***
 

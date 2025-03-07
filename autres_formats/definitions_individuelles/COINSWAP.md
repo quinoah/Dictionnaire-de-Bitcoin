@@ -1,4 +1,5 @@
 ## COINSWAP
+▪ **Confidentialité**
 
 Protocole permettant un transfert secret de propriété entre des utilisateurs. Cette méthode vise à transférer la possession de bitcoins d'une personne à une autre, et inversement, sans que cet échange soit explicitement visible sur la blockchain. Le coinswap utilise des contrats intelligents pour faire le transfert sans besoin de confiance entre les parties.
 

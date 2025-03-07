@@ -1,4 +1,5 @@
 ## BRANCHE (GIT)
+▪ **Informatique**
 
 ► ***EN : BRANCH (GIT)***
 

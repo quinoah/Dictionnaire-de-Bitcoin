@@ -1,4 +1,5 @@
 ## CONCATÉNATION
+▪ **Informatique**
 
 ► ***EN : CONCATENATION***
 

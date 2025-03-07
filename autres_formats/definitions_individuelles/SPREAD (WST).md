@@ -1,4 +1,5 @@
 ## SPREAD (WST)
+▪ **Confidentialité**
 
 ► ***FR : DIFFUSION (WST)***
 

@@ -1,4 +1,5 @@
 ## TYPE DE DEVISE
+▪ **Portefeuille**
 
 ► ***EN : COIN TYPE***
 

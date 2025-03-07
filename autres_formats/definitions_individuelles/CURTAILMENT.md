@@ -1,4 +1,5 @@
-## CURTAILMENT (MINING)
+## CURTAILMENT
+▪ **Minage**
 
 ► ***FR : RÉDUCTION (MINAGE)***
 

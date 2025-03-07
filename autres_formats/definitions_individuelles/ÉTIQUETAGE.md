@@ -1,4 +1,5 @@
 ## ÉTIQUETAGE
+▪ **Portefeuille**
 
 ► ***EN : LABELING***
 

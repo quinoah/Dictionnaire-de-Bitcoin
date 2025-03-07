@@ -1,4 +1,5 @@
 ## CODE DE PAIMENT RÉUTILISABLE
+▪ **Confidentialité**
 
 ► ***EN : REUSABLE PAYMENT CODE***
 

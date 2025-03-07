@@ -1,4 +1,5 @@
 ## PREUVE DE TRAVAIL
+▪ **Protocole**
 
 ► ***EN : PROOF OF WORK (POW)***
 

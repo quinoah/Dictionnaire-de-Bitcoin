@@ -1,4 +1,5 @@
 ## PAIR-À-PAIR (P2P)
+▪ **Protocole**
 
 ► ***EN : PEER-TO-PEER (P2P)***
 

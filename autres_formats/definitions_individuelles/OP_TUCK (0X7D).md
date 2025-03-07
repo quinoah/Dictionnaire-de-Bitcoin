@@ -1,4 +1,5 @@
 ## OP_TUCK (0X7D)
+▪ **Script**
 
 Copie l'élément situé au sommet de la pile et l'insère entre le deuxième élément et le troisième élément de la pile. Par exemple, si la pile est :
 

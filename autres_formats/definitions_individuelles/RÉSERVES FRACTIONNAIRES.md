@@ -1,4 +1,5 @@
 ## RÉSERVES FRACTIONNAIRES
+▪ **Économie et régulation**
 
 ► ***EN : FRACTIONAL RESERVES***
 

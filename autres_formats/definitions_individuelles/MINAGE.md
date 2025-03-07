@@ -1,4 +1,5 @@
 ## MINAGE
+▪ **Minage**
 
 ► ***EN : MINING***
 

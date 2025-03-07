@@ -1,4 +1,5 @@
 ## NOEUD ÉLAGUÉ
+▪ **Protocole**
 
 ► ***EN : PRUNED NODE***
 

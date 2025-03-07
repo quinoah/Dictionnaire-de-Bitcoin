@@ -1,4 +1,5 @@
 ## OP_CHECKLOCKTIMEVERIFY (0XB1)
+▪ **Script**
 
 Rend la transaction invalide sauf si toutes ces conditions sont réunies :
 * La pile n'est pas vide ;

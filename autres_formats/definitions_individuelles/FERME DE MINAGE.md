@@ -1,4 +1,5 @@
 ## FERME DE MINAGE
+▪ **Minage**
 
 ► ***EN : MINING FARM***
 

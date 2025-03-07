@@ -1,4 +1,5 @@
 ## OP_TRUE (0X51)
+▪ **Script**
 
 Identique à OP_1.
 

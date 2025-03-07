@@ -1,4 +1,5 @@
 ## GAP LIMIT
+▪ **Portefeuille**
 
 ► ***FR : LIMITE DE CREUX***
 

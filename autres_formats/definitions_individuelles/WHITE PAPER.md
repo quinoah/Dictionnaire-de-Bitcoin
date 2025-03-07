@@ -1,4 +1,5 @@
 ## WHITE PAPER
+▪ **Histoire**
 
 ► ***FR : LIVRE BLANC***
 

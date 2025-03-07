@@ -1,4 +1,5 @@
 ## FORCED ADDRESS REUSE
+▪ **Attaque**
 
 ► ***FR : RÉUTILISATION D'ADRESSE FORCÉE***
 

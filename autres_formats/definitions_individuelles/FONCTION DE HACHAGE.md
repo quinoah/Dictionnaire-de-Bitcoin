@@ -1,4 +1,5 @@
 ## FONCTION DE HACHAGE
+▪ **Cryptographie**
 
 ► ***EN : HASH FUNCTION***
 

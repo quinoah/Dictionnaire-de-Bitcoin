@@ -1,4 +1,5 @@
 ## MÉTHODE GÉOMÉTRIQUE
+▪ **Minage**
 
 ► ***EN : GEOMETRIC METHOD***
 

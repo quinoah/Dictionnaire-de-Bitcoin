@@ -1,4 +1,5 @@
 ## RÈGLES DE CONSENSUS
+▪ **Protocole**
 
 ► ***EN : CONSENSUS RULES***
 

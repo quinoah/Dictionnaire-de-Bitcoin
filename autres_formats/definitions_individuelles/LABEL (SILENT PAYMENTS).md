@@ -1,4 +1,5 @@
 ## LABEL (SILENT PAYMENTS)
+▪ **Confidentialité**
 
 ► ***FR : ÉTIQUETTE (SILENT PAYMENTS)***
 

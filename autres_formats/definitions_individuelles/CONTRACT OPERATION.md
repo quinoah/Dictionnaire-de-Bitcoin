@@ -1,4 +1,5 @@
 ## CONTRACT OPERATION
+▪ **RGB**
 
 Dans le cadre du protocole RGB, désigne une mise à jour de l’état du contrat effectuée selon les règles du Schema. Les opérations suivantes existent dans RGB :
 * State Transition ;

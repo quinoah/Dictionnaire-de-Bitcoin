@@ -1,4 +1,5 @@
 ## MÉTADONNÉES
+▪ **Informatique**
 
 ► ***EN : METADATA***
 

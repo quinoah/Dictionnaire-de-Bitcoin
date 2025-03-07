@@ -1,4 +1,5 @@
 ## IMPLÉMENTATION DE BITCOIN
+▪ **Protocole**
 
 ► ***EN : BITCOIN IMPLEMENTATION***
 

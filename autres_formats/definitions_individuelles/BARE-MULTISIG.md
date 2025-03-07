@@ -1,4 +1,5 @@
 ## BARE-MULTISIG
+▪ **Protocole**
 
 ► ***FR : MULTISIG BRUT***
 

@@ -1,4 +1,5 @@
 ## MODÈLE TEMPOREL
+▪ **Confidentialité**
 
 ► ***EN : TEMPORAL TEMPLATE***
 

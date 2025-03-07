@@ -1,4 +1,5 @@
 ## MINAGE FUSIONNÉ
+▪ **Sidechain**
 
 ► ***EN : MERGED MINING (MM)***
 

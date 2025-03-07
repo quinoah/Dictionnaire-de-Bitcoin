@@ -1,4 +1,5 @@
 ## EXPLORATEUR DE BLOC
+▪ **Outil**
 
 ► ***EN : BLOCK EXPLORER***
 

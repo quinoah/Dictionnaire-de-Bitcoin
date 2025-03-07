@@ -1,4 +1,5 @@
 ## DUAL FUNDING
+▪ **Lightning Network**
 
 ► ***FR : FINANCEMENT DOUBLE***
 

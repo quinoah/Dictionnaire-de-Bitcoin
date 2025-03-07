@@ -1,4 +1,5 @@
 ## PHRASE DE RÉCUPÉRATION
+▪ **Portefeuille**
 
 ► ***EN : MNEMONIC PHRASE***
 

@@ -1,4 +1,5 @@
 ## CLÉ PUBLIQUE COMPRESSÉE
+▪ **Portefeuille**
 
 ► ***EN : COMPRESSED PUBLIC KEY***
 

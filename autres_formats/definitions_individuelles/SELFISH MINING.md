@@ -1,4 +1,5 @@
 ## SELFISH MINING
+▪ **Attaque**
 
 ► ***FR : MINAGE ÉGOÏSTE***
 

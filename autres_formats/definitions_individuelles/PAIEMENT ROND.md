@@ -1,4 +1,5 @@
 ## PAIEMENT ROND
+▪ **Confidentialité**
 
 ► ***EN : ROUND PAYMENT***
 

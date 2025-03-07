@@ -1,4 +1,5 @@
-## LIQUIDITÉS (LIGHTNING)
+## LIQUIDITÉS
+▪ **Lightning Network**
 
 ► ***EN : LIQUIDITY (LIGHTNING)***
 

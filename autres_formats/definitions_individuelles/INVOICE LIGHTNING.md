@@ -1,4 +1,5 @@
 ## INVOICE LIGHTNING
+▪ **Lightning Network**
 
 Requête de paiement Lightning générée par le destinataire, qui contient toutes les informations nécessaires pour réaliser la transaction. 
 

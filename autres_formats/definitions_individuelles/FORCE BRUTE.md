@@ -1,4 +1,5 @@
-## FORCE BRUTE (ATTAQUE)
+## FORCE BRUTE
+▪ **Attaque**
 
 ► ***EN : BRUTE FORCE ATTACK***
 

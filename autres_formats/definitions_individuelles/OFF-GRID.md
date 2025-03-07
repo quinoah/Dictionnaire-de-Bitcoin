@@ -1,4 +1,5 @@
 ## OFF-GRID
+▪ **Minage**
 
 ► ***FR : HORS RÉSEAU***
 

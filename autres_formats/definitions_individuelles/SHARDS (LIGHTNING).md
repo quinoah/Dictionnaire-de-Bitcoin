@@ -1,4 +1,5 @@
 ## SHARDS (LIGHTNING)
+▪ **Lightning Network**
 
 ► ***FR : FRACTIONS***
 

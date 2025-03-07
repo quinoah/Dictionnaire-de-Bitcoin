@@ -1,4 +1,5 @@
 ## COMMITMENT
+▪ **RGB**
 
 ► ***FR : ENGAGEMENT***
 

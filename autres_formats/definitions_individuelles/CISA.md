@@ -1,4 +1,5 @@
 ## CISA
+▪ **Protocole**
 
 Acronyme de « *Cross-Input Signature Aggregation* ». C'est une proposition technique qui a pour objectif d'optimiser la taille des transactions Bitcoin en réduisant le nombre de signatures requises pour les valider.
 

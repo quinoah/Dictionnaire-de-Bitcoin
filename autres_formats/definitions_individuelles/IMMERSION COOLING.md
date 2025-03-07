@@ -1,4 +1,5 @@
 ## IMMERSION COOLING
+▪ **Minage**
 
 ► ***FR : REFROIDISSEMENT PAR IMMERSION***
 

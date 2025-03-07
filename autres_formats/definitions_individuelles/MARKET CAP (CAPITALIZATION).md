@@ -1,4 +1,5 @@
 ## MARKET CAP (CAPITALIZATION)
+▪ **Économie et régulation**
 
 ► ***FR : CAPITALISATION BOURSIÈRE***
 

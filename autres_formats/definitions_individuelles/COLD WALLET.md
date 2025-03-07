@@ -1,4 +1,5 @@
 ## COLD WALLET
+▪ **Portefeuille**
 
 ► ***FR : PORTEFEUILLE FROID***
 

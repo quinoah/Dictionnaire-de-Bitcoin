@@ -1,4 +1,5 @@
 ## TARO
+▪ **Couche supérieure**
 
 Ancien nom du protocole Taproot Assets Protocol. 
 

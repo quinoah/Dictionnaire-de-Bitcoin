@@ -1,4 +1,5 @@
 ## MAJORITÉ ÉCONOMIQUE
+▪ **Protocole**
 
 ► ***EN : ECONOMIC MAJORITY***
 

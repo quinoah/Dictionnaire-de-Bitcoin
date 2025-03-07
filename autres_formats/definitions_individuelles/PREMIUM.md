@@ -1,4 +1,5 @@
 ## PREMIUM
+▪ **Communauté**
 
 ► ***FR : MAJORATION***
 

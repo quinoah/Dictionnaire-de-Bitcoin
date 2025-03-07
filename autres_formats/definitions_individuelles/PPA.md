@@ -1,4 +1,5 @@
 ## PPA
+▪ **Minage**
 
 ► ***FR : CONTRAT D'ACHAT D'ÉNERGIE***
 

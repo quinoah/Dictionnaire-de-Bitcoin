@@ -1,4 +1,5 @@
 ## SWEEP TRANSACTION
+▪ **Confidentialité**
 
 ► ***FR : TRANSACTION DE BALAYAGE***
 

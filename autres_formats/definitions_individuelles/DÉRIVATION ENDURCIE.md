@@ -1,4 +1,5 @@
 ## DÉRIVATION ENDURCIE
+▪ **Portefeuille**
 
 ► ***EN : HARDENED DERIVATION***
 

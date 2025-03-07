@@ -1,4 +1,5 @@
 ## HYDRO COOLING
+▪ **Minage**
 
 ► ***FR : REFROIDISSEMENT À L'EAU***
 

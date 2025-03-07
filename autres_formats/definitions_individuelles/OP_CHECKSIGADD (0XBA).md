@@ -1,4 +1,5 @@
 ## OP_CHECKSIGADD (0XBA)
+▪ **Script**
 
 Extrait les trois valeurs en haut de la pile : une `clé publique`, un `CScriptNum` `n` et une `signature`. Si la signature n'est pas le vecteur vide et n'est pas valide, le script se termine avec une erreur. Si la signature est valide où est le vecteur vide (`OP_0`), deux cas de figure se présentent :
 * Si la signature est le vecteur vide : un `CScriptNum` avec la valeur de `n` est poussé sur la pile et l'exécution continue ;

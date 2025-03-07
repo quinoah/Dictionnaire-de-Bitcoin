@@ -1,4 +1,5 @@
 ## MAINTENEUR (CORE)
+▪ **Communauté**
 
 ► ***EN : MAINTAINER***
 

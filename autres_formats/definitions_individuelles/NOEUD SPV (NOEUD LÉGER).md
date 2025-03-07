@@ -1,4 +1,5 @@
 ## NOEUD SPV (NOEUD LÉGER)
+▪ **Protocole**
 
 ► ***EN : SPV NODE (LIGHTWEIGHT NODE)***
 

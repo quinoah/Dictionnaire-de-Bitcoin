@@ -1,4 +1,5 @@
 ## FONGIBILITÉ
+▪ **Économie et régulation**
 
 ► ***EN : FUNGIBILITY***
 

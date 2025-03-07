@@ -1,4 +1,5 @@
 ## PAPER WALLET
+▪ **Portefeuille**
 
 ► ***FR : PORTEFEUILLE PAPIER***
 

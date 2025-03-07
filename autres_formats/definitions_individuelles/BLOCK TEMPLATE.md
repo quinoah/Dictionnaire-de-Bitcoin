@@ -1,4 +1,5 @@
 ## BLOCK TEMPLATE
+▪ **Minage**
 
 ► ***FR : MODÈLE DE BLOC***
 

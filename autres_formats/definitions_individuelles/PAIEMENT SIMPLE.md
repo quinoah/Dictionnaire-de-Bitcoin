@@ -1,4 +1,5 @@
 ## PAIEMENT SIMPLE
+▪ **Confidentialité**
 
 ► ***EN : SIMPLE PAYMENT***
 

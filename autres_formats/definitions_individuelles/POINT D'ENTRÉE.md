@@ -1,4 +1,5 @@
 ## POINT D'ENTRÉE
+▪ **Confidentialité**
 
 ► ***EN : ENTRY POINT***
 

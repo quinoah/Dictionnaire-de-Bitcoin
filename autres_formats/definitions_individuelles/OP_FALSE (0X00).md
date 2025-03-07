@@ -1,4 +1,5 @@
 ## OP_FALSE (0X00)
+▪ **Script**
 
 Identique à `OP_0`.
 

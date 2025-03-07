@@ -1,4 +1,5 @@
 ## PORTEFEUILLE CHAUD (LOGICIEL)
+▪ **Portefeuille**
 
 ► ***EN : HOT WALLET / SOFTWARE WALLET***
 

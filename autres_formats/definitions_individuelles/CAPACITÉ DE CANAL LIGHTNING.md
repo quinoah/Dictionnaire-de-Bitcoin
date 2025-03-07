@@ -1,4 +1,5 @@
 ## CAPACITÉ DE CANAL LIGHTNING
+▪ **Lightning Network**
 
 ► ***EN : LIGHTNING CHANNEL CAPACITY***
 

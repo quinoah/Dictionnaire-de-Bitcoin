@@ -1,4 +1,5 @@
 ## CONTRAT INTELLIGENT
+▪ **Script**
 
 ► ***EN : SMART CONTRACT***
 

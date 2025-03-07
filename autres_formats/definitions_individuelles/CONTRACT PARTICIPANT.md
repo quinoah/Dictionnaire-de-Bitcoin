@@ -1,4 +1,5 @@
 ## CONTRACT PARTICIPANT
+▪ **RGB**
 
 Dans le cadre de RGB, un Contract Participant est un acteur prenant part aux opérations relatives au contrat. On distingue ainsi :
 * L’issuer du contrat, qui crée la Genesis (l’origine du contrat) ;

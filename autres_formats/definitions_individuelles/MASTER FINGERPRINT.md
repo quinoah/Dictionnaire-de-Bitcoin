@@ -1,4 +1,5 @@
 ## MASTER FINGERPRINT
+▪ **Portefeuille**
 
 ► ***FR : EMPREINTE MAÎTRESSE***
 

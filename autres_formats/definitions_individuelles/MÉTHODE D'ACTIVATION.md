@@ -1,4 +1,5 @@
 ## MÉTHODE D'ACTIVATION
+▪ **Protocole**
 
 ► ***EN : ACTIVATION METHOD***
 

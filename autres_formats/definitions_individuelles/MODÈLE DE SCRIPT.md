@@ -1,4 +1,5 @@
 ## MODÈLE DE SCRIPT
+▪ **Script**
 
 ► ***EN : SCRIPT TEMPLATE***
 

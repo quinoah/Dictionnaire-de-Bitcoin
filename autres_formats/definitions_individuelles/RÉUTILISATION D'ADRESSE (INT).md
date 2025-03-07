@@ -1,4 +1,5 @@
 ## RÉUTILISATION D'ADRESSE (INT)
+▪ **Confidentialité**
 
 ► ***EN : INTERNAL ADDRESS REUSE***
 

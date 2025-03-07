@@ -1,4 +1,5 @@
 ## RAW TRANSACTION
+▪ **Portefeuille**
 
 ► ***FR : TRANSACTION BRUTE / TRANSACTION SÉRIALISÉE***
 

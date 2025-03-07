@@ -1,4 +1,5 @@
 ## RÉTENTION (DE BLOC)
+▪ **Attaque**
 
 ► ***EN : BLOCK WITHHOLDING***
 

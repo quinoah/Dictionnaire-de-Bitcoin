@@ -1,4 +1,5 @@
 ## MINEUR
+▪ **Minage**
 
 ► ***EN : MINER***
 

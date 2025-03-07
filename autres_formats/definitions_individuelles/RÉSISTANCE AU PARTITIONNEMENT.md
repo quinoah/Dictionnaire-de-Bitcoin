@@ -1,4 +1,5 @@
 ## RÉSISTANCE AU PARTITIONNEMENT
+▪ **Informatique**
 
 ► ***EN : PARTITION TOLERANCE***
 

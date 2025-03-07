@@ -1,4 +1,5 @@
 ## BLOCKSIGNERS
+▪ **Sidechain**
 
 ► ***FR : SIGNATAIRES DE BLOCS***
 

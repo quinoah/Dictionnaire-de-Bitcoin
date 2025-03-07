@@ -1,4 +1,5 @@
 ## GOSSIP
+▪ **Lightning Network**
 
 ► ***FR : BAVARDAGE***
 

@@ -1,4 +1,5 @@
 ## EMPREINTE DE PORTEFEUILLE
+▪ **Portefeuille**
 
 ► ***EN : WALLET FINGERPRINT***
 

@@ -1,4 +1,5 @@
 ## COMMERÇANT
+▪ **Protocole**
 
 ► ***EN : MERCHANT***
 

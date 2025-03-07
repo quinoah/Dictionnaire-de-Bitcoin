@@ -1,4 +1,5 @@
-## DOUBLE DÉPENSE (ATTAQUE)
+## DOUBLE DÉPENSE
+▪ **Attaque**
 
 ► ***EN : DOUBLE SPENDING ATTACK***
 

@@ -1,4 +1,5 @@
 ## MÉLANGEUR
+▪ **Confidentialité**
 
 ► ***EN : MIXER***
 

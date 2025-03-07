@@ -1,4 +1,5 @@
 ## HASHRATE
+▪ **Minage**
 
 ► ***FR : TAUX DE HACHAGE***
 

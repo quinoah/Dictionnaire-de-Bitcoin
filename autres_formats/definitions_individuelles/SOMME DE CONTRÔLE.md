@@ -1,4 +1,5 @@
 ## SOMME DE CONTRÔLE
+▪ **Cryptographie**
 
 ► ***EN : CHECKSUM***
 

@@ -1,4 +1,5 @@
 ## CLIENT-SIDE VALIDATION
+▪ **RGB**
 
 ► ***FR : VALIDATION CÔTÉ CLIENT***
 

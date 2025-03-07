@@ -1,4 +1,5 @@
 ## CHARGE UTILE
+▪ **Informatique**
 
 ► ***EN : PAYLOAD***
 

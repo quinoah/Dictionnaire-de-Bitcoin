@@ -1,4 +1,5 @@
 ## C-LIGHTNING (CLN)
+▪ **Lightning Network**
 
 Ancien nom de l'implémentation Core-Lightning. 
 

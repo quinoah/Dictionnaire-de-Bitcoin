@@ -1,4 +1,5 @@
 ## POOL (MINING)
+▪ **Minage**
 
 ► ***FR : COOPÉRATIVE DE MINAGE***
 

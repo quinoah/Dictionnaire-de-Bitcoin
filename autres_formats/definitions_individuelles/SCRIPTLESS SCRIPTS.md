@@ -1,4 +1,5 @@
 ## SCRIPTLESS SCRIPTS
+▪ **Script**
 
 ► ***FR : SCRIPTS SANS SCRIPT***
 
