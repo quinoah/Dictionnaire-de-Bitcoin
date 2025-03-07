@@ -31,3 +31,7 @@
 - **Attaque** : Les définitions des attaques et vulnérabilités associées à Bitcoin, ou à des concepts connexes.
 
 - **Informatique** : L’ensemble des définitions relatives aux concepts informatiques généraux qui ne sont pas spécifiquement liés à Bitcoin, tout en excluant celles relevant de la catégorie « Cryptographie ». Elle couvre ainsi des notions techniques et théoriques en informatique qui enrichissent la compréhension globale de l’écosystème Bitcoin.
+
+- **Communauté** : Tout ce qui concerne l'organisation des humains autour de Bitcoin.
+
+- **Organisation** : Entreprises et associations travaillant sur Bitcoin.
