@@ -1,10 +1,12 @@
 ## C++ (PLUS PLUS)
+▪ **Informatique**
 
 Langage de programmation polyvalent, évoluant du C, connu pour sa puissance et sa flexibilité. Utilisé pour le développement logiciel complexe, il prend en charge la programmation orientée objet et offre de riches fonctionnalités pour la gestion de la mémoire et des ressources système. 
 
 Bitcoin Core, l'implémentation majoritaire du protocole Bitcoin, est écrite en C++. C'est un héritage du tout premier client de Satoshi qui était aussi dans ce langage de programmation. Pour garantir une cohérence stricte du comportement des nœuds sur le réseau, notamment pour éviter les forks, il a été choisi de ne pas changer de langage depuis 2009.
 
 ## CAHOOTS
+▪ **Portefeuille**
 
 Dans le cadre du portefeuille Samourai Wallet et d'autres logiciels de portefeuilles qui l'implémente, un Cahoot désigne tous les types de transactions réalisées en collaboration entre plusieurs utilisateurs. Procéder à un Cahoot signifie donc participer conjointement à une transaction. Cette collaboration s'articule autour de l'échange de transactions partiellement signées. Ces échanges peuvent se faire soit manuellement, via des codes QR, soit de manière automatisée, via le réseau de communication Soroban. Parmi les cahoots, on retrouve :
 * Les transactions Stowaway (Payjoin) ;
@@ -12,42 +14,49 @@ Dans le cadre du portefeuille Samourai Wallet et d'autres logiciels de portefeui
 * Les transactions Joinbot.
 
 ## CANAL DE PAIMENT
+▪ **Lightning Network**
 
 ► ***EN : PAYMENT CHANNEL***
 
 Dans le cadre du Lightning Network, un canal de paiement est une connexion bidirectionnelle entre deux nœuds Lightning qui permet de faire des échanges de bitcoins off-chain. On-chain, un canal de paiement est représenté par une adresse multisignatures 2/2 détenue par les deux participants. Le canal de paiement nécessite une transaction on-chain pour son ouverture et une autre pour sa fermeture. Entre ces deux évènements, les utilisateurs du canal peuvent réaliser un très grand nombre d'échanges de bitcoins off-chain, sur le Lightning Network, sans nécessiter une activité on-chain. Sur Lightning, il est possible de router un paiement à travers plusieurs canaux et plusieurs nœuds, afin d'envoyer des bitcoins sans forcément ouvrir un canal direct avec le receveur.
 
 ## CANDIDAT (BLOC)
+▪ **Minage**
 
 ► ***EN : CANDIDATE BLOCK***
 
 Un bloc candidat est un bloc en cours de création par un mineur participant au processus de minage du système Bitcoin. Le bloc candidat est une structure de données temporaire qui contient des transactions en attente d'être confirmées, mais ne dispose pas encore d'une preuve de travail valide (proof-of-work) pour être ajouté à la blockchain. Le mineur sélectionne les transactions à inclure dans le bloc candidat en fonction de divers facteurs, tels que les frais de transaction associés et les contraintes de taille de bloc. Une fois les transactions sélectionnées, le mineur génère l'entête du bloc, qui comprend la version, un condensat des transactions (racine de Merkle), un horodatage, le hash du bloc précédent, la cible de difficulté et un nonce. Le mineur tente ensuite de trouver un hash de son entête satisfaisant la difficulté cible du moment. Pour ce faire, il modifie le nonce présent dans l'entête. Il peut également modifier d'autres informations présentes dans son bloc candidat. C'est le mécanisme de la preuve de travail. Si le mineur réussit à trouver un hash valide, le bloc candidat devient un bloc valide et est diffusé au réseau pour être ajouté à la blockchain.
 
 ## CAPACITÉ DE CANAL LIGHTNING
+▪ **Lightning Network**
 
 ► ***EN : LIGHTNING CHANNEL CAPACITY***
 
 Quantité de bitcoins bloqués sur une adresse multisignatures qui représente un canal de paiement sur le Lightning Network. La capacité d'un canal est donc la quantité maximale de sats qui peut être transmise via ce canal spécifique. Elle est définie au moment de la création du canal par la somme des fonds qu'une partie engage dans le canal. L'« *inbound capacity* », ou « capacité entrante », désigne la quantité maximale de bitcoins qu'un nœud peut recevoir via un canal. L'« *outbound capacity* », ou « capacité sortante » représente la quantité maximale de bitcoins qu'un nœud peut envoyer à travers un canal spécifique.
 
 ## CASHU
+▪ **Couche supérieure**
 
 Protocole open-source de monnaie électronique chaumienne, similaire au système eCash de David Chaum, mais qui fonctionne sur Bitcoin et le Lightning Network. Plus précisément, Cashu est inspiré d'une variante d'eCash proposée en 1996 par David Wagner nommée « *Chaumian ecash without RSA* ». Cashu peut être utilisé sur des portefeuilles custodiaux afin que le serveur ne puisse identifier ni les propriétaires des fonds, ni les détails des transactions, offrant ainsi une amélioration de la confidentialité. Les utilisateurs peuvent générer des jetons Cashu en échange de bitcoins, qui sont signés par le serveur sans connaitre l'utilisateur. Les jetons peuvent ensuite être transférés entre utilisateurs de manière instantanée, privée et sans frais.
 
 > ► *Pour plus d'informations, voir la définition de [**ECASH (DAVID CHAUM)**](./E.md#ecash-david-chaum).*
 
 ## CET
+▪ **Couche supérieure**
 
 Sigle de « *Contract Execution Transaction* ». C'est une transaction spécifique au sein d'un DLC qui permet le règlement final entre les parties en fonction de l'issue d'un événement futur. Lorsque l'oracle publie une signature correspondant au résultat de l'événement, les parties utilisent cette signature pour compléter et déverrouiller la CET qui envoie les fonds à la partie gagnante. La CET signée est ensuite minée, et le gagnant reçoit les bitcoins qui lui sont dus selon les conditions du contrat intelligent. Toutes les autres CET potentielles, qui auraient été exécutées en cas de résultats différents, deviennent obsolètes et sont abandonnées.
 
 > ► *Pour plus d'informations, voir la définition de [**DLC (DISCREET LOG CONTRACT)**](./D.md#dlc-discreet-log-contract).*
 
 ## CGMINER
+▪ **Minage**
 
 Logiciel de minage open-source initialement développé pour le CPU et le GPU. CGminer permet aux utilisateurs de gérer et d'optimiser leurs opérations de minage, avec des fonctionnalités comme le multi-threading, la gestion de pools multiples et la surveillance en temps réel des performances. Le logiciel n'est plus vraiment maintenu de nos jours, mais il a été repris dans le projet open-source BOSminer de Braiins.
 
 > ► *Pour plus d'informations, voir la définition de [**BOSMINER**](./B.md#bosminer).*
 
 ## CHAINE EXTERNE
+▪ **Portefeuille**
 
 ► ***EN : EXTERNAL KEYCHAIN***
 
@@ -58,6 +67,7 @@ Dans la dérivation des portefeuilles déterministes et hiérarchiques, la chaî
 > ► *Pour plus d'informations, voir la définition de [**CHEMIN DE DÉRIVATION**](./C.md#chemin-de-dérivation).*
 
 ## CHAINE INTERNE
+▪ **Portefeuille**
 
 ► ***EN : INTERNAL KEYCHAIN***
 
@@ -68,18 +78,21 @@ Dans la dérivation des portefeuilles déterministes et hiérarchiques, la chaî
 > ► *Pour plus d'informations, voir la définition de [**CHEMIN DE DÉRIVATION**](./C.md#chemin-de-dérivation).*
 
 ## CHAINSPLIT
+▪ **Protocole**
 
 Nom parfois donné à un embranchement naturel, c'est-à-dire une séparation temporaire de la blockchain résultant de la diffusion quasi simultanée de plusieurs blocs par différents mineurs à une même hauteur.
 
 > ► *Pour plus d'informations, voir les définitions de [**EMBRANCHEMENT NATUREL**](./E.md#embranchement-naturel) et de **[FORK](./F.md#fork)**.*
 
 ## CHAINSTATE/
+▪ **Protocole**
 
 Nom technique donné au dossier utilisé pour stocker l'UTXO set sur Bitcoin Core. C'est donc en réalité un synonyme d'« UTXO set ».
 
 > ► *Pour plus d'informations, voir la définition de [**UTXO SET**](./U.md#utxo-set).*
 
 ## CHAMPION (BIP)
+▪ **BIP**
 
 ► ***EN : CHAMPION (BIP)***
 
@@ -88,6 +101,7 @@ Dans le contexte du développement de Bitcoin Core (l'implémentation majoritair
 > ► *Le champion est également parfois nommé « auteur ». On retrouve d'ailleurs son nom noté derrière l'entête « Author » dans les BIPs. Il peut parfois y avoir plusieurs champions pour un même BIP. Pour plus d'informations, voir la définition de [**BIP**](./B.md#bip).*
 
 ## CHANGE
+▪ **Portefeuille**
 
 Dans le cadre des transactions Bitcoin, fait référence à l'UTXO créé avec les fonds restants après que le paiement effectif a été satisfait. Lorsque l'on utilise en entrées des UTXOs avec une quantité de bitcoins supérieure au montant nécessaire pour le paiement effectif et les frais de transaction, le surplus est un UTXO renvoyé à une adresse interne du portefeuille, appelée adresse de change. Le change représente cet UTXO. Par exemple, si vous souhaitez payer une baguette qui coute `4 000 sats` avec un UTXO de `10 000 sats`, vous allez créer dans votre transaction un change de `6 000 sats` (si l'on néglige les frais de transaction).
 
@@ -96,10 +110,12 @@ Dans le cadre des transactions Bitcoin, fait référence à l'UTXO créé avec l
 > ► *Même si c'est très peu utilisé, on pourrait également parler de « monnaie » (rendu de monnaie) pour évoquer le change.*
 
 ## CHANNEL FACTORIES
+▪ **Lightning Network**
 
 Mécanisme avancé en cours de travail sur Lightning, permettant la création et la gestion de plusieurs canaux de paiement à partir d'un seul UTXO. Les channel factories utilisent des adresses multisig `n-of-n` pour qu'un groupe d'utilisateurs puisse détenir collectivement un seul UTXO. De là, ils peuvent ouvrir et fermer des canaux de paiement entre eux sans transactions supplémentaires on-chain, sauf lorsqu'ils souhaitent retirer leurs fonds de la factory. Cette méthode permettrait de réduire considérablement les coûts et l'espace occupé sur Bitcoin pour des transactions Lightning. En pratique, cela signifie que des opérations qui nécessiteraient normalement des transactions on-chain pour chaque ouverture ou fermeture de canal peuvent être effectuées hors chaîne, avec la sécurité garantie par la capacité de publier les transactions non publiées si nécessaire. Pour reprendre les mots de David A. Harding, les channel factories peuvent être décrites comme des canaux Lightning utilisés pour générer d'autres canaux Lightning.
 
 ## CHARGE UTILE
+▪ **Informatique**
 
 ► ***EN : PAYLOAD***
 
@@ -111,6 +127,7 @@ Dans le contexte général de l'informatique, une charge utile désigne les donn
 * `ys50gj` : la somme de contrôle.
 
 ## CHAUMIAN COINJOIN
+▪ **Confidentialité**
 
 ► ***FR : COINJOIN CHAUMIEN***
 
@@ -133,6 +150,7 @@ Toutefois, il existe d'autres mentions antérieures, à la fois pour les signatu
 > ► *Pour plus d'informations, voir la définition de **[COINJOIN](./C.md#coinjoin)**.*
 
 ## CHEMIN DE DÉRIVATION
+▪ **Portefeuille**
 
 ► ***EN : DERIVATION PATH***
 
@@ -154,6 +172,7 @@ Par exemple, si mon adresse de réception dispose du chemin de dérivation `m / 
 ![](assets/18.png)
 
 ## CHEMIN DE RÉCUPÉRATION
+▪ **Portefeuille**
 
 ► ***EN : RECOVERY PATH***
 
@@ -162,6 +181,7 @@ Dans un logiciel de portefeuille utilisant Miniscript, comme Liana par exemple, 
 > ► *Pour plus d'informations, voir la définition de [**MINISCRIPT**](./M.md#miniscript).*
 
 ## CHEMIN PRIMAIRE
+▪ **Portefeuille**
 
 ► ***EN : PRIMARY PATH***
 
@@ -170,12 +190,14 @@ Dans un logiciel de portefeuille utilisant Miniscript, comme Liana par exemple, 
 > ► *Pour plus d'informations, voir la définition de [**MINISCRIPT**](./M.md#miniscript).*
 
 ## CHIFFRER (CHIFFREMENT)
+▪ **Cryptographie**
 
 ► ***EN : ENCRYPT (ENCRYPTION)***
 
 Méthode cryptographique permettant de convertir une information brute en information chiffrée. Une information chiffrée masque la signification originale des données pour empêcher qu'elles ne soient connues. Le chiffrement consiste en une série de transformations effectuées sur l'information originale à l'aide d'une clé. Si ces transformations sont réversibles, le processus d'inversion correspondant est appelé « déchiffrement », et il permet de restaurer les informations à leur état brut.
 
 ## CIBLE DE DIFFICULTÉ
+▪ **Minage**
 
 ► ***EN : DIFFICULTY TARGET***
 
@@ -190,6 +212,7 @@ Cette cible est ajustée tous les 2016 blocs (environ toutes les deux semaines),
 > ► *La cible de difficulté est parfois également nommée « facteur de difficulté ». Par extension, on peut l'évoquer avec son encodage dans les entêtes de bloc avec le terme « nBits ».*
 
 ## CIOH
+▪ **Confidentialité**
 
 Sigle de « *Common Input Ownership Heuristic* ». C'est une heuristique utilisée dans le domaine de l'analyse de chaîne sur Bitcoin qui suppose que toutes les entrées d'une transaction appartiennent à une même entité ou à un même utilisateur. Lorsque l'on observe les données publiques d'une transaction Bitcoin, et que l'on y repère plusieurs entrées (inputs), alors, s'il n'y a pas de paternes où d'autres informations qui viendraient infirmer cela, on peut estimer que toutes les entrées de cette transaction appartenaient à une seule et même personne (ou entité).
 
@@ -204,6 +227,7 @@ Encore aujourd'hui, le CIOH demeure la principale heuristique employée par les 
 > ► *En français, on pourrait traduire « CIOH » par « Heuristique de propriété commune des entrée ».*
 
 ## CISA
+▪ **Protocole**
 
 Acronyme de « *Cross-Input Signature Aggregation* ». C'est une proposition technique qui a pour objectif d'optimiser la taille des transactions Bitcoin en réduisant le nombre de signatures requises pour les valider.
 
@@ -212,6 +236,7 @@ Actuellement, sur Bitcoin, chaque input d'une transaction doit avoir une signatu
 Cependant, l'implémentation de CISA sur Bitcoin est très complexe, car elle nécessite des modifications profondes dans la manière de fonctionner des scripts. Actuellement, la vérification des scripts sur Bitcoin se fait input par input. Passer à un modèle où une transaction entière est vérifiée d'un coup, comme le propose CISA, est loin d'être une modification anodine.
 
 ## CLÉ ÉTENDUE
+▪ **Portefeuille**
 
 ► ***EN : EXTENDED KEY***
 
@@ -228,6 +253,7 @@ Suite de caractères qui combine une clé (publique ou privée), son code de cha
 Dans la pratique, la clé publique étendue est utilisée pour générer des adresses de réception et pour observer les transactions d'un compte, sans exposer les clés privées associées. Cela peut permettre, par exemple, la création d'un portefeuille dit « watch-only ». Il est toutefois important de noter que la clé publique étendue est une information sensible pour la confidentialité de l'utilisateur, car sa divulgation peut permettre à des tiers de tracer les transactions et de voir le solde du compte associé.
 
 ## CLÉ MAITRESSE
+▪ **Portefeuille**
 
 ► ***EN : MASTER KEY***
 
@@ -236,6 +262,7 @@ Dans le cadre des portefeuilles HD (déterministes et hiérarchiques) la clé pr
 ![](assets/19.png)
 
 ## CLÉ PRIVÉE
+▪ **Portefeuille**
 
 ► ***EN : PRIVATE KEY***
 
@@ -246,6 +273,7 @@ Dans le système Bitcoin, la clé privée est liée à une clé publique par le 
 > ► *En anglais, une clé privée se dit « private key ». Ce terme est parfois abrégé avec « privkey », ou « PV ».*
 
 ## CLÉ PUBLIQUE
+▪ **Portefeuille**
 
 ► ***EN : PUBLIC KEY***
 
@@ -254,6 +282,7 @@ La clé publique est un élément utilisé dans la cryptographie asymétrique. E
 > ► *En anglais, une clé publique se dit « public key ». Ce terme est parfois abrégé avec « pubkey », ou « PK ».*
 
 ## CLÉ PUBLIQUE COMPRESSÉE
+▪ **Portefeuille**
 
 ► ***EN : COMPRESSED PUBLIC KEY***
 
@@ -292,30 +321,36 @@ K = 03678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb6
 ```
 
 ## CLI
+▪ **Informatique**
 
 Acronyme de « *Command Line Interface* », ou « interface en ligne de commande » en français. C'est une méthode d'interaction avec des logiciels qui repose sur la saisie de commandes textuelles dans un terminal ou une console. La CLI se différencie de la GUI (interface graphique utilisateur) qui dispose de méthodes d'interactions de pointage (avec la souris) et d'éléments visuels interactifs.
 
 ## CLIENT-SIDE VALIDATION
+▪ **RGB**
 
 ► ***FR : VALIDATION CÔTÉ CLIENT***
 
 Processus par lequel chaque partie (client) vérifie un ensemble de données échangées en privé, selon les règles d’un protocole. Dans le cas du protocole RGB, ces données échangées sont regroupées dans ce qu’on appelle des consignments. Contrairement au protocole Bitcoin qui exige que toutes les transactions soient publiées on-chain, RGB permet de ne stocker en public que des commitments (ancrés dans Bitcoin), tandis que l’essentiel des informations de contrat (transitions, attestations, preuves) reste off-chain, partagé seulement entre les utilisateurs concernés.
 
 ## C-LIGHTNING (CLN)
+▪ **Lightning Network**
 
 Ancien nom de l'implémentation Core-Lightning. 
 
 > ► *Pour plus d'informations, voir la définition de [**CORE-LIGHTNING (CLN)**](./C.md#core-lightning-cln).*
 
 ## CLONE
+▪ **Informatique**
 
 Dans le cadre de Git, consiste à créer une copie locale d'un dépôt distant. Cette opération télécharge l'ensemble du dépôt, y compris toutes les branches et l'historique des commits. En tant qu'utilisateur de Bitcoin, il est possible d'avoir à utiliser cette commande lorsque l'on télécharge un logiciel.
 
 ## CLUSTER
+▪ **Confidentialité**
 
 Dans le cadre de l'analyse de chaîne, un cluster est un ensemble d'adresses de réception qui sont associées à une même entité par un analyste. En utilisant diverses heuristiques, il est possible de détecter des activités on-chain qui semblent émaner d'une unique personne ou organisation. Ce regroupement d'activités forme ce que l'on appelle un cluster. L'objectif de l'analyse de chaîne est souvent d'identifier un point d'entrée dans ce cluster, permettant ainsi de lier toutes ces activités à une forme d'identité dans le monde réel.
 
 ## CODE DE CHAINE
+▪ **Portefeuille**
 
 ► ***EN : CHAIN CODE***
 
@@ -326,6 +361,7 @@ Il existe donc un code de chaîne unique pour chaque paire de clés. Le code de 
 Il est impossible de dériver des clés sans avoir la connaissance du code de chaîne associé à chaque paire parent. Il permet d'introduire des données pseudo-aléatoires dans le processus de dérivation pour garantir que la génération des clés cryptographiques reste imprévisible pour les attaquants tout en étant déterministe pour le détenteur du portefeuille.
 
 ## CODE DE CHAINE MAITRE
+▪ **Portefeuille**
 
 ► ***EN : MASTER CHAIN CODE***
 
@@ -334,6 +370,7 @@ Désigne le code de chaîne associé à la clé maîtresse du portefeuille, à l
 > ► *Pour plus d'informations, voir la définition de **[CODE DE CHAINE](./C.md#code-de-chaine)**.*
 
 ## CODE DE PAIMENT RÉUTILISABLE
+▪ **Confidentialité**
 
 ► ***EN : REUSABLE PAYMENT CODE***
 
@@ -361,6 +398,7 @@ Dans l'implémentation PayNym du BIP47, les codes de paiement peuvent également
 L'utilisation de codes de paiements avec l'implémentation PayNym est actuellement disponible sur Sparrow Wallet sur PC et sur Samourai Wallet sur mobile.
 
 ## COINBASE (TRANSACTION)
+▪ **Protocole**
 
 La transaction coinbase est une transaction spéciale et unique incluse dans chaque bloc de la blockchain Bitcoin. Elle représente la première transaction d'un bloc et est créée par le mineur qui a réussi à trouver un entête validant la preuve de travail (*Proof-of-Work*), c'est-à-dire inférieur ou égal à la cible.
 
@@ -371,6 +409,7 @@ La transaction coinbase diffère des transactions régulières de plusieurs mani
 > ► *Il n'existe aucune traduction de « Coinbase » en français. Il est donc admis d'utiliser directement ce terme. Pour plus d'informations, voir la définition de [**PÉRIODE DE MATURITÉ**](./P.md#période-de-maturité).*
 
 ## COIN CONTROL
+▪ **Portefeuille**
 
 ► ***FR : CONTRÔLE DES PIÈCES***
 
@@ -379,6 +418,7 @@ Fonctionnalité présente dans certains logiciels de portefeuille Bitcoin, qui d
 Le coin control est particulièrement utile pour gérer ses frais de transaction et pour améliorer sa confidentialité. En effet, en sélectionnant spécifiquement les UTXOs à consommer, les utilisateurs peuvent éviter de fusionner des UTXOs issus de sources différentes, ce qui pourrait révéler des informations sur l'ensemble de leurs fonds (CIOH). Cette fonctionnalité va souvent de pair avec la possibilité d'étiqueter les sorties de transaction.
 
 ## COINJOIN
+▪ **Confidentialité**
 
 Le coinjoin est une technique permettant de casser le traçage des bitcoins. Il repose sur une transaction collaborative à la structure spécifique de même nom : la transaction coinjoin. Les transactions coinjoin permettent d'améliorer la protection de la vie privée des utilisateurs de Bitcoin en rendant l'analyse des transactions plus difficile pour les observateurs extérieurs. Cette structure permet mixer plusieurs pièces en une seule transaction, rendant difficile la détermination des liens entre les adresses d'entrée et de sortie.
 
@@ -405,28 +445,33 @@ Toutefois, il existe d'autres mentions antérieures, à la fois pour les signatu
 > ► *Le terme de « coinjoin » ne dispose pas de traduction française. Certains bitcoiners utilisent également les termes de « mix », de « mixing » ou encore de « mixage » pour évoquer la transaction coinjoin. Le mixage est plutôt le processus utilisé au cœur du coinjoin. Aussi, il ne faut pas confondre le mixage par coinjoins et le mixage par un acteur central qui prend possession des bitcoins durant le processus. Cela n'a rien à voir avec le coinjoin où l'utilisateur ne perd à aucun moment la main sur ses bitcoins durant le processus. Pour plus d'informations, voir la définition de **[CHAUMIAN COINJOIN](./C.md#chaumian-coinjoin)**.*
 
 ## COINJUMBLE
+▪ **Confidentialité**
 
 Logiciel développé par Chris Belcher et lancée en août 2014 conçu pour faciliter l'utilisation de coinjoins avec une GUI. À la différence d'autres implémentations de coinjoins de l'époque nécessitant que les participants souhaitent effectuer un coinjoin simultanément, CoinJumble permettait de partager les parties de transaction de manière asynchrone. Les utilisateurs pouvaient échanger via des canaux de communications externes pour partager les parties de transaction encodées. Aujourd'hui, CoinJumble n'est plus utilisé.
 
 ## COINMUX
+▪ **Confidentialité**
 
 Implémentation de coinjoin développée en 2014. Coinmux est un protocole de mixage de bitcoins qui repose sur la confiance réciproque entre les participants, sans nécessiter l'intervention d'un acteur central. Le logiciel regroupe les bitcoins de plusieurs utilisateurs dans une transaction unique, où chaque sortie dispose de montants identiques, ce qui permet de casser les liens entre les inputs et les outputs. Le protocole de Coinmux assure que les utilisateurs conservent le contrôle de leurs fonds durant tout le processus, en ne faisant signer les transactions que lorsque les entrées et les sorties correspondent exactement à ce qui a été convenu. Aujourd'hui, ce protocole n'est plus utilisé.
 
 > ► *Pour plus d'informations, voir la définition de [**COINJOIN**](./C.md#coinjoin).*
 
 ## COINS/
+▪ **Protocole**
 
 Nom de l'ancien dossier utilisé dans Bitcoin Core pour stocker l'UTXO set, remplacé par le fichier `chainstate/` dans la version 0.8.0.
 
 > ► *Pour plus d'informations, voir la définition de [**UTXO SET**](./U.md#utxo-set).*
 
 ## COINSHUFFLE
+▪ **Confidentialité**
 
 Protocole de mixage de bitcoins proposé en 2014 par Tim Ruffing, Pedro Moreno-Sanchez, and Aniket Kate, inspiré de l'idée formalisée par Gregory Maxwell. Coinshuffle permet de couper l'historique de pièces sans nécessiter de tiers de confiance. Le protocole assure que même l'intermédiaire ne peut pas relier le payeur au bénéficiaire. Ce concept n'a jamais été largement adopté, les techniques de confidentialité telles que le Chaumian coinjoin lui étant préférées.
 
 > ► *Pour plus d'informations, voir la définition de [**COINJOIN**](./C.md#coinjoin).*
 
 ## COINSWAP
+▪ **Confidentialité**
 
 Protocole permettant un transfert secret de propriété entre des utilisateurs. Cette méthode vise à transférer la possession de bitcoins d'une personne à une autre, et inversement, sans que cet échange soit explicitement visible sur la blockchain. Le coinswap utilise des contrats intelligents pour faire le transfert sans besoin de confiance entre les parties.
 
@@ -441,6 +486,7 @@ L'utilisation des Adaptor Signatures est particulièrement intéressante dans ce
 > ► *Pour plus d'informations, voir la définition de [**ADAPTOR SIGNATURE**](./A.md#adaptor-signature).*
 
 ## COLD WALLET
+▪ **Portefeuille**
 
 ► ***FR : PORTEFEUILLE FROID***
 
@@ -451,20 +497,24 @@ Lorsqu'une transaction est effectuée, le portefeuille matériel signe la transa
 > ► *Le hardware wallet peut être exprimé de différentes manières en français. Certains parlent de « portefeuille matériel » ou bien de « portefeuille froid ». D'autres préfèrent que l'on emploie le terme de « périphérique de signature », ou « signing device » en anglais, afin d'éviter de faire penser que les bitcoins se trouvent physiquement dans le portefeuille.*
 
 ## COLORED COINS
+▪ **Couche supérieure**
 
 Méthode proposée en 2012 par Yoni Assia, Vitalik Buterin et Meni Rosenfeld permettant de représenter et gérer des actifs non natifs sur la blockchain Bitcoin. L'idée était d'attacher des métadonnées à des transactions spécifiques, afin de colorer des bitcoins pour indiquer leur association avec des actifs physiques. La première implémentation fonctionnelle, le protocole Open Assets, a été développée par Flavien Charlon en 2013. Ce protocole permettait de marquer des bitcoins en utilisant des `OP_RETURN`.
 
 ## COMMERÇANT
+▪ **Protocole**
 
 ► ***EN : MERCHANT***
 
 Toute personne physique ou morale qui accepte d'échanger un bien ou un service contre des bitcoins. Ce sont ces commerçants qui confèrent son utilité à la monnaie bitcoin. Plus une monnaie est acceptée par un large éventail de commerçants, plus elle devient utile pour les individus. Puisque les commerçants ont la capacité de déterminer l’utilité d’une monnaie en acceptant de l’échanger contre des biens et des services, dans le cas de Bitcoin, ils ont également un poids considérable dans le choix des règles de consensus. Chacun dispose d'un certain pouvoir proportionnel à l'activité économique qu'il est en capacité d'apporter à un fork. Parmi les commerçants, il y a évidemment les commerces, mais aussi les plateformes d'échange, les mineurs et les utilisateurs.
 
 ## COMMIT
+▪ **Informatique**
 
 Dans le cadre de Git, représente une capture instantanée des modifications apportées à l'ensemble de fichiers d'un dépôt. Chaque commit est identifié par un hachage unique et inclut un message descriptif, l'identité de l'auteur et la date. Il permet de suivre l'évolution du projet et de revenir à des états antérieurs si nécessaire.
 
 ## COMMITMENT
+▪ **RGB**
 
 ► ***FR : ENGAGEMENT***
 
@@ -493,10 +543,12 @@ Dans le cas du protocole RGB, un commitment est inclus dans une transaction Bitc
 
 
 ## COMPACT BLOCK RELAY
+▪ **Réseau**
 
 Protocole introduit dans Bitcoin Core en 2016 via le BIP152 qui propose une méthode d'économie de bande passante pour les nœuds du réseau. Compact Block Relay permet de communiquer les informations des blocs de manière compacte, en se basant sur l'hypothèse que les nœuds ont déjà une grande partie des transactions d'un bloc récent dans leur mempool. Plutôt que de transmettre chaque transaction intégralement, ce qui constituerait un doublon, Compact Block Relay propose d'envoyer uniquement de courts identifiants pour les transactions déjà connues des pairs, accompagnés de quelques transactions sélectionnées (notamment la transaction coinbase et celles que le nœud est susceptible de ne pas connaître). Le nœud peut ensuite demander à ses pairs les éventuelles transactions manquantes. Compact Block Relay permet ainsi de diminuer la quantité de données échangées lors de la propagation des blocs, ce qui réduit ainsi les pics de bande passante et améliore l'efficacité globale du réseau.
 
 ## COMPATIBILITÉ RÉTROSPECTIVE
+▪ **Protocole**
 
 ► ***EN : BACKWARD COMPATIBILITY***
 
@@ -505,6 +557,7 @@ Fait référence à la capacité d'une mise à jour des règles du protocole à 
 La compatibilité rétrospective permet de réduire fortement la probabilité qu'une mise à jour fragmente le réseau, évitant ainsi la division des nœuds en sous-groupes sur des chaînes différentes. Pour assurer une compatibilité avec les versions antérieures du protocole, une mise à jour doit rendre les règles existantes plus strictes ou en introduire de nouvelles. C'est ce principe qui définit un « soft fork ». À l'inverse, si une mise à jour assouplit les règles existantes ou en élimine certaines, alors elle ne sera pas rétrocompatible. Ce sera donc un « hard fork ».
 
 ## COMPTE
+▪ **Portefeuille**
 
 ► ***EN : ACCOUNT***
 
@@ -515,12 +568,14 @@ Dans les portefeuilles HD (déterministes hiérarchiques), un compte représente
 > ► *Pour plus d'informations, voir la définition de [**CHEMIN DE DÉRIVATION**](./C.md#chemin-de-dérivation).*
 
 ## CONCATÉNATION
+▪ **Informatique**
 
 ► ***EN : CONCATENATION***
 
 Dans le contexte de la cryptographie et des systèmes informatiques, désigne le processus d'assemblage de deux opérandes, en les mettant bout à bout, formant ainsi une nouvelle chaîne de caractères ou de données. Cette opération se note généralement avec un symbole de deux barres verticales $\Vert$, ou avec le symbole $\circ$. Par exemple, la concaténation de $45$ avec $87$ sera égale à $4587$. Nous noterons : $45 \Vert 87 = 4587$. On a mis bout à bout les deux opérandes.
 
 ## CONDENSAT
+▪ **Cryptographie**
 
 ► ***EN : DIGEST / HASH***
 
@@ -529,16 +584,19 @@ En cryptographie, désigne le résultat (ou l'output) produit par l'application 
 > ► *Pour plus d'informations, voir la définition de [**FONCTION DE HACHAGE**](./F.md#fonction-de-hachage).*
 
 ## CONFIRMATION
+▪ **Protocole**
 
 Correspond au nombre de blocs pour lesquels une transaction bénéficie de leur sécurité. Lorsque l'on diffuse une transaction au réseau Bitcoin, celle-ci est d'abord en attente dans les mempools des nœuds. Elle est ensuite incluse dans un bloc valide par un mineur. À ce stade, la transaction vient d'être ajoutée à la blockchain, elle bénéficie donc d'une première confirmation. Lorsqu'un nouveau bloc sera trouvé par-dessus le bloc où se trouve la transaction en question, elle bénéficiera d'une seconde confirmation, et ainsi de suite. Chaque nouveau bloc miné par dessus le bloc contenant la transaction constitue une nouvelle confirmation. Grâce au comptage du nombre de confirmations pour une transaction, on peut estimer le risque qu'elle puisse être finalement annulée à cause d'une réorganisation. Le nombre de confirmations nous permet de juger du niveau d'immuabilité d'une transaction sur la blockchain.
 
 ## CONSENSUS
+▪ **Protocole**
 
 Mécanisme par lequel tous les nœuds du réseau Bitcoin parviennent à s'accorder sur l'état partagé de la blockchain. Le consensus permet que tous les utilisateurs s'alignent sur un même historique des transactions Bitcoin, afin notamment d'éviter la double dépense. Le mécanisme de consensus de Bitcoin est parfois appelé « Consensus de Nakamoto ». Il s'appuie sur la preuve de travail et spécifie que tous les nœuds du réseau acceptent la chaîne disposant de la plus grande quantité de travail accumulé.
 
 > ► *Par extension, certaines personnes appellent par « Consensus » les règles tacites du protocole Bitcoin.*
 
 ## CONSIGNMENT
+▪ **RGB**
 
 Dans le cadre du protocole RGB, regroupe les données échangées entre les parties, soumises à la *Client-side Validation*. Il existe deux grandes catégories de consignments :
 * Contract Consignment : fourni par l’issuer (émetteur du contrat), il comprend les informations d’initialisation telles que le Schema, la Genesis, l’Interface et l’Implementation de l'Interface.
@@ -547,6 +605,7 @@ Dans le cadre du protocole RGB, regroupe les données échangées entre les part
 Ces consignments ne sont pas enregistrés publiquement dans la blockchain ; ils sont échangés directement entre les parties concernées sur le canal de communication de leur choix.
 
 ## CONSOLIDATION
+▪ **Portefeuille**
 
 Transaction spécifique dans laquelle plusieurs petits UTXOs sont fusionnés en entrée pour former un seul et plus gros UTXO en sortie. Cette opération est une transaction effectuée vers son propre portefeuille. L'objectif de la consolidation est de tirer profit des périodes où les frais sur le réseau Bitcoin sont bas pour fusionner plusieurs petits UTXOs en un seul plus grand en valeur. Ainsi, on anticipe les dépenses obligatoires en cas de hausse des frais, permettant d'économiser sur les frais de transaction futurs. 
 
@@ -557,12 +616,14 @@ Cependant, il est important de noter que les transactions de consolidation sont 
 ![](assets/7.png)
 
 ## CONTENEUR (MINAGE)
+▪ **Minage**
 
 ► ***EN : CONTAINER (MINING)***
 
 Dans le cadre du minage, un conteneur est une structure modulaire utilisée pour héberger et opérer un grand nombre d'ASICs. Ces containers sont conçus pour optimiser l'espace, la gestion de la chaleur et l'alimentation électrique. Ils sont équipés de systèmes de refroidissement à l'air. Leur avantage principal réside dans leur mobilité et leur capacité à être déployés rapidement, souvent à proximité de sources d'énergie bon marché.
 
 ## CONTRACT OPERATION
+▪ **RGB**
 
 Dans le cadre du protocole RGB, désigne une mise à jour de l’état du contrat effectuée selon les règles du Schema. Les opérations suivantes existent dans RGB :
 * State Transition ;
@@ -572,6 +633,7 @@ Dans le cadre du protocole RGB, désigne une mise à jour de l’état du contra
 Chaque opération modifie l’état en y ajoutant ou en y remplaçant certaines données (Global State, Owned State…).
 
 ## CONTRACT PARTICIPANT
+▪ **RGB**
 
 Dans le cadre de RGB, un Contract Participant est un acteur prenant part aux opérations relatives au contrat. On distingue ainsi :
 * L’issuer du contrat, qui crée la Genesis (l’origine du contrat) ;
@@ -579,6 +641,7 @@ Dans le cadre de RGB, un Contract Participant est un acteur prenant part aux op�
 * Les public parties, acteurs pouvant construire des State Extensions si le contrat propose des Valencies accessibles au public.
 
 ## CONTRACT RIGHTS
+▪ **RGB**
 
 Les Contract Rights désignent les différents droits que peuvent exercer les acteurs d’un contrat RGB. Ils se classent en plusieurs catégories :
 * Les ownership rights, associés à la détention d’un UTXO particulier (via un Seal Definition) ;
@@ -586,12 +649,14 @@ Les Contract Rights désignent les différents droits que peuvent exercer les ac
 * Les public rights, lorsque le Schema autorise certains usages publics, par exemple la création d’une State Extension via la rédemption d’une Valency.
 
 ## CONTRACT STATE
+▪ **RGB**
 
 Dans le cadre de RGB, le Contract State correspond à l’état courant d’un contrat à un instant donné. Il peut être constitué de données à la fois publiques et privées, qui reflète la situation du contrat. Dans RGB, on distingue :
 * Le Global State, qui comprend les propriétés publiques du contrat (mises en place dès la Genesis ou ajoutées via des mises à jour autorisées) ;
 * Les Owned States, qui appartiennent à des détenteurs précis, identifiés par leurs UTXOs.
 
 ## CONTRAT INTELLIGENT
+▪ **Script**
 
 ► ***EN : SMART CONTRACT***
 
@@ -600,42 +665,50 @@ Programme qui s'exécute automatiquement lorsque certaines conditions prédéfin
 > ► *En français, on parle également parfois de « contrat autonome ».*
 
 ## CONTRAT RGB
+▪ **RGB**
 
 Désigne un ensemble de droits exécutés numériquement entre plusieurs acteurs via le protocole RGB. Il possède un état actif et une logique d’affaires, définie par un Schema, qui précise quelles opérations sont autorisées (transferts, extensions, etc.). L’état d’un contrat, ainsi que les règles de validité, s’expriment dans le Schema. À tout moment, le contrat n’évolue que conformément à ce qui est permis par ce Schema et par les scripts de validation (exécutés, par exemple, dans AluVM).
 
 ## CONTRIBUTEUR (CORE)
+▪ **Communauté**
 
 ► ***EN : CONTRIBUTOR***
 
 Un contributeur dans le contexte de Bitcoin Core (l'implémentation majoritaire de nœuds sur le réseau Bitcoin) est une personne qui participe activement au développement du logiciel en écrivant du code, en examinant et en testant les modifications proposées par d'autres. Contrairement aux mainteneurs, les contributeurs n'ont pas le pouvoir de fusionner les modifications dans le code principal ; leur rôle est plutôt de soumettre des pull requests (PR) et de participer à la discussion et à la validation de ces propositions. Tout individu intéressé peut devenir contributeur sans nécessité d'une nomination ou d'une approbation formelle, ce qui diffère des mainteneurs qui sont chargés de responsabilités administratives et de décision plus élevées dans le projet.
 
 ## CONTROL BOARD (MINING)
+▪ **Minage**
 
 ► ***FR : CARTE DE CONTRÔLE (MINAGE)***
 
 Composant dans une machine de minage qui permet de gérer et de coordonner les opérations de l'appareil. La carte de contrôle gère la communication entre le logiciel et les puces ASICs. Elle permet également de relever les performances du matériel et de contrôler sa température.
 
 ## COOKIE (.COOKIE)
+▪ **Protocole**
 
 Fichier utilisé pour l'authentification RPC (*Remote Procedure Call*) dans Bitcoin Core. Lorsque bitcoind démarre, il génère un cookie d'authentification unique et le stocke dans ce fichier. Les clients ou les scripts qui souhaitent interagir avec bitcoind via l'interface RPC peuvent utiliser ce cookie pour s'authentifier de manière sécurisée. Ce mécanisme permet une communication sûre entre le bitcoind et les applications externes (comme les logiciels de portefeuille par exemple), sans nécessiter une gestion manuelle des noms d'utilisateur et des mots de passe. Le fichier `.cookie` est régénéré à chaque redémarrage de bitcoind et supprimé à l'arrêt.
 
 ## COORDINATEUR DE COINJOIN
+▪ **Confidentialité**
 
 Serveur central qui met relation les utilisateur souhaitant faire des coinjoins et qui coordonne la construction des transactions collaboratives, sans pour autant pouvoir associer les inputs aux outputs spécifiques de chaque utilisateur. Cela est possible grâce à l'utilisation des signatures aveugles de Chaum et du réseau Tor. Contrairement à un mélangeur de bitcoins traditionnel, le coordinateur de coinjoin ne prend jamais possession des bitcoins des participants et n'est pas capable d'associer les inputs et les outputs.
 
 > ► *Pour plus d'informations, voir la définition de **[CHAUMIAN COINJOIN](./C.md#chaumian-coinjoin)**.*
 
 ## CORE-LIGHTNING (CLN)
+▪ **Lightning Network**
 
 Implémentation majeure du protocole Lightning Network écrite en langage C et Rust. Développée par Blockstream, Core-Lightning est conçue pour être légère et performante. Elle se distingue par son architecture modulaire, permettant aux développeurs d'ajouter facilement des fonctionnalités personnalisées. Cette implémentation a été renommée en 2022. Son nom original était auparavant « C-Lightning ».
 
 ## COURBE ELLIPTIQUE
+▪ **Cryptographie**
 
 ► ***EN : ELLIPTIC CURVE***
 
 Dans le contexte de la cryptographie, une courbe elliptique est une courbe algébrique définie par une équation de la forme $y^2 = x^3 + ax + b$. Ces courbes sont utilisées dans la cryptographie à courbes elliptiques (ECC), qui est une méthode de cryptographie à clé publique permettant de créer des algorithmes de chiffrement, de signature numérique et d'échange de clés. Dans le contexte de Bitcoin, l'algorithme ECDSA (*Elliptic Curve Digital Signature Algorithm*) ou le protocole de Schnorr sont utilisés avec la courbe `secp256k1`. Cette courbe a été choisie pour ses propriétés de performance et de sécurité. Ces algorithmes sont utilisés pour générer des clés publiques à partir de clés privées, ainsi que pour signer des transactions, et donc débloquer des bitcoins.
 
 ## COVENANT
+▪ **Protocole**
 
 Mécanisme qui permet d'imposer des conditions spécifiques sur la manière dont une pièce donnée peut être dépensée, y compris dans des transactions futures. Au-delà des conditions usuellement autorisées par le langage script sur un UTXO, le covenant force des contraintes supplémentaires sur la manière de dépenser cette pièce Bitcoin dans des transactions ultérieures. Techniquement, l'instauration d'un covenant intervient lorsque le `scriptPubKey` d'un UTXO définit des restrictions sur le `scriptPubKey` des sorties d'une transaction qui dépense ledit UTXO. En élargissant la portée de script, les covenants permettraient de nombreuses évolutions sur Bitcoin comme l'ancrage bilatéral des drivechains, la mise en place de vaults ou encore l'amélioration des systèmes de surcouche comme Lightning. On différencie les propositions de covenants en fonction de trois critères :
 * Leur portée ;
@@ -649,74 +722,87 @@ Pour bien comprendre le concept de covenant, je vous propose une analogie : imag
 > ► *En français, il n'existe aucun terme pour capturer précisément la signification du mot « covenant ». On pourrait parler de « clause », de « pacte » ou d' « engagement », mais cela ne correspondrait pas exactement au terme « covenant ». Ce dernier est d'ailleurs emprunté d'une terminologie juridique qui permet de décrire une clause contractuelle imposant des obligations persistantes sur un bien.*
 
 ## COVERT ASICBOOST
+▪ **Minage**
 
 Version secrète d'AsicBoost. AsicBoost est une méthode d'optimisation algorithmique pour le minage de Bitcoin. Dans sa version Covert, les mineurs manipulent l'arbre de Merkle plutôt que le Nonce, ce qui réduit ainsi les calculs nécessaires pour chaque hachage SHA256 en conservant certaines données inchangées entre les tentatives de hachage. Contrairement à la version Overt d'AsicBoost, la version Covert dissimule l'utilisation d'AsicBoost durant le processus de minage. Cependant, depuis l'introduction de SegWit et son second arbre de Merkle, cette méthode n'est plus efficace, car le nombre de calculs requis pour son utilisation est devenu trop important par rapport à un processus de minage classique.
 
 > ► *Pour plus d'informations, voir les définitions de **[ASICBOOST](./A.md#asicboost)** et **[OVERT ASICBOOST](./O.md#overt-asicboost)**.*
 
 ## CPFP (CHILD PAY FOR PARENT)
+▪ **Portefeuille**
 
 Mécanisme transactionnel visant à accélérer la confirmation d'une transaction Bitcoin, tout comme le fait Replace-by-Fee (RBF), mais du côté du destinataire. Lorsqu'une transaction avec des frais trop faibles par rapport au marché reste bloquée dans les mempools des nœuds et ne se confirme pas assez rapidement, le destinataire peut faire une nouvelle transaction, en dépensant les bitcoins reçus dans la transaction bloquée, bien qu'elle ne soit pas encore confirmée. Cette seconde transaction nécessite forcément que la première soit minée pour être confirmée. Les mineurs sont donc obligés d'inclure les deux transactions ensemble. La seconde va allouer beaucoup plus de frais de transaction que la première, de telle sorte que la moyenne de frais incite les mineurs à inclure les deux transactions. La transaction enfant (la seconde) paie pour la transaction parent qui est bloquée (la première). C'est pour cela que l'on parle d'un « CPFP ».
 
 Ainsi, CPFP permet au destinataire d'obtenir plus rapidement ses fonds malgré les faibles frais initiaux engagés par l'expéditeur, contrairement à RBF (*Replace-By-Fee*) qui permet à l'envoyeur de prendre l'initiative d'accélérer sa propre transaction en augmentant les frais.
 
 ## CPPSRB
+▪ **Minage**
 
 Sigle de « *Capped Pay Per Share Recent Backpay* ». C'est une méthode de calcul de la rémunération des mineurs dans le contexte des pools de minage. Dans ce système, la pool paie autant de shares qu'elle le peut à chaque fois qu'un bloc est trouvé, en donnant la priorité aux shares les plus récentes. Cette méthode permet de garantir la stabilité financière de la pool de minage, tout en offrant une rémunération à la tâche et en incitant les mineurs à rester connectés à la pool pour éviter le pool hopping.
 
 > ► *Pour plus d'informations, voir la définition de **[SHARES](./S.md#shares)**.*
 
 ## CPU (CENTRAL PROCESSING UNIT)
+▪ **Informatique**
 
 Composant principal d'un ordinateur responsable de l'exécution des instructions machines des logiciels. Dans le contexte de Bitcoin, le CPU était initialement utilisé pour le minage par les nœuds avant d'être surpassé par le minage par GPU (cartes graphiques), puis par l'utilisation de puces spécialisées que l'on appelle des « ASIC ».
 
 > ► *En français, on peut parler d'une « unité centrale de calcul » ou bien simplement d'un « processeur ».*
 
 ## CRYPTANALYSE
+▪ **Cryptographie**
 
 ► ***EN : CRYPTANALYSIS***
 
 Étude des techniques mathématiques pour tenter de casser les techniques cryptographiques. Cela inclut les processus de recherche d'erreurs ou de faiblesses dans l'implémentation d'une méthode cryptographique ou dans la méthode cryptographique elle-même.
 
 ## CRYPTER
+▪ **Cryptographie**
 
 Ce terme n'existe pas. On dit « chiffrer ».
 
 ## CRYPTO-ACTIF
+▪ **Économie et régulation**
 
 Terme utilisé dans un contexte juridique et réglementaire pour désigner les divers types de cryptomonnaies, dont le bitcoin.
 
 ## CRYPTOGRAPHIE
+▪ **Cryptographie**
 
 ► ***EN : CRYPTOGRAPHY***
 
 Discipline qui incarne les principes, les moyens et les méthodes de transformation des informations, notamment avec des techniques mathématiques, afin de masquer leur contenu sémantique, d'empêcher leur utilisation non autorisée, d'assurer leur authenticité ou d'empêcher leur modification non détectée. La cryptographie regroupe l'utilisation de fonctions de hachage, de signatures numériques et d'algorithmes de chiffrement.
 
 ## CRYPTOLOGIE
+▪ **Cryptographie**
 
 ► ***EN : CRYPTOLOGY***
 
 Science mathématique qui traite de la cryptanalyse et de la cryptographie.
 
 ## CRYPTOMONNAIE
+▪ **Économie et régulation**
 
 ► ***EN : CRYPTOCURRENCY***
 
 Qualificatif générique donné à toute forme de monnaie, d'actif, de crédit ou d'unité numérique au sein d'un système informatique dans lequel on utilise de la cryptographie pour les échanges et les transactions entre les utilisateurs.
 
 ## CURTAILMENT (MINING)
+▪ **Minage**
 
 ► ***FR : RÉDUCTION (MINAGE)***
 
 Désigne la réduction volontaire de la consommation d'électricité d'une ferme de minage en éteignant des machines. Cette réduction fait partie de certains contrats passés avec des producteurs d'électricité. Lorsqu'il y a une surproduction d'énergie par rapport à la demande du marché, les mineurs utilisent ce surplus. Lorsqu'il y a des pics de demande par rapport à la production, les mineurs peuvent réduire leur consommation afin de stabiliser le réseau.
 
 ## CUSTODY
+▪ **Économie et régulation**
 
 Dans le contexte de Bitcoin, se réfère à la détention et à la gestion des clés privées qui permettent le contrôle de bitcoins. La custody de BTC peut être assurée de deux manières : soit personnellement par l'utilisateur, qui garde lui-même les clés privées nécessaires pour accéder à ses bitcoins (ce que l'on appelle « self-custody »), soit par un tiers, comme une plateforme d'échange, où l'entreprise détient les clés privées et gère les bitcoins au nom de l'utilisateur. Cette seconde option est plus risquée que la self-custody, car cela expose les fonds de l'utilisateur aux risques de piratage, de faillite ou de comportements frauduleux de la part du gestionnaire.
 
 > ► *En français, on utilise généralement le terme anglais de « custody ». On pourrait également le traduire par « garde ».*
 
 ## CYPHERPUNKS
+▪ **Histoire**
 
 Communauté informelle et internationale de personnes promouvant l'utilisation de la cryptographie comme moyen d'assurer les libertés individuelles sur Internet. Les cypherpunks défendent le droit fondamental pour l'individu de protéger sa vie privée, en particulier dans un contexte d'augmentation de la surveillance étatique et d'exploitation des données par des entités privées. Leur nom est issu des mots anglais *cypher*, « chiffre » (dans le sens de code secret), et *punk*. Il s'agit d'un calque du terme *cyberpunk*, qui désigne un genre littéraire décrivant un futur dystopique où la technologie de pointe se marie au vice et au crime d'une société déliquescente.
 
