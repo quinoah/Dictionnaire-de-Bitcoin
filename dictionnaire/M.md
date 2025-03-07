@@ -1,14 +1,17 @@
 ## MACAROON
+▪ **Informatique**
 
 Mécanisme d'authentification conçu pour sécuriser l'accès à des services sur des systèmes distribués. Les macaroons sont notamment utilisés sur Lightning pour authentifier les utilisateurs lorsqu'ils accèdent à des services délégués. Par exemple, avec un nœud Lightning, il est possible de générer un macaroon qui autorise la réalisation de transactions à partir de votre smartphone via votre nœud distant. À la différence des cookies, les macaroons offrent l'avantage de pouvoir être validés cryptographiquement par l'émetteur ou d'être délégués pour vérification.
 
 ## MAGICAL BITCOIN
+▪ **Protocole**
 
 Ancien nom de la collection d'outils et de bibliothèques pour développeurs BDK.
 
 > ► *Pour plus d'informations, voir la définition de [**BDK (BITCOIN DEV KIT)**](./B.md#bdk-bitcoin-dev-kit).*
 
 ## MAGIC NETWORK
+▪ **Réseau**
 
 Constantes utilisées dans le protocole Bitcoin pour identifier le réseau spécifique (mainnet, testnet, regtest...) d'un message échangé entre des nœuds. Ces valeurs sont inscrites au début de chaque message pour faciliter leur identification dans le flux de données. Les Magic Network sont conçus pour être rarement présents dans des données de communication ordinaires. En effet, ces 4 octets sont peu fréquents dans l'ASCII, sont invalides en UTF-8 et génèrent un très grand entier de 32 bits, peu importe le format de stockage des données. Les Magic Network sont (en format little-endian) :
 * Mainnet :
@@ -32,10 +35,12 @@ fabfb5da
 > ► *C'est 4 octets sont parfois également nommés « Magic Number », « Magic Bytes » ou encore « Start String ».*
 
 ## MAINNET
+▪ **Protocole**
 
 Désigne le réseau principal où les transactions réelles de Bitcoin sont enregistrées et exécutées. Le mainnet est tout simplement le réseau Bitcoin. Contrairement aux testnets, regtests et signets, le mainnet implique l'utilisation de bitcoins ayant une valeur économique réelle.
 
 ## MAINTENEUR (CORE)
+▪ **Communauté**
 
 ► ***EN : MAINTAINER***
 
@@ -44,18 +49,21 @@ Dans le contexte du projet Bitcoin Core, l'implémentation majoritaire de nœuds
 Autrement dit, lorsqu'une proposition de modification du code a passé les divers stades de validation, ce sont ces mainteneurs qui assument la grande responsabilité de fusionner le nouveau code avec le logiciel Bitcoin Core. Avant de procéder à cette fusion, les mainteneurs vérifient si le code respecte bien les principes fondamentaux du projet, s'il a atteint les standards minimums requis pour être inclus, et ils jugent également le consensus général des contributeurs à propos de cette modification. Lorsque j'écris cette définition, seuls cinq mainteneurs subsistent sur Bitcoin Core : Hennadii Stepanov, Michael Ford, Ava Chow, Gloria Zhao et Ryan Ofsky.
 
 ## MAINTENEUR PRINCIPAL (CORE)
+▪ **Communauté**
 
 ► ***EN : LEAD MAINTAINER***
 
 Le mainteneur principal était un rôle au sein de la hiérarchie sur Bitcoin Core. Ce rôle n'existe plus depuis février 2023. Cette personne était chargée de diriger le projet et avait donc plus de pouvoir que les mainteneurs. Le rôle de mainteneur principal fut naturellement endossé par Satoshi Nakamoto jusqu'à son départ au début de l'année 2011. Par la suite, Gavin Andresen, ayant déjà contribué aux côtés de Satoshi, prit la relève à la tête du logiciel jusqu'au début de l'année 2014. À partir de cette date, Wladimir J. van der Laan a pris ce rôle jusqu'en février 2023. Depuis, il n'y a plus aucun mainteneur principal pour le projet.
 
 ## MAJORITÉ ÉCONOMIQUE
+▪ **Protocole**
 
 ► ***EN : ECONOMIC MAJORITY***
 
 Désigne la plus grande proportion de l'activité économique liée à la monnaie bitcoin, générée par les commerçants. Un commerçant désigne toute entité physique ou morale acceptant d'échanger un bien ou un service contre du BTC. Ces commerçants, qui incluent les commerces, les utilisateurs, les plateformes d'échange, et les mineurs, varient en taille et en influence économique. Certains sont des acteurs majeurs, générant une activité économique substantielle, tandis que d'autres sont plus modestes. La majorité économique est donc définie par ceux dont l'activité économique combinée représente la part prépondérante sur cette monnaie. Cette majorité a une influence sur les règles de consensus, notamment en cas de fork.
 
 ## MALLÉABILITÉ (TRANSACTION)
+▪ **Protocole**
 
 ► ***EN : TRANSACTION MALLEABILITY***
 
@@ -64,44 +72,52 @@ Se réfère à la possibilité de modifier légèrement la structure d'une trans
 > ► *Bien que ce soit rare, on retrouve parfois le terme de « mutabilité » pour évoquer le même concept.*
 
 ## MAN-IN-THE-MIDDLE (MITM)
+▪ **Attaque**
 
 ► ***FR : ATTAQUE DE L'HOMME DU MILIEU (HDM)***
 
 Attaque dans laquelle un acteur malveillant se place clandestinement entre deux parties qui communiquent, afin d'intercepter et potentiellement de modifier les messages échangés, sans que les deux parties remarquent sa présence.
 
 ## MAPPER
+▪ **Informatique**
 
 ► ***EN : TO MAP***
 
 Dans le contexte de l'informatique, mapper désigne le processus d'associer des éléments d'un ensemble de données à des éléments d'un autre ensemble de données de manière systématique. Cette association permet aux données du premier ensemble de se substituer à celles du second ensemble ou de transitionner de l'un à l'autre. Cette technique est souvent utilisée dans les opérations de transformation de données.
 
 ## MARKET CAP (CAPITALIZATION)
+▪ **Économie et régulation**
 
 ► ***FR : CAPITALISATION BOURSIÈRE***
 
 Représente la valeur totale d'un actif en circulation, comme le bitcoin. Elle est calculée en multipliant le nombre total de pièces en circulation par le prix actuel de chaque unité. Ce chiffre donne une indication de la taille globale et de la valeur du marché de Bitcoin.
 
 ## MASF
+▪ **Protocole**
 
 Sigle de « *Miner-Activated Soft Fork* ». Qualifie un soft fork dans Bitcoin lorsque son activation provient d'une action des mineurs. Les MASF sont une famille de méthodes d'activation de soft fork sur Bitcoin. Dans ces approches, les mineurs signalent leur accord et leur préparation pour une mise à jour du protocole en minant des blocs qui soutiennent le verrouillage du soft fork. Si une majorité significative de mineurs se prononce en faveur du soft fork, la mise à jour est considérée comme acceptée et est activée ultérieurement. Ce processus permet d'éviter la division de la blockchain et de maintenir l'unité du réseau. Le MASF est préféré pour son approche plus douce et consensuelle, réduisant le risque de scission de la blockchain tout en assurant que la majorité de la puissance de calcul soutient la nouvelle mise à jour. Les méthodes d'activation BIP34, BIP9, BIP8 (si `LOT=false` ou si le seuil de vote est atteint) ou encore Speedy Trial sont des MASF.
 
 ## MAST
+▪ **Cryptographie**
 
 Sigle de « *Merkelised Alternative Script Tree* ». Technique employant un arbre de Merkle pour résumer un nombre arbitraire de conditions de dépenses sélectionnées par l'utilisateur dans une adresse de réception, dont une doit être remplie pour dépenser les bitcoins concernés. L'arbre de Merkle permet à l'utilisateur de choisir quelle condition il souhaite remplir sans révéler les détails des autres conditions sur la blockchain. Cela permet de réduire les frais liés à ces scripts, de créer des conditions beaucoup plus lourdes et, sur un temps plus long, d'améliorer la confidentialité de l'utilisateur (en plus de l'utilisation conjointe de Schnorr). Ce concept a fait l'objet de plusieurs propositions, mais il a finalement été ajouté à Bitcoin via le soft fork Taproot en 2021.
 
 > ► *Initialement, « MAST » était l'acronyme de « Merklized Abstract Syntax Tree ». L'utilisation qui en est faite dans le cadre de Taproot n'a plus rien à voir avec un « Abstract Syntax Tree ». Toutefois, les utilisateurs continuaient d'employer ce terme de MAST. Anthony Towns a donc proposé de modifier la signification initiale tout en conservant cet acronyme largement employé avec : « Merklized Alternative Script Tree ».*
 
 ## MASTER FINGERPRINT
+▪ **Portefeuille**
 
 ► ***FR : EMPREINTE MAÎTRESSE***
 
 Empreinte de 4 octets (32 bits) de la clé privée maîtresse dans un portefeuille hiérarchique déterministe (HD). Elle est obtenue en calculant le hash `SHA256` de la clé privée maîtresse, suivi d'un hash `RIPEMD160`, procédé désigné par `HASH160` sur Bitcoin. La Master Fingerprint sert à identifier un portefeuille HD, indépendamment des chemins de dérivation, mais en prenant en compte la présence ou non d'une passphrase. C'est une information concise qui permet de faire référence à l'origine d'un ensemble de clés, sans pour autant dévoiler des informations sensibles sur le portefeuille.
 
 ## MAX_BLOC_SIZE
+▪ **Protocole**
 
 Constante qui spécifie la taille maximale qu'un bloc peut avoir sur Bitcoin. Historiquement, cette limite était fixée à 1 Mo, une mesure mise en place par Satoshi Nakamoto en 2010, afin de prévenir le spam et de maintenir une certaine décentralisation du réseau.
 
 ## MÉLANGEUR
+▪ **Confidentialité**
 
 ► ***EN : MIXER***
 
@@ -112,6 +128,7 @@ De nos jours, l'usage des mélangeurs de bitcoins s'estompe au profit des coinjo
 > ► *Pour plus d'informations, voir la définition de **[COINJOIN](./C.md#coinjoin)**.*
 
 ## MEMPOOL
+▪ **Protocole**
 
 Contraction des termes « memory » et « pool ». Cela désigne un espace virtuel dans lequel les transactions Bitcoin en attente d'inclusion dans un bloc sont regroupées. Lorsqu'une transaction est créée et diffusée sur le réseau Bitcoin, elle est d'abord vérifiée par les nœuds du réseau. Si elle est considérée comme valide, elle est alors placée dans la Mempool de chaque nœud, où elle reste jusqu'à ce qu'elle soit sélectionnée par un mineur pour être incluse dans un bloc.
 
@@ -120,32 +137,38 @@ Il est important de noter que chaque nœud du réseau Bitcoin maintient sa propr
 Les transactions présentent dans les mempool sont provisoires. Elles ne doivent pas être considérées comme immuable tant qu’elles ne sont pas incluses dans un bloc, et après un certain nombre de confirmations. Celles-ci peuvent souvent être remplacées ou purgées.
 
 ## MEMPOOL.DAT
+▪ **Protocole**
 
 Nom du fichier de données utilisé par le logiciel Bitcoin Core pour stocker l'état actuel de la mempool, qui est l'ensemble des transactions non confirmées en attente d'être ajoutées à un bloc.
 
 ## MERGE
+▪ **Informatique**
 
 ► ***FR : FUSIONNER***
 
 Dans le cadre de Git, représente l'action d'intégrer les modifications d'une branche à une autre, typiquement de ramener les développements d'une branche secondaire dans la branche principale. Cette opération permet de combiner les historiques de commit des branches concernées et de résoudre les éventuels conflits pour maintenir l'intégrité du logiciel.
 
 ## MERKLE BLOCK
+▪ **Protocole**
 
 Structure de données utilisée dans le cadre du BIP37 (*Transaction Bloom Filtering*) pour fournir une preuve compacte de l'inclusion de transactions spécifiques dans un bloc. C'est notamment utilisé pour les portefeuilles SPV. Le Merkle Block contient les en-têtes de bloc, les transactions filtrées et un arbre de Merkle partiel, permettant aux clients légers de vérifier rapidement si une transaction appartient à un bloc sans télécharger toutes les transactions.
 
 ## MESURE À LA PRISE
+▪ **Minage**
 
 ► ***EN : MEASURE AT THE WALL***
 
 Dans le cadre de l'industrie du minage, désigne la mesure de la consommation électrique réelle d'un ASIC, directement à son point de connexion, c'est-à-dire à la prise électrique murale. Contrairement aux spécifications théoriques, cette mesure permet de quantifier précisément l'énergie consommée par la machine en incluant toutes les pertes lors du fonctionnement réel.
 
 ## MÉTADONNÉES
+▪ **Informatique**
 
 ► ***EN : METADATA***
 
 Dans le domaine général de l'informatique, cela désigne les données qui fournissent des informations sur d'autres données. Elles décrivent les caractéristiques, le contenu, la qualité, le format et la structure des données qu’elles accompagnent. On différencie ainsi la charge utile (payload), qui représente le cœur de l'information, et les métadonnées. Par exemple, pour un document, les métadonnées peuvent inclure l'auteur, la date de création, la taille du fichier et les mots-clés associés. Sur Bitcoin, on retrouve des métadonnées dans de nombreux éléments. On en utilise dans les adresses de réception, les clés étendues, les blocs...
 
 ## MÉTHODE D'ACTIVATION
+▪ **Protocole**
 
 ► ***EN : ACTIVATION METHOD***
 
@@ -156,6 +179,7 @@ Une méthode d'activation est le processus par lequel la communauté d'utilisate
 Il existe de nombreuses méthodes d'activation différentes qui ont été testées au fur et à mesure de l'évolution de Bitcoin. À l'époque de Satoshi, le processus d'activation n'était pas formellement établi. Les modifications étaient souvent arbitraires et parfois même réalisées sans informer la communauté. Plus tard, la méthode du *Flag Day* a été adoptée. Après le retrait de Satoshi, d'autres méthodes ont été successivement utilisées, notamment le BIP34, le BIP9, le BIP8, et enfin, le *Speedy Trial*.
 
 ## MÉTHODE GÉOMÉTRIQUE
+▪ **Minage**
 
 ► ***EN : GEOMETRIC METHOD***
 
@@ -164,6 +188,7 @@ Méthode de calcul de la rémunération des mineurs dans le contexte des pools d
 > ► *Pour plus d'informations, voir la définition de **[SHARES](./S.md#shares)**.*
 
 ## MINAGE
+▪ **Minage**
 
 ► ***EN : MINING***
 
@@ -176,18 +201,21 @@ Concrètement, le minage est la recherche d’une valeur qui, une fois passée d
 Ce travail effectué par les mineurs est récompensé à chaque bloc valide trouvé. Le mineur gagnant empoche une récompense pécuniaire, composée de la subvention de bloc (création de nouveaux bitcoins ex-nihilo), et des frais de transaction. Aujourd’hui, la difficulté de la preuve de travail sur Bitcoin est telle que le minage nécessite une grande puissance de calcul pour parvenir à gagner des blocs. En conséquence, il faut souvent disposer de puces électroniques spécialisées dans l’exécution de `SHA256d`, que l’on appelle des ASICs, et participer dans des pools de minage.
 
 ## MINAGE FUSIONNÉ
+▪ **Sidechain**
 
 ► ***EN : MERGED MINING (MM)***
 
 Technique de consensus de sidechain permettant aux mineurs de Bitcoin de travailler simultanément sur la chaîne principale et sur une ou plusieurs sidechains, sans pour autant devoir fournir plus de travail de calcul. Il s'agit donc de réutiliser la preuve de travail de Bitcoin pour des applications tierces. Toutefois, le minage fusionné présente un désavantage notable pour le mineur : il nécessite l'installation et l'exécution d'un logiciel de nœud spécifique à chaque sidechain pour permettre la réutilisation de ses preuves de travail. De plus, la récompense obtenue pour le minage d'une sidechain est versée sur celle-ci et non directement en BTC sur la blockchain principale.
 
 ## MINAGE FUSIONNÉ AVEUGLE
+▪ **Sidechain**
 
 ► ***EN : BLIND MERGED MINING (BMM)***
 
 Technique de consensus de sidechain permettant aux mineurs de Bitcoin de travailler simultanément sur la chaîne principale et sur une ou plusieurs sidechains, sans pour autant devoir fournir plus de travail de calcul. Contrairement au minage fusionné classique, cette méthode ne nécessite pas de configurer un nouveau nœud pour chaque sidechain exploitée. Dans le cadre du *Blind Merged Mining* (BMM), chaque sidechain est gérée par des opérateurs de nœud indépendants, responsables de la création des blocs et de la récolte des récompenses associées sur la sidechain. En contrepartie, ces opérateurs doivent acheter des preuves de travail auprès des mineurs de la blockchain principale pour valider leurs blocs sur la sidechain. Ainsi, les mineurs de Bitcoin reçoivent leurs récompenses du minage fusionné des sidechains en BTC, directement sur la chaîne principale. Cette méthode, développée par Paul Sztorc pour les drivechains, nécessite l'implémentation du BIP301 pour être opérationnelle sur le réseau Bitcoin.
 
 ## MINEUR
+▪ **Minage**
 
 ► ***EN : MINER***
 
@@ -196,12 +224,14 @@ Dans le contexte de Bitcoin, un mineur fait référence à une personne qui gèr
 > ► *Dans le cadre spécifique des pools de minage, on différencie parfois le rôle de mineur du rôle de hacheur, étant donné que les hacheurs individuels qui participent à la mutualisation doivent uniquement hacher et ne participent pas au processus complet de la mine.*
 
 ## MINING MANAGEMENT SOFTWARE
+▪ **Minage**
 
 ► ***FR : LOGICIEL DE GESTION DE MINAGE***
 
 Logiciel dédié à la gestion et à l'optimisation des opérations de minage. Ce type de logiciel permet de surveiller en temps réel les performances des ASICs, la consommation énergétique, les températures, et les taux de hachage. Il offre également des fonctionnalités de gestion des fermes de minage à grande échelle, avec l’automatisation des réglages (comme l'overclocking par exemple), la détection des pannes et la gestion à distance des appareils.
 
 ## MINISCRIPT
+▪ **Script**
 
 Framework permettant de fournir un cadre pour programmer des scripts de manière sécurisée sur Bitcoin. Le langage natif de Bitcoin s'appelle script. Celui-ci est assez complexe à utiliser en pratique, notamment pour des applications sophistiquées et personnalisées. Surtout, il est très difficile de vérifier les limitations d'un script. Miniscript utilise un sous-ensemble de scripts Bitcoin pour simplifier leur création, leur analyse et leur vérification. Chaque miniscript est équivalent 1 pour 1 avec un script natif. On utilise un langage de policies facile à utiliser, qui est ensuite compilé en miniscript, pour enfin correspondre à un script natif. 
 
@@ -216,16 +246,19 @@ Miniscript permet ainsi aux développeurs de construire des scripts sophistiqué
 Le projet Miniscript a été lancé en 2018 par Peter Wuille, Andrew Poelstra et Sanket Kanjalkar, via l'entreprise Blockstream. Miniscript est ajouté au wallet Bitcoin Core en mode watch-only en décembre 2022 avec la version 24.0, puis complètement en mai 2023 avec la version 25.0.
 
 ## MINITAPSCRIPT
+▪ **Script**
 
 Version de Miniscript pour Tapscript. Tapscript dispose de quelques différences notables avec Script dans sa version originale. MiniTapscript fournit ainsi la prise en charge de Tapscript dans Miniscript.
 
 > ► *Ce terme est parfois contesté. En effet, certains bitcoiners préfèrent parler de « TapMiniscript ». Pour plus d'informations, voir la définition de **[MINISCRIPT](./M.md#miniscript)** et de **[TAPSCRIPT](./T.md#tapscript)**.*
 
 ## MIT X11
+▪ **Informatique**
 
 Licence de logiciel libre très permissive qui autorise les utilisateurs à copier, modifier, fusionner, publier, distribuer, sous-licencier et vendre le logiciel. Elle exige uniquement que la licence originale et les notifications de droits d'auteur soient conservées dans toutes les copies ou distributions substantielles du logiciel. Contrairement à la licence GPL, la licence MIT ne requiert pas que les adaptations ou les versions dérivées du logiciel soient distribuées sous la même licence. Cette flexibilité fait de la licence MIT X11 un choix populaire pour de nombreux projets open source, y compris dans l'environnement de Bitcoin. Satoshi Nakamoto a d'ailleurs choisi cette licence pour la première version de Bitcoin publiée en 2009, et elle reste en usage pour le projet Bitcoin Core aujourd'hui.
 
 ## MIXAGE
+▪ **Confidentialité**
 
 ► ***EN : MIXING***
 
@@ -234,12 +267,14 @@ Dans le domaine général des mathématiques, le mixage ou le mélange se réfè
 > ► *En anglais, on parle de « mixing ». Certains bitcoiners différencient la notion de mixage du processus de coinjoin. En effet, ils disent que le mixage se réfère au mélange de pièces effectué par une entité possédant les fonds, contrairement aux coinjoins où l'utilisateur conserve toujours la possession des fonds. Toutefois, selon moi, cette distinction est incorrecte, car le coinjoin implique nécessairement un mixage au sens mathématique du terme. Pour plus d'informations, voir la définition de **[COINJOIN](./C.md#coinjoin)***
 
 ## MODÈLE DE SCRIPT
+▪ **Script**
 
 ► ***EN : SCRIPT TEMPLATE***
 
 Template permettant l'utilisation de scripts standards. Un modèle de script est essentiellement une petite liste d'opcodes mis ensemble pour former une norme qui spécifie une manière d'établir des conditions de dépenses sur des bitcoins. Voici quelques exemples de modèles de script : P2PK, P2PKH, P2WPKH, P2SH...
 
 ## MODÈLE DE TRANSACTION
+▪ **Protocole**
 
 ► ***EN : TRANSACTION TEMPLATE***
 
@@ -248,6 +283,7 @@ Un pattern de transaction est simplement un modèle ou une structure globale de 
 > ► *En anglais, on parle de « patterns ».*
 
 ## MODÈLE TEMPOREL
+▪ **Confidentialité**
 
 ► ***EN : TEMPORAL TEMPLATE***
 
@@ -260,18 +296,21 @@ Au-delà de la nature de l’entité observée, le pattern temporel peut égalem
 Dans un registre différent, c'est également une analyse temporelle de ce type qui a permis de formuler l'hypothèse selon laquelle Satoshi Nakamoto n’opérait pas depuis le Japon, mais bien depuis les États-Unis : [_The Time Zones of Satoshi Nakamoto_](https://medium.com/@insearchofsatoshi/the-time-zones-of-satoshi-nakamoto-aa40f035178f).
 
 ## M-OF-N
+▪ **Portefeuille**
 
 ► ***FR : M-DE-N***
 
 Désigne un portefeuille ou un script multisignatures à seuil. Pour renforcer la sécurité de bitcoins, on peut utiliser un système de sécurisation multisignatures à seuil qui exige que `m` parmi `n` signatures soient faites pour pouvoir dépenser les fonds. Dans un m-de-n, la lettre `m` désigne le seuil de signatures requis et la lettre `n` désigne le nombre total de clés existantes pouvant signer. Par exemple, dans une configuration 2-de-3, deux signatures sur trois possibles sont nécessaires pour exécuter une transaction.
 
 ## MTP (MEDIAN TIME PAST)
+▪ **Protocole**
 
 ► ***FR : TEMPS MÉDIAN PASSÉ***
 
 Concept utilisé dans le protocole Bitcoin pour déterminer une marge sur l'horodatage consensuel du réseau. Le MTP est défini comme la médiane des horodatages des 11 derniers blocs minés. L'utilisation de cet indicateur permet d'éviter les désaccords entre les nœuds sur l'heure exacte en cas de décalage. Le MTP était initialement utilisé pour vérifier la validité de l'horodatage des blocs par rapport au passé. Depuis le BIP113, il est également utilisé comme référentiel du temps du réseau pour vérifier la validité des opérations de verrouillages temporels (`nLockTime`, `OP_CHECKLOCKTIMEVERIFY`, `nSequence` et `OP_CHECKSEQUENCEVERIFY`).
 
 ## MULTI-PATH PAYMENTS (MPP)
+▪ **Lightning Network**
 
 ► ***FR : PAIEMENTS MULTICHEMINS***
 
@@ -282,16 +321,19 @@ Les paiements multi-path offrent également de légers avantages en termes de co
 > ► *On parle également parfois de « Multi-Part Payment » pour désigner cette même méthode. Pour plus d'informations, voir la définition de **[ATOMIC MULTI-PATH PAYMENTS](./A.md#atomic-multi-path-payments)**.*
 
 ## MULTI PROTOCOL COMMITMENT
+▪ **RGB**
 
 Dans le cadre du protocole RGB, le MPC désigne la structure d’arbre de Merkle conçue pour intégrer, au sein d’une unique transaction Bitcoin, plusieurs Transition Bundles issus de contrats distincts. Ce mécanisme permet de regrouper divers engagements, lesquels correspondent à des contrats ou des actifs différents, en un seul point d’ancrage. En consolidant ces transitions dans une structure hiérarchisée, le MPC optimise l’occupation de l’espace de bloc, afin de réduire les frais de transaction et d'améliorer l’efficacité de l’utilisation de la blockchain.
 
 ## MULTISIG
+▪ **Script**
 
 Les portefeuilles multisignatures, souvent abrégés « multisig », sont conçus pour renforcer la sécurisation de bitcoins en exigeant plusieurs signatures provenant de différentes clés privées pour autoriser une dépense. Cette méthode répartit le risque entre plusieurs clés, ce qui permet de réduire à la fois le risque de perte et celui de vol (selon la configuration du multisig). Les portefeuilles multisig fonctionnent selon un modèle « m-de-n », où `m` désigne le nombre minimal de signatures requises pour valider une transaction, et `n` le nombre total de clés impliquées. Par exemple, une configuration 2-de-3 nécessite deux signatures sur trois possibles pour valider une transaction. Cette approche offre une sécurité supérieure par rapport aux portefeuilles à clé unique, mais elle introduit également plus de complexité en termes de gestion et de sauvegarde. De plus, les transactions utilisant les anciens standards de multisig sont moins confidentielles et plus coûteuses en frais que les transactions singlesig classiques. Cependant, des innovations récentes telles que Taproot et l'utilisation de descriptors vont permettre de minimiser, voire d'éliminer, ces inconvénients des multisigs.
 
 > ► *Certains bitcoiners distinguent les termes « Multisig » et « Multisig à seuil ». En effet, certains affirment qu'un multisig est forcément un n-de-n, tandis qu'un multisig à seuil est un m-de-n. Toutefois, dans le langage courant, il est accepté de parler de « Multisig » même pour m-de-n.*
 
 ## MYSTERY SHOPPER PAYMENTS
+▪ **Attaque**
 
 ► ***FR : PAIEMENTS DE CLIENT MYSTÈRE***
 
